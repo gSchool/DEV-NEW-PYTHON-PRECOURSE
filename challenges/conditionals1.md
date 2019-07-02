@@ -57,6 +57,10 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 
+```python
+def isOldEnoughToDrink(age):
+    return age >= 21
+```
 ### !end-explanation
 
 ### !end-challenge
