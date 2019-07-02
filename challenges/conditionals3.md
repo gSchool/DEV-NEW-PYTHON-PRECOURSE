@@ -66,7 +66,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isLessThan(num1, num2):
+    return num2 < num1
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -135,7 +140,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isGreaterThan(num1, num2):
+    return num2 > num1
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -201,7 +212,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isEqualTo(num1, num2):
+    return num1 == num2
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -268,7 +285,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isEven(num):
+    return num % 2 == 0
+
+
+```
 ### !end-explanation
 
 ### !end-challenge

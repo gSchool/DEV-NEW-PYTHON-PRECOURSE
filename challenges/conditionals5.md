@@ -65,7 +65,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def isOddLength(word):
+    return len(word) % 2 == 1
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -133,7 +137,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def isEvenLength(word):
+    return len(word) % 2 == 0
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -207,7 +215,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def isEvenAndGreaterThanTen(num):
+    return num % 2 == 0 and num > 10
 
+
+```
 ### !end-explanation
 
 ### !end-challenge

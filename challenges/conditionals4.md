@@ -60,7 +60,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isOdd(num):
+    return num % 2 == 1
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -121,7 +126,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def isSameLength(word1, word2):
+    return len(word1) == len(word2)
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -186,7 +195,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def areBothOdd(num1, num2):
+    return num1 % 2 == 1 and num2 % 2 == 1
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -253,7 +267,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def isEitherEven(num1, num2):
+    return num1 % 2 == 0 or num2 % 2 == 0
+
+
+```
 ### !end-explanation
 
 ### !end-challenge

@@ -53,6 +53,11 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 
+```python
+def getProperty(dictionary, key):
+    return dictionary[key]
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -110,7 +115,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def addProperty(dictionary, key):
+    dictionary[key] = True
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -168,7 +178,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def removeProperty(dictionary, key):
+    dictionary[key] = None
 
+```
 ### !end-explanation
 
 ### !end-challenge

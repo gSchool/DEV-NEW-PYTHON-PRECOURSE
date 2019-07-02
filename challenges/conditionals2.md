@@ -64,7 +64,15 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def checkAge(name, age):
+    if age >= 21:
+        return f'Welcome, {name}!'
+    else:
+        return f'Go home, {name}!'
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -127,7 +135,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def isGreaterThan10(num):
+    return num > 10
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -192,6 +204,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+
+def isLessThan30(num):
+    return num < 30
+
+
+```
 
 ### !end-explanation
 
@@ -258,7 +277,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def equalsTen(num):
+    return num == 10
+
+
+```
 ### !end-explanation
 
 ### !end-challenge

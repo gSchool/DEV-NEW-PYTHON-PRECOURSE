@@ -52,7 +52,14 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def computeAverageLengthOfWords(word1, word2):
+    return (len(word1) + len(word2)) / 2
+
+
+
+```
 ### !end-explanation
 
 ### !end-challenge

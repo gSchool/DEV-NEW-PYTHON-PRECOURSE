@@ -49,7 +49,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def average(num1, num2):
+    return (num1 + num2)/2
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -104,7 +109,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def computeAreaOfATriangle(base, height):
+    return base * height / 2
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -169,7 +180,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def cube(num):
+    return num * num * num
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -234,7 +249,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def square(num):
+    return num * num
+    
+```
 ### !end-explanation
 
 ### !end-challenge

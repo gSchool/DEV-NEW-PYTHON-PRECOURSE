@@ -116,6 +116,10 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 
+```python
+def isOldEnoughToDrive(age):
+    return age >= 16
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -176,6 +180,10 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 
+```python
+def isOldEnoughToVote(age):
+    return age >= 18
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -228,7 +236,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def isOldEnoughToDrinkAndDrive(age):
+    return False
+```
 ### !end-explanation
 
 ### !end-challenge

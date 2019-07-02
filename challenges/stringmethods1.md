@@ -55,7 +55,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
 
+def getFullName(firstName, lastName):
+    return f'{firstName} {lastName}'
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -118,7 +124,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def getLengthOfWord(word):
+    return len(word)
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -170,7 +180,7 @@ class TestScript(unittest.TestCase):
 
     def test2(self):
         #it should return the sum length of two words if one is an empty string
-        self.assertEqual(main.getLengthOfTwoWords('', 'words'), 5, 
+        self.assertEqual(main.getLengthOfTwoWords('', 'words'), 5,
         msg = "it should return the sum length of two words if one is an empty string" )
 
 ```
@@ -179,7 +189,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def getLengthOfTwoWords(word1, word2):
+    return len(word1) + len(word2)
 
+```
 ### !end-explanation
 
 ### !end-challenge
