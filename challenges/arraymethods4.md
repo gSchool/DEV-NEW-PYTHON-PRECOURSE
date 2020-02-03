@@ -5,23 +5,23 @@
 * type: code-snippet
 * language: python3.6
 * id: 879c0dc1-12a5-4dad-876a-5f698f0dbe05
-* title: getAllElementsButFirst
+* title: get_all_elements_but_first
 
 ### !question
 
-Write a function called "getAllElementsButFirst".
+Write a function called "get_all_elements_but_first".
 
-Given a list, "getAllElementsButFirst" returns a list with all the elements but the first.
+Given a list, "get_all_elements_but_first" returns a list with all the elements but the first.
 
 ```
 input = [1, 2, 3, 4]
-output = getAllElementsButFirst(input)
+output = get_all_elements_but_first(input)
 print(output) # --> [2, 3, 4]
 
-output = getAllElementsButFirst([])
+output = get_all_elements_but_first([])
 print(output) # --> []
 
-output = getAllElementsButFirst([14])
+output = get_all_elements_but_first([14])
 print(output) # --> []
 ```
 
@@ -46,22 +46,22 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return an list"
-        self.assertIs(type(main.getAllElementsButFirst([1,2,3,4])), list,
+        self.assertIs(type(main.get_all_elements_but_first([1,2,3,4])), list,
         msg =  "it should return an list")
 
     def test2(self):
         # "should return an array with all the elements of the passed in array, except for the first"
-        self.assertEqual(main.getAllElementsButFirst([4, 5, 6]), [5,6],
+        self.assertEqual(main.get_all_elements_but_first([4, 5, 6]), [5,6],
         msg = "it should return an array with all the elements of the passed in array, except for the first")
 
     def test3(self):
         # it "should return an empty array when passed in a single element array"
-        self.assertEqual(main.getAllElementsButFirst([4]), [],
+        self.assertEqual(main.get_all_elements_but_first([4]), [],
         msg = "it should return an empty array when passed in a single element array")
 
     def test4(self):
         # it "should return an empty array when passed in an empty array"
-        self.assertEqual(main.getAllElementsButFirst([]), [],
+        self.assertEqual(main.get_all_elements_but_first([]), [],
         msg = "it should return an empty array when passed in an empty array")
 
 ```
@@ -79,23 +79,23 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 1662f5c1-43d4-4cbe-8a0e-2c6866408de5
-* title: getAllElementsButLast
+* title: get_all_elements_but_last
 
 ### !question
 
-Write a function called "getAllElementsButLast".
+Write a function called "get_all_elements_but_last".
 
-Given an list, "getAllElementsButLast" returns an list with all the elements but the last.
+Given an list, "get_all_elements_but_last" returns an list with all the elements but the last.
 
 ```
 input = [1, 2, 3, 4]
-output = getAllElementsButLast(input)
+output = get_all_elements_but_last(input)
 print(output) # --> [1, 2, 3]
 
-output = getAllElementsButLast([])
+output = get_all_elements_but_last([])
 print(output) # --> []
 
-output = getAllElementsButLast([14])
+output = get_all_elements_but_last([14])
 print(output) # --> []
 
 ```
@@ -122,22 +122,22 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return an list"
-        self.assertIs(type(main.getAllElementsButLast([1,2,3,4])), list,
+        self.assertIs(type(main.get_all_elements_but_last([1,2,3,4])), list,
         msg =  "it should return an list")
 
     def test2(self):
         # it "should return an array with all the elements of the passed in array, except for the last"
-        self.assertEqual(main.getAllElementsButLast([1,2,3,4]), [1,2,3],
+        self.assertEqual(main.get_all_elements_but_last([1,2,3,4]), [1,2,3],
         msg = "should return an array with all the elements of the passed in array, except for the last")
 
     def test3(self):
         # it "should return an empty array when passed in a single element array"
-        self.assertEqual(main.getAllElementsButLast([1]), [],
+        self.assertEqual(main.get_all_elements_but_last([1]), [],
         msg = "should return an empty array when passed in a single element array")
 
     def test4(self):
         # it
-        self.assertEqual(main.getAllElementsButLast([]), [],
+        self.assertEqual(main.get_all_elements_but_last([]), [],
         msg = "it should return an empty array when passed in an empty array")
 
 ```
@@ -155,20 +155,20 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 94f66a0e-795b-439b-bb69-c12c78b475b0
-* title: removeFromFront
+* title: remove_from_front
 
 ### !question
 
-Write a function called "removeFromFront".
+Write a function called "remove_from_front".
 
-Given an list, "removeFromFront" returns the given list with its first element removed.
+Given an list, "remove_from_front" returns the given list with its first element removed.
 
 
 ```
-output = removeFromFront([1, 2, 3])
+output = remove_from_front([1, 2, 3])
 print(output) # --> [2, 3]
 
-output = removeFromFront([])
+output = remove_from_front([])
 print(output) # --> []
 ```
 
@@ -193,17 +193,17 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return an array"
-        self.assertIs(type(main.removeFromFront([1, 2, 3])), list,
+        self.assertIs(type(main.remove_from_front([1, 2, 3])), list,
         msg = "it should return a list" )
 
     def test2(self):
         # it "should return the array with the first element removed"
-        self.assertEqual(main.removeFromFront([1, 2]),[2],
+        self.assertEqual(main.remove_from_front([1, 2]),[2],
         msg = "should return the list with the first element removed")
 
     def test3(self):
         # it "should handle an empty array"
-        self.assertEqual(main.removeFromFront([]), [],
+        self.assertEqual(main.remove_from_front([]), [],
         msg = "it should handle an empty list" )
 
 ```

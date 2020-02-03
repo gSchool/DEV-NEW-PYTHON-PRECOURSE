@@ -5,13 +5,13 @@
 * type: code-snippet
 * language: python3.6
 * id: c0e2ea23-c0e1-47bf-b0c0-4cd29b1b4dcd
-* title: getElementsThatEqual10AtProperty
+* title: get_elements_that_equal10_at_property
 
 ### !question
 
-Write a function called "getElementsThatEqual10AtProperty".
+Write a function called "get_elements_that_equal10_at_property".
 
-Given a dictionary and a key, "getElementsThatEqual10AtProperty" returns a list containing all the elements of the list located at the given key that are equal to ten.
+Given a dictionary and a key, "get_elements_that_equal10_at_property" returns a list containing all the elements of the list located at the given key that are equal to ten.
 
 Notes:
 * If the list is empty, it should return an empty list.
@@ -21,11 +21,11 @@ Notes:
 
 ```
 obj1 = {'key': [1000, 10, 50, 10]}
-output1 = getElementsThatEqual10AtProperty(obj1, 'key')
+output1 = get_elements_that_equal10_at_property(obj1, 'key')
 print(output1) # --> [10, 10]
 
 obj2 = {'key': 10}
-output2 = getElementsThatEqual10AtProperty(obj2, 'key')
+output2 = get_elements_that_equal10_at_property(obj2, 'key')
 print(output2) # --> []
 ```
 
@@ -35,7 +35,7 @@ print(output2) # --> []
 
 ```python
 
-def getElementsThatEqual10AtProperty(obj, key):
+def get_elements_that_equal10_at_property(obj, key):
     # your code here
     pass
 
@@ -53,37 +53,37 @@ class TestScript(unittest.TestCase):
     def test_0(self):
             # it should return a list
             obj = {'key': [10,20,30,10,100]}
-            self.assertIsInstance(main.getElementsThatEqual10AtProperty(obj,
+            self.assertIsInstance(main.get_elements_that_equal10_at_property(obj,
             'key'), list, msg = "should return a list")
 
     def test_1(self):
             # it should return a list containing all the elements that equal 10 in the list located at key
             obj = {'key': [10,20,30,10,100]}
-            self.assertEqual(main.getElementsThatEqual10AtProperty(obj, 'key'),
+            self.assertEqual(main.get_elements_that_equal10_at_property(obj, 'key'),
              [10,10], msg = "should return a list containing all the elements that equal 10 in the list located at key")        
 
     def test_2(self):
             # it "should return an empty list if the list has no elements that equal 10"
             obj = {'key': [20,100]}
-            self.assertEqual(main.getElementsThatEqual10AtProperty(obj, 'key'),
+            self.assertEqual(main.get_elements_that_equal10_at_property(obj, 'key'),
              [], msg = "should return an empty list if the list has no elements that equal 10")
 
     def test_3(self):
             # it "should return an empty list if the list is empty"
             obj = {'key': []}
-            self.assertEqual(main.getElementsThatEqual10AtProperty(obj, 'key'),
+            self.assertEqual(main.get_elements_that_equal10_at_property(obj, 'key'),
              [], msg = "should return an empty listy")
 
     def test_4(self):
             # it "should return an empty list if the value of the key is not a list"
             obj = {'key': 10}
-            self.assertEqual(main.getElementsThatEqual10AtProperty(obj, 'key'),
+            self.assertEqual(main.get_elements_that_equal10_at_property(obj, 'key'),
              [], msg = "should return an empty list if the value of the key is not a list")
 
     def test_4(self):
             # it "should return an empty list if the key does not exist"
             obj = {'nope': 10}
-            self.assertEqual(main.getElementsThatEqual10AtProperty(obj, 'key'),
+            self.assertEqual(main.get_elements_that_equal10_at_property(obj, 'key'),
              [], msg = "should return an empty list if the key does not exist")
 
 ```
@@ -100,13 +100,13 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: fc295f5b-ed11-4bcc-8a6b-17f34618a97e
-* title: getElementsLessThan100AtProperty
+* title: get_elements_less_than100_at_property
 
 ### !question
 
-Write a function called "getElementsLessThan100AtProperty".
+Write a function called "get_elements_less_than100_at_property".
 
-Given a dictionary and a key, "getElementsLessThan100AtProperty" returns a list containing all the elements of the list located at the given key that are less than 100.
+Given a dictionary and a key, "get_elements_less_than100_at_property" returns a list containing all the elements of the list located at the given key that are less than 100.
 
 Notes:
 * If the list is empty, it should return an empty list.
@@ -117,7 +117,7 @@ Notes:
 ```
 obj = {'key': [1000, 20, 50, 500, 100]}
 
-output = getElementsLessThan100AtProperty(obj, 'key')
+output = get_elements_less_than100_at_property(obj, 'key')
 print(output) # --> [20, 50]
 ```
 
@@ -126,7 +126,7 @@ print(output) # --> [20, 50]
 ### !placeholder
 
 ```python
-def getElementsLessThan100AtProperty(obj, key):
+def get_elements_less_than100_at_property(obj, key):
     # your code here
     pass
 
@@ -145,33 +145,33 @@ class TestScript(unittest.TestCase):
     def test_0(self):
         # it "should return a list containing all the elements less than 100 in the list located at key"
         obj = {'key': [1, 2, 100, 400]}
-        self.assertEqual(main.getElementsLessThan100AtProperty(obj, 'key'), [1, 2],
+        self.assertEqual(main.get_elements_less_than100_at_property(obj, 'key'), [1, 2],
         msg = "should return a list containing all the elements less than 100 in the list located at key")
 
 
     def test_1(self):
         # it should return None if the list is empty
         obj = {'key': []}
-        self.assertEqual(main.getElementsLessThan100AtProperty(obj, 'key'),[],
+        self.assertEqual(main.get_elements_less_than100_at_property(obj, 'key'),[],
         msg = 'should return an empty list if the list is empty')
 
 
     def test_2(self):
         # it should return None if the property is not a list
         obj = {'key': 'Nope, nobody here but us chickens'}
-        self.assertEqual(main.getElementsLessThan100AtProperty(obj, 'key'),[],
+        self.assertEqual(main.get_elements_less_than100_at_property(obj, 'key'),[],
         msg = 'should return an empty list if the key does not point to a list')
 
     def test_2_5(self):
         # it should return an empty list if the list is empty
         obj = {'key': []}
-        self.assertEqual(main.getElementsLessThan100AtProperty(obj, 'key'),[],
+        self.assertEqual(main.get_elements_less_than100_at_property(obj, 'key'),[],
         msg = 'it should return an empty list if the list is emptyy')
 
     def test_3(self):
         # it should return an empty list if the key does not exist
         obj = {'key2_not_key': [1, 2, 4]}
-        self.assertEqual(main.getElementsLessThan100AtProperty(obj, 'key'),[],
+        self.assertEqual(main.get_elements_less_than100_at_property(obj, 'key'),[],
         msg = 'should return an empty list if the key does not exist')
 
 ```

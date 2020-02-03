@@ -5,7 +5,7 @@
 * type: code-snippet
 * language: python3.6
 * id: 0fa027aa-cf1a-4b02-a19e-5d43a6c83a32
-* title: removeArrayValues
+* title: remove_array_values
 
 ### !question
 
@@ -62,18 +62,18 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 717ab908-571e-4a56-a675-ec540640c6ea
-* title: removeNumberValues
+* title: remove_number_values
 
 ### !question
 
-Write a function called "removeNumberValues".
+Write a function called "remove_number_values".
 
-Given a dictionary, "removeNumberValues" removes any keys whose values are numbers.
+Given a dictionary, "remove_number_values" removes any keys whose values are numbers.
 
 ```
 input = {'b': 2, 'c': ['hi', 'there'], 'd':'hi'}
 
-output = removeNumberValues(input)
+output = remove_number_values(input)
 print(output) # --> {'c': ['hi', 'there'], 'd':'hi'}
 ```
 
@@ -100,7 +100,7 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should remove any properties with values that are numbers
-        self.assertEqual(main.removeNumberValues({'b': 2.9, 'c': ['hi', 'there'], 'd':4}), {'c': ['hi', 'there']},
+        self.assertEqual(main.remove_number_values({'b': 2.9, 'c': ['hi', 'there'], 'd':4}), {'c': ['hi', 'there']},
         msg = 'should remove any keys with values that are numbers')
 
 ```
@@ -118,18 +118,18 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 8fa998a8-1847-4de4-aada-7c319bf55354
-* title: removeStringValues
+* title: remove_string_values
 
 ### !question
 
-Write a function called "removeStringValues".
+Write a function called "remove_string_values".
 
-Given an dictionary, "removeStringValues" removes any keys on the given dictionary whose values are strings.
+Given an dictionary, "remove_string_values" removes any keys on the given dictionary whose values are strings.
 
 ```
 input = {'name': 'Sam', 'age': 20}
 
-output = removeStringValues(input)
+output = remove_string_values(input)
 print(output) # -> {'age': 20}
 ```
 
@@ -156,7 +156,7 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should remove any keys with values that are strings
-        self.assertEqual(main.removeStringValues({'b': 2, 'c': ['hi', 'there'], 'd':'4'}), {'b': 2, 'c': ['hi', 'there']},
+        self.assertEqual(main.remove_string_values({'b': 2, 'c': ['hi', 'there'], 'd':'4'}), {'b': 2, 'c': ['hi', 'there']},
         msg = 'should remove any keys with values that are strings')
 
 ```

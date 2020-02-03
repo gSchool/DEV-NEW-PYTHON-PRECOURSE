@@ -5,13 +5,13 @@
 * type: code-snippet
 * language: python3.6
 * id: eea9cf06-5305-4626-8955-00e5d02563fb
-* title: isPersonOldEnoughToDrive
+* title: is_person_old_enough_to_drive
 
 ### !question
 
-Write a function called "isPersonOldEnoughToDrive".
+Write a function called "is_person_old_enough_to_drive".
 
-Given a "person" dict, that contains an "age" key, "isPersonOldEnoughToDrive" returns whether the given person is old enough to drive.
+Given a "person" dict, that contains an "age" key, "is_person_old_enough_to_drive" returns whether the given person is old enough to drive.
 
 Notes:
 * The legal driving age in the United States is 16.
@@ -19,7 +19,7 @@ Notes:
 ```
 person = {'age': 16}
 
-output = isPersonOldEnoughToDrive(person)
+output = is_person_old_enough_to_drive(person)
 print(output) # --> True
 ```
 
@@ -28,7 +28,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def isPersonOldEnoughToDrive(person):
+def is_person_old_enough_to_drive(person):
     # your code here
     pass
 
@@ -48,23 +48,23 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a bool
-        self.assertIs(type(main.isPersonOldEnoughToDrive({'age': 99})), bool,
+        self.assertIs(type(main.is_person_old_enough_to_drive({'age': 99})), bool,
         msg = "it should return a bool" )
 
 
     def test2(self):
         #it should return True if a person has an age of over 16
-        self.assertTrue(main.isPersonOldEnoughToDrive({'age': 17}),
+        self.assertTrue(main.is_person_old_enough_to_drive({'age': 17}),
         msg = "it should return True if a person has an age of over 16")
 
     def test3(self):
         #it should return True if a person has an age of over 16
-        self.assertTrue(main.isPersonOldEnoughToDrive({'age': 16}),
+        self.assertTrue(main.is_person_old_enough_to_drive({'age': 16}),
         msg = "it should return True if a person has an age of 16")
 
     def test4(self):
         #it should return True if a person has an age of over 16
-        self.assertFalse(main.isPersonOldEnoughToDrive({'age': 9}),
+        self.assertFalse(main.is_person_old_enough_to_drive({'age': 9}),
         msg = "it should return False if a person has an age of under 16")
 
 ```
@@ -82,13 +82,13 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 6b52bff0-742b-4c12-b361-03d5e7457084
-* title: isPersonOldEnoughToVote
+* title: is_person_old_enough_to_vote
 
 ### !question
 
-Write a function called "isPersonOldEnoughToVote".
+Write a function called "is_person_old_enough_to_vote".
 
-Given a "person" dictionary, that contains a key called "age", "isPersonOldEnoughToVote" returns whether the given person is old enough to vote.
+Given a "person" dictionary, that contains a key called "age", "is_person_old_enough_to_vote" returns whether the given person is old enough to vote.
 
 Notes:
 * The legal voting age in the United States is 18.
@@ -96,7 +96,7 @@ Notes:
 ```
 dictionary = {'age' 19}
 
-output = isPersonOldEnoughToVote(dictionary)
+output = is_person_old_enough_to_vote(dictionary)
 print(output) # --> True
 ```
 
@@ -105,7 +105,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def isPersonOldEnoughToVote(person):
+def is_person_old_enough_to_vote(person):
     # your code here
     pass
 
@@ -126,22 +126,22 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it
-        self.assertIs(type(main.isPersonOldEnoughToVote({'age': 18})), bool,
+        self.assertIs(type(main.is_person_old_enough_to_vote({'age': 18})), bool,
         msg = "it should return a bool" )
 
     def test3(self):
         #"should return True if a person has an age of over 18"
-        self.assertTrue(main.isPersonOldEnoughToVote({'age': 99}),
+        self.assertTrue(main.is_person_old_enough_to_vote({'age': 99}),
         msg = "it should return True if a person has an age of over 18" )
 
     def test3(self):
         #"it should return True if a person has an age of 18"
-        self.assertTrue(main.isPersonOldEnoughToVote({'age': 18}),
+        self.assertTrue(main.is_person_old_enough_to_vote({'age': 18}),
         msg = "it should return True if a person has an age of 18" )
 
     def test3(self):
         #"it should return False if a person has an age of under 18"
-        self.assertFalse(main.isPersonOldEnoughToVote({'age': 8}),
+        self.assertFalse(main.is_person_old_enough_to_vote({'age': 8}),
         msg = "it should return False if a person has an age of under 18" )
 
 ```
@@ -159,19 +159,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 53bb0534-cafa-44a2-85ce-1d450e1f79ef
-* title: addArrayToDict
+* title: add_array_to_dict
 
 ### !question
 
-Write a function called "addArrayToDict".
+Write a function called "add_array_to_dict".
 
-Given an dict, a key, and an array, "addArrayToDict" sets a new value on the dictionary at the given key, with the value set to the given array.
+Given an dict, a key, and an array, "add_array_to_dict" sets a new value on the dictionary at the given key, with the value set to the given array.
 
 ```
 myDict = {'name': 'Smiley'}
 myArray = [1, 3]
 
-result = addArrayToDict(myDict, 'key', myArray)
+result = add_array_to_dict(myDict, 'key', myArray)
 type(result) #-> NoneType
 print(myDict['key']) # --> [1, 3]
 print(myDict['name']) # --> 'Smiley'
@@ -182,7 +182,7 @@ print(myDict['name']) # --> 'Smiley'
 ### !placeholder
 
 ```python
-def addArrayToDict(dictionary, key, arr):
+def add_array_to_dict(dictionary, key, arr):
     # your code here
     pass
 
@@ -202,13 +202,13 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return None
-        self.assertIs(main.addArrayToDict({}, "testKey", [1,3,5]), None,
+        self.assertIs(main.add_array_to_dict({}, "testKey", [1,3,5]), None,
         msg = "it should return None")
 
     def test2(self):
         #it should set the value at the passed in key on the passed in dict to be the passed in array"
         dictionary = {}
-        main.addArrayToDict(dictionary, "testKey", [1,3,5])
+        main.add_array_to_dict(dictionary, "testKey", [1,3,5])
 
         self.assertEqual(dictionary["testKey"],[1,3,5],
         msg = "it should set the value at the passed in key on the passed in dict to be the passed in array")
@@ -216,7 +216,7 @@ class TestScript(unittest.TestCase):
     def test3(self):
         #it should set the value at the passed in key on the passed in dict to be the passed in array and keep the other keys unchanged"
         dictionary = {'key1': 'key1', 'key2': 'key2'}
-        main.addArrayToDict(dictionary, "testKey", [1,3,5])
+        main.add_array_to_dict(dictionary, "testKey", [1,3,5])
 
         self.assertEqual(dictionary['key1'],'key1',
         msg = "it should set the value at the passed in key on the passed in dict to be the passed in array and keep the other keys unchanged")

@@ -5,15 +5,15 @@
 * type: code-snippet
 * language: python3.6
 * id: 3fb77f32-bfa4-46a3-b207-3b7cf58ba011
-* title: filterEvenElements
+* title: filter_even_elements
 
 ### !question
 
-Write a function called "filterEvenElements".
+Write a function called "filter_even_elements".
 
-Given a list of numbers, "filterEvenElements" returns a list containing only the even numbers of the given list.
+Given a list of numbers, "filter_even_elements" returns a list containing only the even numbers of the given list.
 ```
-output = filterEvenElements([2, 3, 4, 5, 6])
+output = filter_even_elements([2, 3, 4, 5, 6])
 print(output) # --> [2, 4, 6]
 ```
 
@@ -22,7 +22,7 @@ print(output) # --> [2, 4, 6]
 ### !placeholder
 
 ```python
-def filterEvenElements(arr):
+def filter_even_elements(arr):
     # your code here
     pass
 
@@ -40,25 +40,25 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should return a list
-        self.assertIsInstance(main.filterEvenElements([1, 2, 3, 4]), list,
+        self.assertIsInstance(main.filter_even_elements([1, 2, 3, 4]), list,
         msg = 'should return a list')
 
 
     def test_1(self):
         # it should return a list with the even elements from the passed in list
-        self.assertEqual(main.filterEvenElements([1, 2, 3, 4, 5]), [2, 4],
+        self.assertEqual(main.filter_even_elements([1, 2, 3, 4, 5]), [2, 4],
         msg = 'should return a list with the even elements from the passed in list')
 
 
     def test_2(self):
         # it should return a list if there are no even numbers
-        self.assertEqual(main.filterEvenElements([1, 3, 5]), [],
+        self.assertEqual(main.filter_even_elements([1, 3, 5]), [],
         msg = 'should return a list if there are no even numbers')
 
 
     def test_3(self):
         # it should return a list if given an empty list
-        self.assertEqual(main.filterEvenElements([]), [],
+        self.assertEqual(main.filter_even_elements([]), [],
         msg = 'should return a list if given an empty list')
 
 
@@ -77,19 +77,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 0c0a6c72-d8a0-488e-a0c7-c3a8df27630f
-* title: getLengthOfShortestElement
+* title: get_length_of_shortest_element
 
 ### !question
 
-Write a function called "getLengthOfShortestElement".
+Write a function called "get_length_of_shortest_element".
 
-Given a list, "getLengthOfShortestElement" returns the length of the shortest string in the given list.
+Given a list, "get_length_of_shortest_element" returns the length of the shortest string in the given list.
 
 Notes:
 * It should return 0 if the list is empty.
 
 ```
-output = getLengthOfShortestElement(['one', 'two', 'three'])
+output = get_length_of_shortest_element(['one', 'two', 'three'])
 print(output) # --> 3
 ```
 
@@ -114,25 +114,25 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return a number
-        self.assertIsInstance(main.getLengthOfShortestElement(["one", "two", "three"]), (float, int),
+        self.assertIsInstance(main.get_length_of_shortest_element(["one", "two", "three"]), (float, int),
         msg = 'should return a number')
 
 
     def test_1(self):
         # it should return the length of the shortest element in a list
-        self.assertEqual(main.getLengthOfShortestElement(["one", "four", "three"]), 3,
+        self.assertEqual(main.get_length_of_shortest_element(["one", "four", "three"]), 3,
         msg = 'should return the length of the shortest element in a list')
 
 
     def test_2(self):
         # it it should handle ties
-        self.assertEqual(main.getLengthOfShortestElement(["one", "to", "no"]), 2,
+        self.assertEqual(main.get_length_of_shortest_element(["one", "to", "no"]), 2,
         msg = 'it should handle ties')
 
 
     def test_3(self):
         # it it should return 0 when given an empty list
-        self.assertEqual(main.getLengthOfShortestElement([]), 0,
+        self.assertEqual(main.get_length_of_shortest_element([]), 0,
         msg = 'it should return 0 when given an empty list')
 
 ```
@@ -150,20 +150,20 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: c910016d-56a3-4e65-88d8-01111d85a609
-* title: getLongestElement
+* title: get_longest_element
 
 ### !question
 
-Write a function called "getLongestElement".
+Write a function called "get_longest_element".
 
-Given a list, "getLongestElement" returns the longest string in the given list.
+Given a list, "get_longest_element" returns the longest string in the given list.
 
 Notes:
 * If there are ties, it returns the first element to appear.
 * If the list is empty, it should return an empty string.
 
 ```
-output = getLongestElement(['one', 'two', 'three'])
+output = get_longest_element(['one', 'two', 'three'])
 print(output) # --> 'three'
 ```
 
@@ -187,19 +187,19 @@ class TestScript(unittest.TestCase):
 
         def test_0(self):
             # it should return a string
-            self.assertIsInstance(main.getLongestElement(["one", "two", "three"]), str,
+            self.assertIsInstance(main.get_longest_element(["one", "two", "three"]), str,
             msg = 'should return a string')
 
 
         def test_1(self):
             # it should return the longest element in a list
-            self.assertEqual(main.getLongestElement(["one", "two", "three"]), "three",
+            self.assertEqual(main.get_longest_element(["one", "two", "three"]), "three",
             msg = 'should return the longest element in a list')
 
 
         def test_2(self):
             # it should return the first longest element in a list when there are ties
-            self.assertEqual(main.getLongestElement(["one", "two", "one"]), "one",
+            self.assertEqual(main.get_longest_element(["one", "two", "one"]), "one",
             msg = 'should return the first longest element in a list when there are ties')
 
 ```

@@ -5,16 +5,16 @@
 * type: code-snippet
 * language: python3.6
 * id: 4912dcc3-714b-405d-a1c6-9d4668195528
-* title: computeTripledAreaOfARectangle
+* title: compute_tripled_area_of_aRectangle
 
 ### !question
 
-Write a function called "computeTripledAreaOfARectangle".
+Write a function called "compute_tripled_area_of_aRectangle".
 
-Given a length and width of a rectangle, "computeTripledAreaOfARectangle" returns the rectangle's area, multiplied by 3.
+Given a length and width of a rectangle, "compute_tripled_area_of_aRectangle" returns the rectangle's area, multiplied by 3.
 
 ```
-output = computeTripledAreaOfARectangle(2, 4)
+output = compute_tripled_area_of_aRectangle(2, 4)
 print(output) # --> 24
 ```
 
@@ -23,7 +23,7 @@ print(output) # --> 24
 ### !placeholder
 
 ```python
-def computeTripledAreaOfARectangle(length, width):
+def compute_tripled_area_of_aRectangle(length, width):
     # your code here
     pass
 
@@ -42,7 +42,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test2(self):
         # "it should return the 3 * area of a rectangle"
-        self.assertEqual(main.computeTripledAreaOfARectangle(2, 4),
+        self.assertEqual(main.compute_tripled_area_of_aRectangle(2, 4),
         24,
         msg = "it should return the 3 * area of a rectangle" )
 
@@ -62,19 +62,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: a4c9be25-3121-4933-a4b5-e6099ca26ec6
-* title: computePerimeterOfACircle
+* title: compute_perimeter_of_aCircle
 
 ### !question
 
-Write a function called "computePerimeterOfACircle".
+Write a function called "compute_perimeter_of_aCircle".
 
-Given the radius of a circle, "computePerimeterOfACircle" returns its perimeter.
+Given the radius of a circle, "compute_perimeter_of_aCircle" returns its perimeter.
 
 Notes:
 * `math.pi` can be used for pi.
 
 ```
-output = computePerimeterOfACircle(4)
+output = compute_perimeter_of_aCircle(4)
 print(output) # --> 25.132741228718345
 ```
 
@@ -88,7 +88,7 @@ Reference:
 ```python
 import math
 
-def computePerimeterOfACircle(radius):
+def compute_perimeter_of_aCircle(radius):
     # your code here
     pass
 
@@ -108,7 +108,7 @@ import math
 class TestScript(unittest.TestCase):
     def test1(self):
         # "it should return the perimeter of a circle"
-        self.assertAlmostEqual(main.computePerimeterOfACircle(4), 25.132741,
+        self.assertAlmostEqual(main.compute_perimeter_of_aCircle(4), 25.132741,
         delta = 0.000001,
         msg = "it should return the perimeter of a circle" )
 
@@ -129,19 +129,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: a2e9ed27-c4b2-4aa9-bd99-afe1d3a8a68a
-* title: computeAreaOfACircle
+* title: compute_area_of_aCircle
 
 ### !question
 
-Write a function called "computeAreaOfACircle".
+Write a function called "compute_area_of_aCircle".
 
-Given the radius of a circle, "computeAreaOfACircle" returns its area.
+Given the radius of a circle, "compute_area_of_aCircle" returns its area.
 
 Notes:
 * `math.pi` can be used for pi.
 
 ```
-output = computeAreaOfACircle(4)
+output = compute_area_of_aCircle(4)
 print(output) # --> 50.26548245743669
 ```
 
@@ -156,7 +156,7 @@ Reference:
 ```python
 import math
 
-def computeAreaOfACircle(radius):
+def compute_area_of_aCircle(radius):
     # your code here
     pass
 
@@ -175,7 +175,7 @@ import math
 class TestScript(unittest.TestCase):
     def test1(self):
         # "it should return the area of a circle"
-        self.assertAlmostEqual(main.computeAreaOfACircle(4), 50.265482,
+        self.assertAlmostEqual(main.compute_area_of_aCircle(4), 50.265482,
         delta = 0.000001,
         msg = "it should return the area of a circle" )
 

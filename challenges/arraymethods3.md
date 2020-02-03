@@ -5,7 +5,7 @@
 * type: code-snippet
 * language: python3.6
 * id: 14e62a93-6633-4448-bea5-14ab6d68995c
-* title: joinArrays
+* title: join_arrays
 
 ### !question
 
@@ -75,13 +75,13 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 39177ecc-9a13-4ca6-83c2-495489bfa312
-* title: getElementsAfter
+* title: get_elements_after
 
 ### !question
 
-Write a function called "getElementsAfter".
+Write a function called "get_elements_after".
 
-Given an list and an index, "getElementsAfter" returns a new list with all the elements after (but not including) the given index.
+Given an list and an index, "get_elements_after" returns a new list with all the elements after (but not including) the given index.
 
 Note:
 * In order to do this you should be familiar with slicing lists in Python.
@@ -89,16 +89,16 @@ Note:
 ```
 Specifications:
 
-output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2)
+output = get_elements_after(['a', 'b', 'c', 'd', 'e'], 2)
 print(output) # --> ['d', 'e']
 
-output = getElementsAfter(['a', 'b', 'c'], 5)
+output = get_elements_after(['a', 'b', 'c'], 5)
 print(output) # --> []
 
-output = getElementsAfter([], 2)
+output = get_elements_after([], 2)
 print(output) # --> []
 
-output = getElementsAfter([4], 1)
+output = get_elements_after([4], 1)
 print(output) # --> []
 
 
@@ -126,31 +126,31 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a list
-        self.assertIs(type(main.getElementsAfter([4, 5, 6], 2)), list,
+        self.assertIs(type(main.get_elements_after([4, 5, 6], 2)), list,
         msg = "it should return a list" )
 
     def test2(self):
-        # it "should return an array with all the elements of the passed in array getElementsAfter the nth"
-        self.assertEqual(main.getElementsAfter([4, 5, 6, 7, 8, 9], 3), [8, 9],
-        msg = "it should return an list with all the elements of the passed in array getElementsAfter the nth" )
+        # it "should return an array with all the elements of the passed in array get_elements_after the nth"
+        self.assertEqual(main.get_elements_after([4, 5, 6, 7, 8, 9], 3), [8, 9],
+        msg = "it should return an list with all the elements of the passed in array get_elements_after the nth" )
 
     def test3(self):
         # it "should return an empty array when passed an n out of range"
-        self.assertEqual(main.getElementsAfter([4,5,6,7,8,9], 11), [],
+        self.assertEqual(main.get_elements_after([4,5,6,7,8,9], 11), [],
         msg = "it should return an empty list when passed an n out of range" )
 
     def test4(self):
         # it should return an empty array when passed in a single element array
         for n in range(5):
             with self.subTest(n=n):
-                self.assertEqual(main.getElementsAfter([4], n), [],
+                self.assertEqual(main.get_elements_after([4], n), [],
                 msg = " it should return an empty list when passed in a single element list" )
 
     def test5(self):
         # it "should return an empty array when passed in an empty array"
         for n in range(5):
             with self.subTest(n=n):
-                self.assertEqual(main.getElementsAfter([], n), [],
+                self.assertEqual(main.get_elements_after([], n), [],
                     msg = "should return an empty list when passed in an empty list" )
 
 ```
@@ -168,13 +168,13 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 41fe3188-d6e9-4f43-9c4a-a1313a61b407
-* title: getElementsUpTo
+* title: get_elements_up_to
 
 ### !question
 
-Write a function called "getElementsUpTo".
+Write a function called "get_elements_up_to".
 
-Given an list and a index, "getElementsUpTo", returns a list with all the elements up until, but not including, the element at the given index.
+Given an list and a index, "get_elements_up_to", returns a list with all the elements up until, but not including, the element at the given index.
 
 Notes:
 * In order to do this you should be familiar with slicing lists in Python.
@@ -182,19 +182,19 @@ Notes:
 ```
 Specifications:
 
-output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3)
+output = get_elements_up_to(['a', 'b', 'c', 'd', 'e'], 3)
 print(output) # --> ['a', 'b', 'c']
 
-output = getElementsUpTo(['a'], 0)
+output = get_elements_up_to(['a'], 0)
 print(output) # --> []
 
-output = getElementsUpTo(['a'], 3)
+output = get_elements_up_to(['a'], 3)
 print(output) # --> ['a']
 
-output = getElementsUpTo(['a','b'], 3)
+output = get_elements_up_to(['a','b'], 3)
 print(output) # --> ['a','b']
 
-output = getElementsUpTo([], 3)
+output = get_elements_up_to([], 3)
 print(output) # --> []
 
 
@@ -221,21 +221,21 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a list
-        self.assertIs(type(main.getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3)), list, msg = "it should return a list" )
+        self.assertIs(type(main.get_elements_up_to(['a', 'b', 'c', 'd', 'e'], 3)), list, msg = "it should return a list" )
 
     def test2(self):
         # it "should return an array with all the elements of the passed in array up to but not including the nth"
-        self.assertEqual(main.getElementsUpTo([4, 5, 6], 2), [4, 5],
+        self.assertEqual(main.get_elements_up_to([4, 5, 6], 2), [4, 5],
         msg = "it should return a list with all the elements of the passed in array up to but not including the nth" )
 
     def test3(self):
         # "it should return an empty array when passed in a single element array"
-        self.assertEqual(main.getElementsUpTo([4], 0), [],
+        self.assertEqual(main.get_elements_up_to([4], 0), [],
         msg = "it should return an empty list when passed in a single element array" )
 
     def test4(self):
         # it "should return a mirror of the original array when passed an n out of range"
-        self.assertEqual(main.getElementsUpTo([4], 10), [4],
+        self.assertEqual(main.get_elements_up_to([4], 10), [4],
         msg = "it should return a mirror of the original list when passed an n out of range" )
 
 
@@ -243,7 +243,7 @@ class TestScript(unittest.TestCase):
         # "should return an empty array when passed in an empty array"
         for n in range(5):
             with self.subTest(n=n):
-                self.assertEqual(main.getElementsUpTo([], n), [],
+                self.assertEqual(main.get_elements_up_to([], n), [],
                 msg = "it should return an empty list when passed in an empty list" )
 ```
 

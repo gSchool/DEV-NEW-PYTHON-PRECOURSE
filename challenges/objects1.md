@@ -5,17 +5,17 @@
 * type: code-snippet
 * language: python3.6
 * id: 3469deaf-8010-4036-b39c-902d281a897e
-* title: getProperty
+* title: get_property
 
 ### !question
 
-Write a function called "getProperty".
-Given an dictionary and a key, "getProperty" returns the value of the property at the given key.
+Write a function called "get_property".
+Given an dictionary and a key, "get_property" returns the value of the property at the given key.
 
 ```python
 dictionary = {'key': 'value'}
 
-output = getProperty(dictionary, 'key')
+output = get_property(dictionary, 'key')
 print(output) # --> 'value'
 ```
 
@@ -24,7 +24,7 @@ print(output) # --> 'value'
 ### !placeholder
 
 ```python
-def getProperty(dictionary, key):
+def get_property(dictionary, key):
     # your code here
     pass
 
@@ -43,7 +43,7 @@ class TestScript(unittest.TestCase):
     def test1(self):
         #"it should return the value of the property located in the dict at the passed in key"
         dictionary = {'David': 'Bowie'}
-        self.assertEqual(main.getProperty(dictionary, 'David'),
+        self.assertEqual(main.get_property(dictionary, 'David'),
         dictionary['David'],
         msg = "it should return the value of the property located in the dict at the passed in key")
 
@@ -54,7 +54,7 @@ class TestScript(unittest.TestCase):
 ### !explanation
 
 ```python
-def getProperty(dictionary, key):
+def get_property(dictionary, key):
     return dictionary[key]
 
 ```
@@ -67,16 +67,16 @@ def getProperty(dictionary, key):
 * type: code-snippet
 * language: python3.6
 * id: 62b814e5-85d4-4d5b-8b5b-327692487625
-* title: addProperty
+* title: add_property
 
 ### !question
 
-Write a function called "addProperty".
-Given an object, and a key, "addProperty" sets a new property on the given dictionary with a value of True.
+Write a function called "add_property".
+Given an object, and a key, "add_property" sets a new property on the given dictionary with a value of True.
 
 ```python
 dictionary = {}
-addProperty(dictionary, 'my_property')
+add_property(dictionary, 'my_property')
 
 print(my_dict['my_property']) # --> True
 ```
@@ -86,7 +86,7 @@ print(my_dict['my_property']) # --> True
 ### !placeholder
 
 ```python
-def addProperty(dictionary, key):
+def add_property(dictionary, key):
     # your code here
     pass
 
@@ -105,7 +105,7 @@ class TestScript(unittest.TestCase):
     def test1(self):
         #it should add a property to the passed in dictionary at the passed in key that is equal to True
         dictionary = {}
-        main.addProperty(dictionary, 'my_key')
+        main.add_property(dictionary, 'my_key')
         self.assertTrue(dictionary['my_key'],
         msg = "it should add a property to the passed in dictionary at the passed in key that is equal to True" )
 
@@ -116,7 +116,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def addProperty(dictionary, key):
+def add_property(dictionary, key):
     dictionary[key] = True
 
 
@@ -130,16 +130,16 @@ def addProperty(dictionary, key):
 * type: code-snippet
 * language: python3.6
 * id: 89e3ad32-7097-4f1b-a4c8-445738b02a39
-* title: removeProperty
+* title: remove_property
 
 ### !question
 
-Write a function called "removeProperty".
-Given an object and a key, "removeProperty" removes the given key from the given object.
+Write a function called "remove_property".
+Given an object and a key, "remove_property" removes the given key from the given object.
 
 ```
 dictionary = {'name':'Sam', 'age': 20}
-removeProperty(dictionary, 'name')
+remove_property(dictionary, 'name')
 
 print(dictionary) # --> {'age': 20}
 print(dictionary.get('name')) # --> None
@@ -150,7 +150,7 @@ print(dictionary.get('name')) # --> None
 ### !placeholder
 
 ```python
-def removeProperty(dictionary, key):
+def remove_property(dictionary, key):
     # your code here
     pass
 
@@ -168,7 +168,7 @@ class TestScript(unittest.TestCase):
     def test1(self):
         # it "should remove the property from the passed in dictionary at the passed in key"
         dictionary = {'name': 'James Bond', 'license':'007'}
-        main.removeProperty(dictionary, 'name')
+        main.remove_property(dictionary, 'name')
 
         self.assertIs(dictionary.get('name'), None,
         msg = "it should remove the property from the passed in dictionary at the passed in key" )
@@ -179,7 +179,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def removeProperty(dictionary, key):
+def remove_property(dictionary, key):
     dictionary[key] = None
 
 ```

@@ -5,20 +5,20 @@
 * type: code-snippet
 * language: python3.6
 * id: 8bf521f7-88bd-47f1-a173-4a0a4d1d8389
-* title: isOddWithoutModulo
+* title: is_odd_without_modulo
 
 ### !question
 
-Write a function called "isOddWithoutModulo".
+Write a function called "is_odd_without_modulo".
 
-Given a number, "isOddWithoutModulo" returns whether the passed in number is odd.
+Given a number, "is_odd_without_modulo" returns whether the passed in number is odd.
 
 Note:
 * It does so without using the modulo operator (%).
 * It should work for negative numbers and zero.
 
 ```
-output = isOddWithoutModulo(17)
+output = is_odd_without_modulo(17)
 print(output) # --> True
 ```
 
@@ -27,7 +27,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def isOddWithoutModulo(num):
+def is_odd_without_modulo(num):
     # your code here
     pass
 
@@ -47,37 +47,37 @@ class TestScript(unittest.TestCase):
     def test_00(self):
         # should not have "%" or mod anywhere in function body'
         pattern = re.compile(r'(%|mod\()')
-        source = inspect.getsource(main.isOddWithoutModulo)
+        source = inspect.getsource(main.is_odd_without_modulo)
         self.assertIsNone(pattern.search(source),
         msg = 'should not have "%" or mod() anywhere in function body')
 
     def test_0(self):
         # it should return a boolean
-        self.assertIsInstance(main.isOddWithoutModulo(40), bool,
+        self.assertIsInstance(main.is_odd_without_modulo(40), bool,
         msg = 'should return a boolean')
 
 
     def test_2(self):
         # it should return True when a negative number is odd
-        self.assertTrue(main.isOddWithoutModulo(-41),
+        self.assertTrue(main.is_odd_without_modulo(-41),
         msg = 'should return True when a negative number is odd')
 
 
     def test_3(self):
         # it should return True when a number is odd
-        self.assertTrue(main.isOddWithoutModulo(43),
+        self.assertTrue(main.is_odd_without_modulo(43),
         msg = 'should return True when a positive number is odd')
 
 
     def test_4(self):
         # it should return False when a negative number is even
-        self.assertFalse(main.isOddWithoutModulo(-40),
+        self.assertFalse(main.is_odd_without_modulo(-40),
         msg = 'should return False when a negative number is even')
 
 
     def test_5(self):
         # it should return False when a number is even
-        self.assertFalse(main.isOddWithoutModulo(0),
+        self.assertFalse(main.is_odd_without_modulo(0),
         msg = 'should return False when a number is even')
 
 ```

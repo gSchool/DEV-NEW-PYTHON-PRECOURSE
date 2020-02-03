@@ -5,7 +5,7 @@
 * type: code-snippet
 * language: python3.6
 * id: a67d49da-9135-4b9b-96be-37a1accc9b5f
-* title: joinArraysOfArrays
+* title: join_arrays_of_arrays
 
 ### !question
 

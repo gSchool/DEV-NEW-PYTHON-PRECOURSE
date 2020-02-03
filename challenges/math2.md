@@ -5,16 +5,16 @@
 * type: code-snippet
 * language: python3.6
 * id: 9ac26815-96c8-44bd-baac-960b874e4b32
-* title: computeAreaOfARectangle
+* title: compute_area_of_aRectangle
 
 ### !question
 
-Write a function called "computeAreaOfARectangle".
+Write a function called "compute_area_of_aRectangle".
 
-Given the length and width of a rectangle, "computeAreaOfARectangle" returns its area.
+Given the length and width of a rectangle, "compute_area_of_aRectangle" returns its area.
 
 ```
-output = computeAreaOfARectangle(4, 8)
+output = compute_area_of_aRectangle(4, 8)
 print(output) # --> 32
 ```
 
@@ -23,7 +23,7 @@ print(output) # --> 32
 ### !placeholder
 
 ```python
-def computeAreaOfARectangle(length, width):
+def compute_area_of_aRectangle(length, width):
     # your code here
     pass
 
@@ -40,7 +40,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return the area of a rectangle
-        self.assertEqual(main.computeAreaOfARectangle(6, 7), 42,
+        self.assertEqual(main.compute_area_of_aRectangle(6, 7), 42,
         msg = "it should return the area of a rectangle" )
 
 ```
@@ -58,16 +58,16 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 2fd97e96-08e0-4a67-a662-949acbf0e43c
-* title: computePerimeterOfARectangle
+* title: compute_perimeter_of_aRectangle
 
 ### !question
 
-Write a function called "computePerimeterOfARectangle".
+Write a function called "compute_perimeter_of_aRectangle".
 
-Given a length and a width describing a rectangle, "computePerimeterOfARectangle" returns its perimter.
+Given a length and a width describing a rectangle, "compute_perimeter_of_aRectangle" returns its perimter.
 
 ```
-output = computePerimeterOfARectangle(5, 2)
+output = compute_perimeter_of_aRectangle(5, 2)
 print(output) # --> 14
 ```
 
@@ -76,7 +76,7 @@ print(output) # --> 14
 ### !placeholder
 
 ```python
-def computePerimeterOfARectangle(length, width):
+def compute_perimeter_of_aRectangle(length, width):
     # your code here
     pass
 
@@ -94,7 +94,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return the perimeter of a rectangle
-        self.assertEqual(main.computePerimeterOfARectangle(5, 6), 22,
+        self.assertEqual(main.compute_perimeter_of_aRectangle(5, 6), 22,
         msg = "it should return the perimeter of a rectangle" )
 
 ```
@@ -112,16 +112,16 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 349703e4-eba7-4566-9a0f-c81569733b84
-* title: computePerimeterOfATriangle
+* title: compute_perimeter_of_aTriangle
 
 ### !question
 
-Write a function called "computePerimeterOfATriangle".
+Write a function called "compute_perimeter_of_aTriangle".
 
-Given 3 sides describing a triangle, "computePerimeterOfATriangle" returns its perimter.
+Given 3 sides describing a triangle, "compute_perimeter_of_aTriangle" returns its perimter.
 
 ```
-output = computePerimeterOfATriangle(6, 7, 10)
+output = compute_perimeter_of_aTriangle(6, 7, 10)
 print(output) # --> 23
 ```
 
@@ -130,7 +130,7 @@ print(output) # --> 23
 ### !placeholder
 
 ```python
-def computePerimeterOfATriangle(side1, side2, side3):
+def compute_perimeter_of_aTriangle(side1, side2, side3):
     # your code here
     pass
 
@@ -149,7 +149,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return the perimeter of a triangle
-        self.assertEqual(main.computePerimeterOfATriangle(6, 8, 10), 24,
+        self.assertEqual(main.compute_perimeter_of_aTriangle(6, 8, 10), 24,
         msg = "it should return the perimeter of a triangle" )
 ```
 

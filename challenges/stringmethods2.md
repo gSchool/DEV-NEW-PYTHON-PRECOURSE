@@ -5,16 +5,16 @@
 * type: code-snippet
 * language: python3.6
 * id: e094a4bd-4b1a-4a9d-847b-634336385767
-* title: computeAverageLengthOfWords
+* title: compute_average_length_of_words
 
 ### !question
 
-Write a function called "computeAverageLengthOfWords".
+Write a function called "compute_average_length_of_words".
 
-Given two words, "computeAverageLengthOfWords" returns the average of their lengths.
+Given two words, "compute_average_length_of_words" returns the average of their lengths.
 
 ```
-output = computeAverageLengthOfWords('code', 'programs')
+output = compute_average_length_of_words('code', 'programs')
 print(output) # --> 6
 ```
 
@@ -23,7 +23,7 @@ print(output) # --> 6
 ### !placeholder
 
 ```python
-def computeAverageLengthOfWords(word1, word2):
+def compute_average_length_of_words(word1, word2):
     # your code here
     pass
 
@@ -43,7 +43,7 @@ class TestScript(unittest.TestCase):
 
     def test1(self):
         #it should return the average length of the two words
-        self.assertEqual(main.computeAverageLengthOfWords('code', 'programs'), 6,
+        self.assertEqual(main.compute_average_length_of_words('code', 'programs'), 6,
         msg = "it should return the average length of the two words" )
 
 
@@ -54,7 +54,7 @@ class TestScript(unittest.TestCase):
 ### !explanation
 ```python
 
-def computeAverageLengthOfWords(word1, word2):
+def compute_average_length_of_words(word1, word2):
     return (len(word1) + len(word2)) / 2
 
 

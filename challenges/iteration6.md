@@ -5,19 +5,19 @@
 * type: code-snippet
 * language: python3.6
 * id: 49c67b68-aa6f-4fc6-a5b9-f1de6a3c8079
-* title: multiplyBetween
+* title: multiply_between
 
 ### !question
 
-Write a function called "multiplyBetween".
+Write a function called "multiply_between".
 
-Given 2 integers, "multiplyBetween" returns the product between the two given integers, beginning at num1, and excluding num2.
+Given 2 integers, "multiply_between" returns the product between the two given integers, beginning at num1, and excluding num2.
 
 Notes:
 * The product between 1 and 4 is 1 * 2 * 3 = 6.
 * If num2 is not greater than num1, it should return 0.
 ```
-output = multiplyBetween(2, 5)
+output = multiply_between(2, 5)
 print(output) # --> 24
 ```
 
@@ -26,7 +26,7 @@ print(output) # --> 24
 ### !placeholder
 
 ```python
-def multiplyBetween(num1, num2):
+def multiply_between(num1, num2):
     # your code here
     pass
 
@@ -45,37 +45,37 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return an int
-        self.assertIsInstance(main.multiplyBetween(4, 8), int,
+        self.assertIsInstance(main.multiply_between(4, 8), int,
         msg = 'should return an int')
 
 
     def test_1(self):
         # it should multiply between the first and second number exclusive
-        self.assertEqual(main.multiplyBetween(4, 6), 20,
+        self.assertEqual(main.multiply_between(4, 6), 20,
         msg = 'should multiply between the first and second number, exclusive')
 
 
     def test_2(self):
         # it should multiply between the first and second number when they are one number apart
-        self.assertEqual(main.multiplyBetween(4, 5), 4,
+        self.assertEqual(main.multiply_between(4, 5), 4,
         msg = 'should multiply between the first and second number when they are one number apart')
 
 
     def test_3(self):
         # it should multiply between the first and second number exclusive with negatives
-        self.assertEqual(main.multiplyBetween(-5, -3), 20,
+        self.assertEqual(main.multiply_between(-5, -3), 20,
         msg = 'should multiply between the first and second number exclusive with negatives')
 
 
     def test_4(self):
         # it should return 0 if the second number is less than the first
-        self.assertEqual(main.multiplyBetween(1, -3), 0,
+        self.assertEqual(main.multiply_between(1, -3), 0,
         msg = 'should return 0 if the second number is less than the first')
 
 
     def test_5(self):
         # it should return 0 if the 2 numbers are equal
-        self.assertEqual(main.multiplyBetween(1, 1), 0,
+        self.assertEqual(main.multiply_between(1, 1), 0,
         msg = 'should return 0 if the 2 numbers are equal')
 
 
@@ -93,19 +93,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: fc489cfd-7046-4452-8557-c1fccc5ba5a5
-* title: computeSumBetween
+* title: compute_sum_between
 
 ### !question
 
-Write a function called "computeSumBetween".
+Write a function called "compute_sum_between".
 
-Given 2 integers, "computeSumBetween" returns the sum between the two given integers, beginning at num1, and excluding num2.
+Given 2 integers, "compute_sum_between" returns the sum between the two given integers, beginning at num1, and excluding num2.
 
 Notes:
 * The sum between 1 and 4 is 1 + 2 + 3 = 6.
 * If num2 is not greater than num1, it should return 0.
 ```
-output = computeSumBetween(2, 5)
+output = compute_sum_between(2, 5)
 print(output) # --> 9
 ```
 
@@ -114,7 +114,7 @@ print(output) # --> 9
 ### !placeholder
 
 ```python
-def computeSumBetween(num1, num2):
+def compute_sum_between(num1, num2):
     # your code here
     pass
 
@@ -132,31 +132,31 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should return an int
-        self.assertIsInstance(main.computeSumBetween(4, 8), int,
+        self.assertIsInstance(main.compute_sum_between(4, 8), int,
         msg = 'should return an int')
 
 
     def test_1(self):
         # it should sum between the first and second number exclusive
-        self.assertEqual(main.computeSumBetween(4, 6), 9,
+        self.assertEqual(main.compute_sum_between(4, 6), 9,
         msg = 'should sum between the first and second number, exclusive')
 
 
     def test_2(self):
         # it should sum between the first and second number exclusive with negatives
-        self.assertEqual(main.computeSumBetween(-1, 3), 2,
+        self.assertEqual(main.compute_sum_between(-1, 3), 2,
         msg = 'should sum between the first and second number exclusive with negatives')
 
 
     def test_3(self):
         # it should return 0 if the second number is less than the first
-        self.assertEqual(main.computeSumBetween(1, -3), 0,
+        self.assertEqual(main.compute_sum_between(1, -3), 0,
         msg = 'should return 0 if the second number is less than the first')
 
 
     def test_4(self):
         # it should return 0 if the 2 numbers are equal
-        self.assertEqual(main.computeSumBetween(1, 1), 0,
+        self.assertEqual(main.compute_sum_between(1, 1), 0,
         msg = 'should return 0 if the 2 numbers are equal')
 
 ```

@@ -5,16 +5,16 @@
 * type: code-snippet
 * language: python3.6
 * id: bf41eed3-a9de-4e31-9750-a645da0ab576
-* title: computePower
+* title: compute_power
 
 ### !question
 
-Write a function called "computePower".
+Write a function called "compute_power".
 
-Given a number and an exponent, "computePower" returns the given number, raised to the given exponent.
+Given a number and an exponent, "compute_power" returns the given number, raised to the given exponent.
 
 ```
-output = computePower(2, 3)
+output = compute_power(2, 3)
 print(output) # --> 8
 ```
 
@@ -23,7 +23,7 @@ print(output) # --> 8
 ### !placeholder
 
 ```python
-def computePower(num, exponent):
+def compute_power(num, exponent):
     # your code here
     pass
 
@@ -41,17 +41,17 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # "it should return a positive number raised to a given exponent"
-        self.assertEqual(main.computePower(2, 4), 16,
+        self.assertEqual(main.compute_power(2, 4), 16,
         msg = "it should return a positive number raised to a given exponent" )
 
     def test2(self):
         # "it should return a negative number raised to a given exponent"
-        self.assertEqual(main.computePower(-2, 4), 16,
+        self.assertEqual(main.compute_power(-2, 4), 16,
         msg = "it should return a negative number raised to a given exponent" )
 
     def test3(self):
         # "it should return a number raised to a zero exponent"
-        self.assertEqual(main.computePower(2, 0), 1,
+        self.assertEqual(main.compute_power(2, 0), 1,
         msg = "it should return a number raised to a zero exponent" )
 
 ```
@@ -69,15 +69,15 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: d6959c6e-7921-4f3d-9b44-947c99fab887
-* title: computeSquareRoot
+* title: compute_square_root
 
 ### !question
 
-Write a function called "computeSquareRoot".
-Given a number, "computeSquareRoot" returns its square root.
+Write a function called "compute_square_root".
+Given a number, "compute_square_root" returns its square root.
 
 ```
-output = computeSquareRoot(9)
+output = compute_square_root(9)
 print(output) # --> 3
 ```
 
@@ -88,7 +88,7 @@ print(output) # --> 3
 ```python
 import math
 
-def computeSquareRoot(num):
+def compute_square_root(num):
     # your code here
     pass
 
@@ -106,7 +106,7 @@ import math
 class TestScript(unittest.TestCase):
     def test1(self):
         # "it should return the square root of a number"
-        self.assertEqual(main.computeSquareRoot(16), 4,
+        self.assertEqual(main.compute_square_root(16), 4,
         msg = "it should return the square root of a number" )
 
 ```
@@ -124,15 +124,15 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: e5a953a0-42f3-414c-bd77-c4247d272f7a
-* title: doubleSquareRootOf
+* title: double_square_root_of
 
 ### !question
 
-Write a function called "doubleSquareRootOf".
-Given a number, "doubleSquareRootOf" returns double its square root.
+Write a function called "double_square_root_of".
+Given a number, "double_square_root_of" returns double its square root.
 
 ```
-output = doubleSquareRootOf(121)
+output = double_square_root_of(121)
 print(output) # --> 22
 ```
 
@@ -142,7 +142,7 @@ print(output) # --> 22
 
 ```python
 import math
-def doubleSquareRootOf(num):
+def double_square_root_of(num):
     # your code here
     pass
 
@@ -161,7 +161,7 @@ import math
 class TestScript(unittest.TestCase):
     def test1(self):
         # it
-        self.assertEqual(main.doubleSquareRootOf(121), 22,
+        self.assertEqual(main.double_square_root_of(121), 22,
         msg = "it should return the doubled square root of the passed in number" )
 
 

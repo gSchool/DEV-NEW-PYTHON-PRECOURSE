@@ -5,19 +5,19 @@
 * type: code-snippet
 * language: python3.6
 * id: 7efe888f-b6e0-4255-933e-0f6f12bfe7f2
-* title: getAllLetters
+* title: get_all_letters
 
 ### !question
 
-Write a function called "getAllLetters".
+Write a function called "get_all_letters".
 
-Given a word, "getAllLetters" returns an array containing every character in the word.
+Given a word, "get_all_letters" returns an array containing every character in the word.
 
 Notes:
 * If given an empty string, it should return an empty array.
 
 ```
-output = getAllLetters('Radagast')
+output = get_all_letters('Radagast')
 print(output) # --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 ```
 
@@ -26,7 +26,7 @@ print(output) # --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 ### !placeholder
 
 ```python
-def getAllLetters(string):
+def get_all_letters(string):
     # your code here
     pass
 
@@ -45,19 +45,19 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return an array
-        self.assertIsInstance(main.getAllLetters("something like this here"), list,
+        self.assertIsInstance(main.get_all_letters("something like this here"), list,
         msg = 'should return an array')
 
 
     def test_1(self):
         # it should return an array containing all the letters in the word
-        self.assertEqual(main.getAllLetters("Eowin"), ["E", "o", "w", "i", "n"],
+        self.assertEqual(main.get_all_letters("Eowin"), ["E", "o", "w", "i", "n"],
         msg = 'should return a list containing all the letters in the word')
 
 
     def test_2(self):
         # it should return an empty array when given an empty string
-        self.assertEqual(main.getAllLetters(""), [],
+        self.assertEqual(main.get_all_letters(""), [],
         msg = 'should return an empty array when given an empty string')
 
 
@@ -76,19 +76,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: afe8bb31-31d2-4ef6-b344-e7cbcfe01d1f
-* title: getAllWords
+* title: get_all_words
 
 ### !question
 
-Write a function called "getAllWords".
+Write a function called "get_all_words".
 
-Given a sentence, "getAllWords" returns an array containing every word in the sentence.
+Given a sentence, "get_all_words" returns an array containing every word in the sentence.
 
 Notes:
 * If given an empty string, it should return an empty array.
 
 ```
-output = getAllWords('Radagast the Brown')
+output = get_all_words('Radagast the Brown')
 print(output) # --> ['Radagast', 'the', 'Brown']
 ```
 
@@ -97,7 +97,7 @@ print(output) # --> ['Radagast', 'the', 'Brown']
 ### !placeholder
 
 ```python
-def getAllWords(string):
+def get_all_words(string):
     # your code here
     pass
 
@@ -116,19 +116,19 @@ class TestScript(unittest.TestCase):
 
         def test_0(self):
             # it should return an array
-            self.assertIsInstance(main.getAllWords("something like this here"), list,
+            self.assertIsInstance(main.get_all_words("something like this here"), list,
             msg = 'should return a list')
 
 
         def test_1(self):
             # it should return an array containing all the words in the sentence
-            self.assertEqual(main.getAllWords("Something like this here"), ["Something", "like", "this", "here"],
+            self.assertEqual(main.get_all_words("Something like this here"), ["Something", "like", "this", "here"],
             msg = 'should return a list containing all the words in the sentence')
 
 
         def test_2(self):
             # it should return an empty array when given an empty string
-            self.assertEqual(main.getAllWords(""), [],
+            self.assertEqual(main.get_all_words(""), [],
             msg = 'should return an empty list when given an empty string')
 
 
