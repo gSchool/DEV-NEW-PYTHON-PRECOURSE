@@ -3,15 +3,15 @@
 * type: code-snippet
 * language: python3.6
 * id: af0470f5-db25-4019-881b-3f73c0bda343
-* title: convert_object_to_list2.md
+* title: convert_dict_to_list2.md
 
 ### !question
 
-Write a function called "getAllValues" which returns a list of all the input dictionary's values.
+Write a function called "get_all_values" which returns a list of all the input dictionary's values.
 
 ```
 inp = {'name' : 'Sam', 'age' : 25, 'hasPets' : True}
-output = getAllValues(inp)
+output = get_all_values(inp)
 print(output) # -> ['Sam', 25, True]
 ```
 
@@ -36,19 +36,19 @@ import inspect, re
 
 class TestScript(unittest.TestCase):
     def test_00(self):
-        self.assertIsInstance(main.getAllValues({'first':1, 'second':2}), list,
+        self.assertIsInstance(main.get_all_values({'first':1, 'second':2}), list,
         msg = "it should return a list")
 
     def test0(self):
         input1 = {'name' : 'Sam', 'age' : 25, 'hasPets' : True}
-        self.assertEqual(main.getAllValues(input1),
+        self.assertEqual(main.get_all_values(input1),
         ['Sam', 25, True],
         msg = "it should return a list of values")
 
     def test_1(self):
         # it should not use the multiply operator
         pattern = re.compile(r'\.values')
-        source = inspect.getsource(main.getAllValues)
+        source = inspect.getsource(main.get_all_values)
         self.assertIsNone(pattern.search(source),
         msg = 'should not call the "values" method on the input dictionary in the function body')
 

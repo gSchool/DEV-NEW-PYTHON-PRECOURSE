@@ -3,11 +3,11 @@
 * type: code-snippet
 * language: python3.6
 * id: 5c6e257b-c85d-4a59-9df2-777bc47d4d92
-* title: convert_array_to_object3.md
+* title: convert_list_to_dict3.md
 
 ### !question
 
-Write a function called "transformEmployeeData" that transforms some employee data from one format to another.
+Write a function called "transform_employee_data" that transforms some employee data from one format to another.
 
 The argument will look like this:
 
@@ -41,7 +41,7 @@ Your code should flexibly accommodate that.
 ### !placeholder
 
 ```python
-def transformEmployeeData(employeeData):
+def transform_employee_data(data):
     # your code here
     pass
 
@@ -61,7 +61,7 @@ class TestScript(unittest.TestCase):
         input1 = [[['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']],
                 [['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']]]
         try:
-            main.transformEmployeeData(input1)[0]
+            main.transform_employee_data(input1)[0]
         except TypeError:
             self.fail('It should return a list of dictionaries')
 
@@ -69,7 +69,7 @@ class TestScript(unittest.TestCase):
     def test1(self):
         input1 = [[['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']],
                 [['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']]]
-        self.assertIsInstance(main.transformEmployeeData(input1),list,
+        self.assertIsInstance(main.transform_employee_data(input1),list,
         msg = "It should return a list of dictionaries")
 
 
@@ -77,8 +77,8 @@ class TestScript(unittest.TestCase):
         input1 = [[['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']],
                 [['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']]]
         try:
-            main.transformEmployeeData(input1)[0]['firstName']
-            self.assertEqual(main.transformEmployeeData(input1)[0]['firstName'],'Joe', msg = "should properly assign key and value pairs")
+            main.transform_employee_data(input1)[0]['firstName']
+            self.assertEqual(main.transform_employee_data(input1)[0]['firstName'],'Joe', msg = "should properly assign key and value pairs")
         except TypeError:
             self.fail("It should return a list of dictionaries")
 
@@ -88,8 +88,8 @@ class TestScript(unittest.TestCase):
                        [['firstName', 'Carl'], ['lastName', 'Sagan'], ['favoriteIceCream', 'starfruit'], ['role', 'seer']],
                        [['firstName', 'Mary'], ['lastName', 'Jenkins'], ['favoriteIceCream', 'vanilla'], ['role', 'manager']]]
         try:
-            main.transformEmployeeData(input1)[0]['firstName']
-            self.assertEqual(main.transformEmployeeData(input1)[1]['favoriteIceCream'],'starfruit', msg = "should properly assign key and value pairs")
+            main.transform_employee_data(input1)[0]['firstName']
+            self.assertEqual(main.transform_employee_data(input1)[1]['favoriteIceCream'],'starfruit', msg = "should properly assign key and value pairs")
         except TypeError:
             self.fail("It should return a list of dictionaries")
 

@@ -3,15 +3,15 @@
 * type: code-snippet
 * language: python3.6
 * id: 862b3ed4-83e2-4253-9e53-e7d2263c2727
-* title: convert_object_to_list3.md
+* title: convert_dict_to_list3.md
 
 ### !question
 
-Write a function called "convertObjectToList" which converts a dictionary literal into a list of lists, like this:
+Write a function called "convert_dict_to_list" which converts a dictionary literal into a list of lists, like this:
 
 ```
 inp = {'name': 'Holly', 'age': 35, 'role': 'producer'}
-output = convertObjectToList(inp)
+output = convert_dict_to_list(inp)
 print(output) # -> [['name', 'Holly'], ['age', 35], ['role', 'producer']]
 
 ```
@@ -21,7 +21,7 @@ print(output) # -> [['name', 'Holly'], ['age', 35], ['role', 'producer']]
 ### !placeholder
 
 ```python
-def convertObjectToList(obj):
+def convert_dict_to_list(obj):
     # your code here
     pass
 
@@ -37,12 +37,12 @@ import unittest
 
 class TestScript(unittest.TestCase):
     def test_00(self):
-        self.assertIsInstance(main.convertObjectToList({'first':1, 'second':2}), list,
+        self.assertIsInstance(main.convert_dict_to_list({'first':1, 'second':2}), list,
         msg = "it should return a list")
 
     def test0(self):
         input1 = {'name': 'Holly', 'age': 35, 'role': 'producer'}
-        self.assertEqual(main.convertObjectToList(input1),
+        self.assertEqual(main.convert_dict_to_list(input1),
         [['name', 'Holly'], ['age', 35], ['role', 'producer']],
         msg = "it should return a list of lists")
 
@@ -50,8 +50,8 @@ class TestScript(unittest.TestCase):
         input1 = {'name': 'Holly', 'age': 35, 'role': 'producer'}  
 
         try:
-            holly = main.convertObjectToList(input1)[0][1]
-            self.assertEqual(main.convertObjectToList(input1),
+            holly = main.convert_dict_to_list(input1)[0][1]
+            self.assertEqual(main.convert_dict_to_list(input1),
             'Holly',
             msg = "it should have the correct nesting")
             

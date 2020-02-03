@@ -3,12 +3,12 @@
 * type: code-snippet
 * language: python3.6
 * id: c27c7922-479a-41ca-a400-d3bc984468f4
-* title: convert_array_to_object1.md
+* title: convert_list_to_dict1.md
 
 ### !question
 
 
-Write a function 'transformFirstAndLast' that takes in a list, and returns a dictionary with:
+Write a function 'transform_first_and_last' that takes in a list, and returns a dictionary with:
 1) the first element of the list as the dictionary's key, and
 2) the last element of the list as that key's value.
 
@@ -18,7 +18,7 @@ Note that the input list may have a varying number of elements. Your code should
 
 ```
 input1 = ['Kevin', 'Bacon', 'Love', 'Heart', 'Costner', 'Hart']
-output = transformFirstAndLast(input1)
+output = transform_first_and_last(input1)
 print(output) #--> {'Kevin':'Hart'}
 
 ```
@@ -42,16 +42,16 @@ import unittest
 class TestScript(unittest.TestCase):
 
     def test1(self):
-        self.assertIsInstance(main.transformFirstAndLast(['Kevin', 'Bacon']),dict,
+        self.assertIsInstance(main.transform_first_and_last(['Kevin', 'Bacon']),dict,
         msg = "It should return a dict")
 
     def test2(self):
-        self.assertEqual(main.transformFirstAndLast(['Kevin', 'Bacon', 'Love', 'Heart', 'Costner', 'Hart']), {'Kevin':'Hart'},
+        self.assertEqual(main.transform_first_and_last(['Kevin', 'Bacon', 'Love', 'Heart', 'Costner', 'Hart']), {'Kevin':'Hart'},
         msg = "should properly assign key and value pair")    
 
     def test3(self):
         input1 = ['Mars', 'Wayne', 'Mary']
-        main.transformFirstAndLast(input1)
+        main.transform_first_and_last(input1)
         self.assertEqual(input1, ['Mars', 'Wayne', 'Mary'],
         msg = 'it should not modify input list')
 
