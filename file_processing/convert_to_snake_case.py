@@ -9,14 +9,17 @@ def snake_case(match):
     return match.group(1).lower() + "_" + match.group(2).lower()
 
 for file in os.listdir(source_path):
-  filepath = os.path.join(source_path, file)
-  with open(filepath, "rt") as f:
+  source_filepath = os.path.join(source_path, file)
+  target_filepath  = os.path.join(target_path, file)
+  with open(source_filepath, "rt") as f:
     markdown = f.read()
     old_function_names = titles.findall(markdown)
     new_function_names = [re.sub(camel_case, snake_case, name, 0) for name in old_function_names]
-    print(file, new_function_names)
+    assert(len(old_function_names) == len(new_function_names))
+    name_changes = zip(old_function_names,new_function_names)
+#    [print(file,i,j) for i,j in name_changes]
+    for old, new in name_changes:
+      markdown = re.sub(old, new, markdown)
 
-# split function names according to upper case letters in function name ONLY!
-# if not in camel case, ignore function name
-# lowercase all words
-# replace original function name with lowercase snake function names
+  with open(target_filepath, "wt") as f:
+    f.write(markdown)

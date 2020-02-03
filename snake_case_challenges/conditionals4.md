@@ -1,0 +1,279 @@
+# Conditionals 4
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: c13afed5-de19-458a-a3b9-65fc3d34f842
+* title: is_odd
+
+### !question
+
+Write a function called "is_odd".
+Given a number, "is_odd" returns whether the given number is odd.
+
+```
+output = is_odd(9)
+print(output) # --> True
+```
+
+### !end-question
+
+### !placeholder
+
+```python
+def is_odd(num):
+    # your code here
+    pass
+
+```
+
+### !end-placeholder
+
+### !tests
+
+```python
+import main
+import unittest
+
+class TestScript(unittest.TestCase):
+    def test1(self):
+        # "it should return a bool"
+        self.assertIs(type(main.is_odd(8)), bool,
+        msg="it should return a bool")
+
+    def test2(self):
+        #it should return True if number is odd
+        for num in range(1,11,2):
+                with self.subTest(num=num):
+                    self.assertTrue(main.is_odd(num),
+                    msg="it should return True if the number is odd")
+
+    def test3(self):
+        ##it should return False if number is not odd
+        for num in range(0,10,2):
+                with self.subTest(num=num):
+                    self.assertFalse(main.is_odd(num),
+                    msg="it should return False if the number is not odd")
+```
+
+### !end-tests
+
+### !explanation
+```python
+
+def is_odd(num):
+    return num % 2 == 1
+
+```
+### !end-explanation
+
+### !end-challenge
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: d502830a-6d86-479d-9bd3-664e13d2a686
+* title: is_same_length
+
+### !question
+
+Write a function called "is_same_length".
+
+Given two words, "is_same_length" returns whether the given words have the same length.
+
+```
+output = is_same_length('words', 'super')
+print(output) # --> True
+```
+
+### !end-question
+
+### !placeholder
+
+```python
+def is_same_length(word1, word2):
+    # your code here
+    pass
+
+
+```
+
+### !end-placeholder
+
+### !tests
+
+```python
+import main
+import unittest
+
+class TestScript(unittest.TestCase):
+    def test1(self):
+        # it should
+        self.assertIs(type(main.is_same_length("book", "books")), bool, msg="it should return a bool")
+
+    def test2(self):
+        #it "should return True if the two words are the same length"
+        self.assertTrue(main.is_same_length("yes", "you"), msg="should return True if the two words are the same length")
+
+    def test3(self):
+        #it should return False if the two words are not the same length
+        self.assertFalse(main.is_same_length("book","books"), msg="it should return False if the two words are not the same length")
+
+```
+
+### !end-tests
+
+### !explanation
+```python
+def is_same_length(word1, word2):
+    return len(word1) == len(word2)
+
+```
+### !end-explanation
+
+### !end-challenge
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: 2b052832-2dec-494d-9a24-090c8051db0a
+* title: are_both_odd
+
+### !question
+
+Write a function called "are_both_odd".
+
+Given 2 numbers, "are_both_odd" returns whether or not both of the given numbers are odd.
+
+```
+output = are_both_odd(1, 3)
+print(output) # --> True
+```
+
+### !end-question
+
+### !placeholder
+
+```python
+def are_both_odd(num1, num2):
+    # your code here
+    pass
+
+
+```
+
+### !end-placeholder
+
+### !tests
+
+```python
+import main
+import unittest
+
+class TestScript(unittest.TestCase):
+    def test1(self):
+        # it "should return a boolean"
+        self.assertIs(type(main.are_both_odd(6, 7)), bool, msg = "should return a boolean")
+
+    def test2(self):
+        #it "should return True if both numbers are odd"
+        self.assertTrue(main.are_both_odd(7, 99), msg = "should return True if both numbers are odd")
+
+    def test3(self):
+        #it "should return False if the first number is even"
+        self.assertFalse(main.are_both_odd(4, 7), msg = "should return False if the first number is even")
+
+    def test4(self):
+        #it "should return False if the second number is even"
+        self.assertFalse(main.are_both_odd(71, 88), msg = "should return False if the second number is even")
+
+```
+
+### !end-tests
+
+### !explanation
+```python
+
+def are_both_odd(num1, num2):
+    return num1 % 2 == 1 and num2 % 2 == 1
+
+```
+### !end-explanation
+
+### !end-challenge
+
+### !challenge
+
+* type: code-snippet
+* language: python3.6
+* id: 2aa4cdd8-0158-438d-8a53-b9c0283226c7
+* title: is_either_even
+
+### !question
+
+Write a function called "is_either_even".
+
+Given two numbers, "is_either_even" returns whether or not either one of the given numbers is even.
+
+```
+output = is_either_even(1, 4)
+print(output) # --> True
+```
+
+### !end-question
+
+### !placeholder
+
+```python
+def is_either_even(num1, num2):
+    # your code here
+    pass
+
+
+
+```
+
+### !end-placeholder
+
+### !tests
+
+```python
+import main
+import unittest
+
+class TestScript(unittest.TestCase):
+    def test1(self):
+        # it "should return a boolean"
+        self.assertIs(type(main.is_either_even(6, 7)), bool, msg = "should return a boolean")
+
+    def test2(self):
+        #it "should return False if both numbers are odd"
+        self.assertFalse(main.is_either_even(17, 49), msg = "should return False if both numbers are odd")
+
+    def test3(self):
+        #it "should return True if the first number is even"
+        self.assertTrue(main.is_either_even(4, 7), msg = "should return True if the first number is even")
+
+    def test4(self):
+        #it "should return True if the second number is even"
+        self.assertTrue(main.is_either_even(71, 88), msg = "should return True if the second number is even")
+
+```
+
+
+### !end-tests
+
+### !explanation
+```python
+
+def is_either_even(num1, num2):
+    return num1 % 2 == 0 or num2 % 2 == 0
+
+
+```
+### !end-explanation
+
+### !end-challenge
