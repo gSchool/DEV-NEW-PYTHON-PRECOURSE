@@ -5,19 +5,19 @@
 * type: code-snippet
 * language: python3.6
 * id: a51b922c-0c0b-42b1-b372-f57a7e3cc12e
-* title: getLongestOfThreeWords
+* title: get_longest_of_three_words
 
 ### !question
 
-Write a function called "getLongestOfThreeWords".
+Write a function called "get_longest_of_three_words".
 
-Given 3 words, "getLongestOfThreeWords" returns the longest of three words.
+Given 3 words, "get_longest_of_three_words" returns the longest of three words.
 
 Notes:
 * If there is a tie, it should return the first word in the tie.
 
 ```
-output = getLongestOfThreeWords('these', 'three', 'words')
+output = get_longest_of_three_words('these', 'three', 'words')
 print(output) # --> 'these'
 ```
 
@@ -26,7 +26,7 @@ print(output) # --> 'these'
 ### !placeholder
 
 ```python
-def getLongestOfThreeWords(word1, word2, word3):
+def get_longest_of_three_words(word1, word2, word3):
     # your code here
     pass
 
@@ -45,19 +45,19 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return a string
-        self.assertIsInstance(main.getLongestOfThreeWords("a", "be", "see"), str,
+        self.assertIsInstance(main.get_longest_of_three_words("a", "be", "see"), str,
         msg = 'should return a string')
 
 
     def test_1(self):
         # it should return the longest of three words
-        self.assertEqual(main.getLongestOfThreeWords("a", "be", "see"), "see",
+        self.assertEqual(main.get_longest_of_three_words("a", "be", "see"), "see",
         msg = 'should return the longest of three words')
 
 
     def test_2(self):
         # it should return the first occurrence of a longest word when there is a tie
-        self.assertEqual(main.getLongestOfThreeWords("these", "three", "words"), "these",
+        self.assertEqual(main.get_longest_of_three_words("these", "three", "words"), "these",
         msg = 'should return the first occurrence of a longest word when there is a tie')
 
 ```
@@ -75,19 +75,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: e70b8323-50dd-4588-a4c7-56138c5c4bdd
-* title: findShortestOfThreeWords
+* title: find_shortest_of_three_words
 
 ### !question
 
-Write a function called "findShortestOfThreeWords".
+Write a function called "find_shortest_of_three_words".
 
-Given 3 strings, "findShortestOfThreeWords" returns the shortest of the given strings.
+Given 3 strings, "find_shortest_of_three_words" returns the shortest of the given strings.
 
 Notes:
 * If there are ties, it should return the first word in the parameters list.
 
 ```
-output = findShortestOfThreeWords('a', 'two', 'three')
+output = find_shortest_of_three_words('a', 'two', 'three')
 print(output) # --> 'a'
 ```
 
@@ -96,7 +96,7 @@ print(output) # --> 'a'
 ### !placeholder
 
 ```python
-def findShortestOfThreeWords(word1, word2, word3):
+def find_shortest_of_three_words(word1, word2, word3):
     # your code here
     pass
 
@@ -115,19 +115,19 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return a string
-        self.assertIsInstance(main.findShortestOfThreeWords("a", "be", "see"), str,
+        self.assertIsInstance(main.find_shortest_of_three_words("a", "be", "see"), str,
         msg = 'should return a string')
 
 
     def test_1(self):
         # it should return the shortest of three words
-        self.assertEqual(main.findShortestOfThreeWords("abacus", "be", "see"), "be",
+        self.assertEqual(main.find_shortest_of_three_words("abacus", "be", "see"), "be",
         msg = 'should return the shortest of three words')
 
 
     def test_2(self):
         # it should return the first occurrence of a shortest word when there is a tie
-        self.assertEqual(main.findShortestOfThreeWords("these", "apple", "words"), "these",
+        self.assertEqual(main.find_shortest_of_three_words("these", "apple", "words"), "these",
         msg = 'should return the first occurrence of a shortest word when there is a tie')
 ```
 

@@ -5,19 +5,19 @@
 * type: code-snippet
 * language: python3.6
 * id: 9a167567-dfa8-4854-a21c-3d773b0c1ef5
-* title: isOddLength
+* title: is_odd_length
 
 ### !question
 
-Write a function called "isOddLength".
+Write a function called "is_odd_length".
 
-Given a word, "isOddLength" returns whether the length of the given word is odd.
+Given a word, "is_odd_length" returns whether the length of the given word is odd.
 
 ```
-output = isOddLength('special')
+output = is_odd_length('special')
 print(output) # --> True
 
-output = isOddLength('')
+output = is_odd_length('')
 print(output) # --> False
 
 ```
@@ -27,7 +27,7 @@ print(output) # --> False
 ### !placeholder
 
 ```python
-def isOddLength(word):
+def is_odd_length(word):
     # your code here
     pass
 
@@ -46,19 +46,19 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return a boolean"
-        self.assertIs(type(main.isOddLength("wow")), bool, msg="it should return a boolean")
+        self.assertIs(type(main.is_odd_length("wow")), bool, msg="it should return a boolean")
 
     def test2(self):
         #it "should return False if the length of the word is even"
-        self.assertFalse(main.isOddLength("arrays"), msg="should return False if the length of the word is even")
+        self.assertFalse(main.is_odd_length("arrays"), msg="should return False if the length of the word is even")
 
     def test3(self):
         #it "should return True if the length of the word is odd"
-        self.assertTrue(main.isOddLength("wow"), msg="should return True if the length of the word is odd")
+        self.assertTrue(main.is_odd_length("wow"), msg="should return True if the length of the word is odd")
 
     def test4(self):
         #it "should return False if the string is empty"
-        self.assertFalse(main.isOddLength(''), msg="should return False if passed an empty string")
+        self.assertFalse(main.is_odd_length(''), msg="should return False if passed an empty string")
 ```
 
 
@@ -66,7 +66,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def isOddLength(word):
+def is_odd_length(word):
     return len(word) % 2 == 1
 
 ```
@@ -79,19 +79,19 @@ def isOddLength(word):
 * type: code-snippet
 * language: python3.6
 * id: 3e56d53e-7025-45e4-a697-fd2851b6495d
-* title: isEvenLength
+* title: is_even_length
 
 ### !question
 
-Write a function called "isEvenLength".
+Write a function called "is_even_length".
 
-Given a word, "isEvenLength" returns whether the length of the word is even.
+Given a word, "is_even_length" returns whether the length of the word is even.
 
 ```
-output = isEvenLength('wow')
+output = is_even_length('wow')
 print(output) # --> False
 
-output = isEvenLength('')
+output = is_even_length('')
 print(output) # --> True
 ```
 
@@ -100,7 +100,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def isEvenLength(word):
+def is_even_length(word):
     # your code here
     pass
 
@@ -118,19 +118,19 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return a boolean"
-        self.assertIs(type(main.isEvenLength("wow")), bool, msg="it should return a boolean")
+        self.assertIs(type(main.is_even_length("wow")), bool, msg="it should return a boolean")
 
         def test2(self):
             #it "should return False if the length of the word is odd"
-            self.assertFalse(main.isEvenLength("wow"), msg="should return False if the length of the word is even")
+            self.assertFalse(main.is_even_length("wow"), msg="should return False if the length of the word is even")
 
         def test3(self):
             #it "should return True if the length of the word is odd"
-            self.assertTrue(main.isEvenLength("arrays"), msg="should return True if the length of the word is odd")
+            self.assertTrue(main.is_even_length("arrays"), msg="should return True if the length of the word is odd")
 
         def test4(self):
             #it "should return True if the string is empty"
-            self.assertFalse(main.isEvenLength(''), msg="should return True if passed an empty string")
+            self.assertFalse(main.is_even_length(''), msg="should return True if passed an empty string")
 ```
 
 
@@ -138,7 +138,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def isEvenLength(word):
+def is_even_length(word):
     return len(word) % 2 == 0
 
 ```
@@ -151,7 +151,7 @@ def isEvenLength(word):
 * type: code-snippet
 * language: python3.6
 * id: 547a6787-3d47-4a09-83d6-ca86e7aa26c9
-* title: isEvenAndGreaterThan10
+* title: is_even_and_greater_than10
 
 ### !question
 

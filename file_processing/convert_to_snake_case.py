@@ -1,8 +1,8 @@
 import os
 import re
 
-source_path = os.path.join('..','diagnostic')
-target_path = os.path.join('..','snake_case_challenges')
+source_path = os.path.join('..','temp')
+target_path = os.path.join('..','challenges')
 titles = re.compile(r'title:\s+([a-zA-Z0-9]*)')
 camel_case = re.compile(r"(.+?)([A-Z])")
 def snake_case(match):
