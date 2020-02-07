@@ -86,11 +86,11 @@ def check_age(name, age):
 
 ### !question
 
-Write a function called "isGreaterThan10".
-Given a number, "isGreaterThan10" returns whether the given number is greater than 10.
+Write a function called "is_greater_than_ten".
+Given a number, "is_greater_than_ten" returns whether the given number is greater than 10.
 
 ```
-output = isGreaterThan10(11)
+output = is_greater_than_ten(11)
 print(output) # --> True
 ```
 
@@ -99,7 +99,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def isGreaterThan10(num):
+def is_greater_than_ten(num):
     # your code here
     pass
 
@@ -117,26 +117,26 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a bool
-        self.assertIs(type(main.isGreaterThan10(40)),bool,"it should return a bool")
+        self.assertIs(type(main.is_greater_than_ten(40)),bool,"it should return a bool")
 
     def test2(self):
         #it should return False for a number less than 10
-        self.assertFalse(main.isGreaterThan10(4), "it should return False for a number less than 10")
+        self.assertFalse(main.is_greater_than_ten(4), "it should return False for a number less than 10")
 
     def test3(self):
         #it should return True for a number greater than 10
-        self.assertTrue(main.isGreaterThan10(40),"it should return True for a number greater than 10")
+        self.assertTrue(main.is_greater_than_ten(40),"it should return True for a number greater than 10")
 
     def test4(self):
         #it should return False for the number 10
-        self.assertFalse(main.isGreaterThan10(10),"it should return False for the number 10")
+        self.assertFalse(main.is_greater_than_ten(10),"it should return False for the number 10")
 ```
 
 ### !end-tests
 
 ### !explanation
 ```python
-def isGreaterThan10(num):
+def is_greater_than_ten(num):
     return num > 10
 
 ```
@@ -150,15 +150,15 @@ def isGreaterThan10(num):
 * type: code-snippet
 * language: python3.6
 * id: 49586ccf-27da-4265-abb8-7ba92a2202cc
-* title: is_less_than30
+* title: is_less_than_30
 
 ### !question
 
-Write a function called "is_less_than30".
-Given a number, "is_less_than30" returns whether the given number is less than 30.
+Write a function called "is_less_than_30".
+Given a number, "is_less_than_30" returns whether the given number is less than 30.
 
 ```
-output = is_less_than30(9)
+output = is_less_than_30(9)
 print(output) # --> True
 ```
 
@@ -167,7 +167,7 @@ print(output) # --> True
 ### !placeholder
 
 ```python
-def is_less_than30(num):
+def is_less_than_30(num):
     # your code here
     pass
 
@@ -185,19 +185,19 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a boolean
-        self.assertIs(type(main.is_less_than30(40)), bool, "it should return a boolean")
+        self.assertIs(type(main.is_less_than_30(40)), bool, "it should return a boolean")
 
     def test2(self):
         #it should return True for a number less than 30
-        self.assertTrue(main.is_less_than30(10), "it should return True for  a number less than 30")
+        self.assertTrue(main.is_less_than_30(10), "it should return True for  a number less than 30")
 
     def test3(self):
         #it should return False for a number greater than 30
-        self.assertFalse(main.is_less_than30(40), "it should return False for a number greater than 30")
+        self.assertFalse(main.is_less_than_30(40), "it should return False for a number greater than 30")
 
     def test4(self):
         #it should return False for the number 30
-        self.assertFalse(main.is_less_than30(30), "it should return False for the number 30")
+        self.assertFalse(main.is_less_than_30(30), "it should return False for the number 30")
 ```
 
 
@@ -206,7 +206,7 @@ class TestScript(unittest.TestCase):
 ### !explanation
 ```python
 
-def is_less_than30(num):
+def is_less_than_30(num):
     return num < 30
 
 

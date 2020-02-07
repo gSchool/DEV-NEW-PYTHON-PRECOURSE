@@ -193,18 +193,18 @@ def is_old_enough_to_vote(age):
 * type: code-snippet
 * language: python3.6
 * id: 4031a186-73da-4384-95c9-8d8510aa67a9
-* title: is_old_enough_to_drinkAndDrive
+* title: is_old_enough_to_drink_and_drive
 
 ### !question
 
-Write a function called "is_old_enough_to_drinkAndDrive".
-Given a number, in this case an age, "is_old_enough_to_drinkAndDrive" returns whether a person of this given age is old enough to legally drink and drive in the United States.
+Write a function called "is_old_enough_to_drink_and_drive".
+Given a number, in this case an age, "is_old_enough_to_drink_and_drive" returns whether a person of this given age is old enough to legally drink and drive in the United States.
 Notes:
 * The legal drinking age in the United States is 21.
 * It is always illegal to drink and drive in the United States.
 
 ```
-output = is_old_enough_to_drinkAndDrive(22)
+output = is_old_enough_to_drink_and_drive(22)
 print(output) # --> False
 ```
 
@@ -213,7 +213,7 @@ print(output) # --> False
 ### !placeholder
 
 ```python
-def is_old_enough_to_drinkAndDrive(age):
+def is_old_enough_to_drink_and_drive(age):
     # your code here
     pass
 ```
@@ -229,7 +229,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it "should return false"
-        self.assertFalse(main.is_old_enough_to_drinkAndDrive(99), "No one is old enough to drink and drive.")
+        self.assertFalse(main.is_old_enough_to_drink_and_drive(99), "No one is old enough to drink and drive.")
 ```
 
 
@@ -237,7 +237,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def is_old_enough_to_drinkAndDrive(age):
+def is_old_enough_to_drink_and_drive(age):
     return False
 ```
 ### !end-explanation

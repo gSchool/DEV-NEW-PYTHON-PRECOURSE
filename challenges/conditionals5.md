@@ -151,16 +151,16 @@ def is_even_length(word):
 * type: code-snippet
 * language: python3.6
 * id: 547a6787-3d47-4a09-83d6-ca86e7aa26c9
-* title: is_even_and_greater_than10
+* title: is_even_and_greater_than_10
 
 ### !question
 
-Write a function called "isEvenAndGreaterThanTen".
+Write a function called "is_even_and_greater_than_10".
 
-Given a number, "isEvenAndGreaterThanTen" returns whether it is both even and greater than 10.
+Given a number, "is_even_and_greater_than_10" returns whether it is both even and greater than 10.
 
 ```
-output = isEvenAndGreaterThanTen(13)
+output = is_even_and_greater_than_10(13)
 print(output) # --> False
 ```
 
@@ -169,7 +169,7 @@ print(output) # --> False
 ### !placeholder
 
 ```python
-def isEvenAndGreaterThanTen(num):
+def is_even_and_greater_than_10(num):
     # your code here
     pass
 
@@ -187,28 +187,28 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return a boolean
-        self.assertIs(type(main.isEvenAndGreaterThanTen(40)), bool, msg="")
+        self.assertIs(type(main.is_even_and_greater_than_10(40)), bool, msg="")
 
     def test2(self):
         #it "should return True if the number is even and greater than 10"
-        self.assertTrue(main.isEvenAndGreaterThanTen(40), msg="should return True if the number is even and greater than 10")
+        self.assertTrue(main.is_even_and_greater_than_10(40), msg="should return True if the number is even and greater than 10")
 
     def test3(self):
         #it "should return False if the number is odd"
-        self.assertFalse(main.isEvenAndGreaterThanTen(99), msg="it should return False if the number is odd")
+        self.assertFalse(main.is_even_and_greater_than_10(99), msg="it should return False if the number is odd")
 
 
     def test4(self):
         #it "should return False if the number is odd"
-        self.assertFalse(main.isEvenAndGreaterThanTen(17), msg="it should return False if the number is odd")
+        self.assertFalse(main.is_even_and_greater_than_10(17), msg="it should return False if the number is odd")
 
     def test5(self):
         #it "should return False if the number is 10"
-        self.assertFalse(main.isEvenAndGreaterThanTen(10), msg="it should return False if the number is 10")
+        self.assertFalse(main.is_even_and_greater_than_10(10), msg="it should return False if the number is 10")
 
     def test6(self):
         #it "should return False if the number is less than 10"
-        self.assertFalse(main.isEvenAndGreaterThanTen(4), msg="it should return False if the number is less than 10")    
+        self.assertFalse(main.is_even_and_greater_than_10(4), msg="it should return False if the number is less than 10")    
 
 ```
 
@@ -216,7 +216,7 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def isEvenAndGreaterThanTen(num):
+def is_even_and_greater_than_10(num):
     return num % 2 == 0 and num > 10
 
 
