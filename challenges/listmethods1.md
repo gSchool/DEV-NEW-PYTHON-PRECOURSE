@@ -11,7 +11,7 @@
 
 Write a function called "get_nth_element".
 
-Given an array and an integer, "get_nth_element" returns the element at the given integer index, within the given array.
+Given a list and an integer, "get_nth_element" returns the element at the given integer index, within the given list.
 
 Notes:
 * Remember, arrays in Python begin counting at element with index 0.
@@ -28,7 +28,7 @@ print(output) # --> 3
 ### !placeholder
 
 ```python
-def get_nth_element(array, n):
+def get_nth_element(lst, n):
     # your code here
     pass
 
@@ -50,16 +50,22 @@ class TestScript(unittest.TestCase):
         msg = "it should return None if the array is Empty" )
 
     def test2(self):
-        #it should return the nth element of an array
+        #it should return the nth element of a list
         self.assertEqual(main.get_nth_element([10,12,14,16], 3), 16,
-        msg = "it should return the nth element of an array" )
+        msg = "it should return the nth element of a list" )
 
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_nth_element(lst, n):
+    if len(lst):
+        return lst[n]
+    else:
+        return None
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -75,7 +81,7 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_first_element".
 
-Given an array, "get_first_element" returns the first element of the given array.
+Given a list, "get_first_element" returns the first element of the given array.
 
 Notes:
 * If the given array has a length of 0, it should return None.
@@ -112,16 +118,22 @@ class TestScript(unittest.TestCase):
         msg = "it should return None if the array is Empty" )
 
     def test2(self):
-        #it should return the first element of an array
+        #it should return the first element of a list
         self.assertEqual(main.get_first_element([-99, 99, 0]), -99,
-        msg = "it should return the first element of an array" )
+        msg = "it should return the first element of a list" )
 
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_first_element(lst):
+    if len(lst):
+        return lst[0]
+    else:
+        return None
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -137,10 +149,10 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_last_element".
 
-Given an array, "get_last_element" returns the last element of the given array.
+Given a list, "get_last_element" returns the last element of the given array.
 
 Notes:
-* If the given array has a length of 0, it should return 'undefined'.
+* If the given array has a length of 0, it should return None.
 
 ```
 output = get_last_element([1, 2, 3, 4])
@@ -175,9 +187,9 @@ class TestScript(unittest.TestCase):
         msg = "it should return None if the array is Empty" )
 
     def test2(self):
-        #it should return the last element of an array
+        #it should return the last element of a list
         self.assertEqual(main.get_last_element([-99, 99, 10]), 10,
-        msg = "it should return the last element of an array" )
+        msg = "it should return the last element of a list" )
 
 ```
 
@@ -185,7 +197,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_last_element(lst):
+    if len(lst):
+        return lst[-1]
+    else:
+        return None
+```
 ### !end-explanation
 
 ### !end-challenge
