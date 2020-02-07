@@ -354,17 +354,17 @@ Standards:
       -
         Type: Lesson
         UID: ce7a6f05-9558-485b-858f-aebac959f6d6
-        Path: /challenges/149-list-to-dict.md
+        Path: /challenges/149-dict-to-list.md
       -
         Type: Lesson
         UID: fc319ecb-3275-48ad-bca6-b13f5311d057
-        Path: /challenges/150-list-to-dict.md
+        Path: /challenges/150-dict-to-list.md
       -
         Type: Lesson
         UID: 3f2e29ad-4332-4158-8cb2-f9ef1385d2e4
-        Path: /challenges/151-list-to-dict.md
+        Path: /challenges/151-dict-to-list.md
       -
         Type: Lesson
         UID:  957ae7b3-9149-4095-9c7b-367ca59590b8
-        Path: /challenges/152-greetCustomer.md
+        Path: /challenges/152-greet-customer.md
         Autoscore: true
