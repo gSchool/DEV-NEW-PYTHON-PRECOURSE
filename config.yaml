@@ -334,37 +334,37 @@ Standards:
   -
     Title: Diagnostic Skills Check
     UID: cf43a521-59b3-4059-bd4c-53346c76007f
-    Description: A cumulative set of exercises ranging over topics featured Module 1. The ability to complete these problems indicates that you are likely ready for Module 2.
+    Description: A cumulative set of exercises ranging over topics featured in all modules
     SuccessCriteria:
       - Complete these cumulative exercises.
-      - Verify that you are ready to move on to Module 2.
+      - Verify that you are ready to move on.
     ContentFiles:
       -
         Type: Lesson
         UID: 469e8b2a-c403-4f7e-b2fd-2357523d16d1
-        Path: /diagnostic/146-convertArrayToObject1.md
+        Path: /challenges/146-list-to-dict.md
       -
         Type: Lesson
         UID: c3bd9a0a-c98b-4ef0-bbd9-377dcd632800
-        Path: /diagnostic/147-convertArrayToObject2.md
+        Path: /challenges/147-list-to-dict.md
       -
         Type: Lesson
         UID: 882d1b16-6e23-4f10-b385-06a0b13ae65e
-        Path: /diagnostic/148-convertArrayToObject3.md
+        Path: /challenges/148-list-to-dict.md
       -
         Type: Lesson
         UID: ce7a6f05-9558-485b-858f-aebac959f6d6
-        Path: /diagnostic/149-convertObjectToList1.md
+        Path: /challenges/149-list-to-dict.md
       -
         Type: Lesson
         UID: fc319ecb-3275-48ad-bca6-b13f5311d057
-        Path: /diagnostic/150-convertObjectToList2.md
+        Path: /challenges/150-list-to-dict.md
       -
         Type: Lesson
         UID: 3f2e29ad-4332-4158-8cb2-f9ef1385d2e4
-        Path: /diagnostic/151-convertObjectToList3.md
+        Path: /challenges/151-list-to-dict.md
       -
         Type: Lesson
         UID:  957ae7b3-9149-4095-9c7b-367ca59590b8
-        Path: /diagnostic/152-greetCustomer.md
+        Path: /challenges/152-greetCustomer.md
         Autoscore: true
