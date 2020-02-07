@@ -72,7 +72,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def is_person_old_enough_to_drive(person):
+    return person['age'] >= 16
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -149,7 +152,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def is_person_old_enough_to_vote(person):
+    return person['age'] >= 18
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -159,22 +165,22 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 53bb0534-cafa-44a2-85ce-1d450e1f79ef
-* title: add_array_to_dict
+* title: add_list_to_dict
 
 ### !question
 
-Write a function called "add_array_to_dict".
+Write a function called "add_list_to_dict".
 
-Given an dict, a key, and an array, "add_array_to_dict" sets a new value on the dictionary at the given key, with the value set to the given array.
+Given an dict, a key, and an list, "add_list_to_dict" sets a new value on the dictionary at the given key, with the value set to the given list.
 
 ```
-myDict = {'name': 'Smiley'}
-myArray = [1, 3]
+mydict = {'name': 'Smiley'}
+mylist = [1, 3]
 
-result = add_array_to_dict(myDict, 'key', myArray)
+result = add_list_to_dict(myDict, 'key', mylist)
 type(result) #-> NoneType
-print(myDict['key']) # --> [1, 3]
-print(myDict['name']) # --> 'Smiley'
+print(mydict['key']) # --> [1, 3]
+print(mydict['name']) # --> 'Smiley'
 ```
 
 ### !end-question
@@ -182,7 +188,7 @@ print(myDict['name']) # --> 'Smiley'
 ### !placeholder
 
 ```python
-def add_array_to_dict(dictionary, key, arr):
+def add_list_to_dict(dictionary, key, arr):
     # your code here
     pass
 
@@ -202,13 +208,13 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it should return None
-        self.assertIs(main.add_array_to_dict({}, "testKey", [1,3,5]), None,
+        self.assertIs(main.add_list_to_dict({}, "testKey", [1,3,5]), None,
         msg = "it should return None")
 
     def test2(self):
         #it should set the value at the passed in key on the passed in dict to be the passed in array"
         dictionary = {}
-        main.add_array_to_dict(dictionary, "testKey", [1,3,5])
+        main.add_list_to_dict(dictionary, "testKey", [1,3,5])
 
         self.assertEqual(dictionary["testKey"],[1,3,5],
         msg = "it should set the value at the passed in key on the passed in dict to be the passed in array")
@@ -216,7 +222,7 @@ class TestScript(unittest.TestCase):
     def test3(self):
         #it should set the value at the passed in key on the passed in dict to be the passed in array and keep the other keys unchanged"
         dictionary = {'key1': 'key1', 'key2': 'key2'}
-        main.add_array_to_dict(dictionary, "testKey", [1,3,5])
+        main.add_list_to_dict(dictionary, "testKey", [1,3,5])
 
         self.assertEqual(dictionary['key1'],'key1',
         msg = "it should set the value at the passed in key on the passed in dict to be the passed in array and keep the other keys unchanged")
@@ -229,7 +235,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_list_to_dict(dictionary, key, arr):
+    dictionary[key] = arr
+```
 ### !end-explanation
 
 ### !end-challenge

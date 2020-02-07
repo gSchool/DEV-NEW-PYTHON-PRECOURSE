@@ -64,16 +64,16 @@ def average(num1, num2):
 * type: code-snippet
 * language: python3.6
 * id: bb88d243-fda0-4b49-ba45-f4a19ead5d03
-* title: compute_area_of_aTriangle
+* title: compute_area_of_triangle
 
 ### !question
 
-Write a function called "compute_area_of_aTriangle".
+Write a function called "compute_area_of_triangle".
 
-Given the base and height of a triangle, "compute_area_of_aTriangle" returns its area.
+Given the base and height of a triangle, "compute_area_of_triangle" returns its area.
 
 ```
-output = compute_area_of_aTriangle(4, 6)
+output = compute_area_of_triangle(4, 6)
 print(output) # --> 12
 ```
 
@@ -82,7 +82,7 @@ print(output) # --> 12
 ### !placeholder
 
 ```python
-def compute_area_of_aTriangle(base, height):
+def compute_area_of_triangle(base, height):
     # your code here
     pass
 
@@ -100,7 +100,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test2(self):
         # "it should return the area of a triangle"
-        self.assertEqual(main.compute_area_of_aTriangle(4, 6), 12,
+        self.assertEqual(main.compute_area_of_triangle(4, 6), 12,
         msg = "it should return the area of a triangle" )
 
 
@@ -111,7 +111,7 @@ class TestScript(unittest.TestCase):
 ### !explanation
 ```python
 
-def compute_area_of_aTriangle(base, height):
+def compute_area_of_triangle(base, height):
     return base * height / 2
 
 

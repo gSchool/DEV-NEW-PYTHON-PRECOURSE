@@ -71,7 +71,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_full_name(dictionary):
+    dictionary['fullName'] = f"{dictionary['firstName']} {dictionary['lastName']}"
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -148,7 +151,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_dictionary(dict1, key, dict2):
+    dict1[key] = dict2
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -219,7 +225,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def is_person_old_enough_to_drink_and_drive(person):
+    return False
+```
 ### !end-explanation
 
 ### !end-challenge
