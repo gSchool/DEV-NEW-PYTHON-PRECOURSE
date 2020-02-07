@@ -45,7 +45,7 @@ Standards:
       -
         Type: Lesson
         UID: 7de423a4-1fea-4226-b372-122d15e56d8a
-        Path: /challenges/objects1.md
+        Path: /challenges/dict1.md
       -
         Type: Lesson
         UID: d77258c9-8844-4b41-a3fe-6cb0b7d1bd3d
@@ -90,11 +90,11 @@ Standards:
       -
         Type: Lesson
         UID: a0f63947-9772-4f4d-9b87-a9d536f053ef
-        Path: /challenges/objects2.md
+        Path: /challenges/dict2.md
       -
         Type: Lesson
         UID: db0c1ec1-ed3a-4737-9d1e-b54e19bebbb5
-        Path: /challenges/objects3.md
+        Path: /challenges/dict3.md
       -
         Type: Lesson
         UID: acdab971-cf11-4bf3-8459-43295a24f974
@@ -163,15 +163,15 @@ Standards:
       -
         Type: Lesson
         UID: 3f7e5bdb-682c-4f15-ae40-1a4375ce704b
-        Path: /challenges/objects4.md
+        Path: /challenges/dict4.md
       -
         Type: Lesson
         UID: 9f42274b-390b-44cd-914e-fb0d5b1fda43
-        Path: /challenges/objects5.md
+        Path: /challenges/dict5.md
       -
         Type: Lesson
         UID: bfadcea2-bb6b-4606-b88c-c9a97ea6dfa6
-        Path: /challenges/objects6.md
+        Path: /challenges/dict6.md
       -
         Type: Lesson
         UID: 23e7cb41-ba68-4143-bcf2-96cbca222337
@@ -204,7 +204,7 @@ Standards:
       -
         Type: Lesson
         UID: 9a85983f-85e6-4f3f-b49c-5ff9a31001da
-        Path: /challenges/objects7.md
+        Path: /challenges/dict7.md
       -
         Type: Lesson
         UID: e241db10-4f97-4830-9ccb-69f57ceb95ab
@@ -212,7 +212,7 @@ Standards:
       -
         Type: Lesson
         UID: 64f2ceb0-0663-4661-a443-f2036f8a253a
-        Path: /challenges/objects8.md
+        Path: /challenges/dict8.md
       -
         Type: Lesson
         UID: 0972add3-be30-4c1a-a58d-be8d6b2be8de
@@ -220,11 +220,11 @@ Standards:
       -
         Type: Lesson
         UID: 238aa790-a77d-4e4a-9301-d99fc8df0f7d
-        Path: /challenges/objects9.md
+        Path: /challenges/dict9.md
       -
         Type: Lesson
         UID: fe48230b-c02f-4b37-8dae-1468b08a4bde
-        Path: /challenges/objects10.md
+        Path: /challenges/dict10.md
       -
         Type: Lesson
         UID: 0433a235-634c-41dc-b36b-23b7bdaed6b6
@@ -232,7 +232,7 @@ Standards:
       -
         Type: Lesson
         UID: 7f8ba3bf-11da-47b3-ab3a-4e8f24af2e2c
-        Path: /challenges/objects11.md
+        Path: /challenges/dict11.md
       -
         Type: Lesson
         UID: ba5bec61-dcde-4db6-9490-9cf3ba789d0a
@@ -273,7 +273,7 @@ Standards:
       -
         Type: Lesson
         UID: 43db9031-9a69-4e2c-a96c-9476aca5bf86
-        Path: /challenges/objects12.md
+        Path: /challenges/dict12.md
       -
         Type: Lesson
         UID: 4c768066-f29e-4a9c-a6fd-4f69946a6689
@@ -281,7 +281,7 @@ Standards:
       -
         Type: Lesson
         UID: 4a0d7237-1f0f-4210-b040-d5ee847b0ef5
-        Path: /challenges/objects13.md
+        Path: /challenges/dict13.md
       -
         Type: Lesson
         UID: d477bfb0-4cd0-487f-bb94-58095f831dfe
