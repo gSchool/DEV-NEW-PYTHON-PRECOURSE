@@ -67,7 +67,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_to_front(input_list, element):
+    input_list.insert(0,element)
+    return input_list
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -138,7 +142,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_to_back(input_list, element):
+    input_list.append(element)
+    return input_list
+```
 ### !end-explanation
 
 ### !end-challenge
