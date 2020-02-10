@@ -16,8 +16,8 @@ Given a number and a dictionary, "remove_numbers_larger_than" removes any keys w
 ```
 dictionary = {'a': 8, 'b': 2, 'c': 'montana'}
 
-remove_numbers_larger_than(5, dictionary)
-print(dictionary) # --> {'b': 2, 'c': 'montana'}
+result = remove_numbers_larger_than(5, dictionary)
+print(result) # --> {'b': 2, 'c': 'montana'}
 ```
 
 ### !end-question
@@ -39,18 +39,28 @@ import unittest
 
 class TestScript(unittest.TestCase):
     def test_0(self):
-        # it should remove any keys with values that are numbers greater than the given number
+        # it should remove any keys with values that are integers greater than the given number
         dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd':-3}
         number = -1
         result = {'c':'montana', 'd':-3}
         self.assertEqual(main.remove_numbers_larger_than(number, dictionary), result,
-        msg = 'should remove any keys with values that are numbers greater than num')
+        msg = 'should remove any keys with values that are integers greater than num')
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_numbers_larger_than(target, dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], int):
+            if dictionary[key] > target: removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -71,8 +81,8 @@ Given a number and a dictionary, "remove_integers_less_than" removes any keys wh
 ```
 dictionary = {'a': 8, 'b': 2, 'c':'montana'}
 
-remove_integers_less_than(5, dictionary)
-print(dictionary) # --> {'a': 8, 'c':'montana'}
+result = remove_integers_less_than(5, dictionary)
+print(result) # --> {'a': 8, 'c':'montana'}
 ```
 
 ### !end-question
@@ -107,6 +117,18 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def remove_integers_less_than(target, dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], int):
+            if dictionary[key] < target: removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 
 ### !end-explanation
 
@@ -127,9 +149,9 @@ Given an number and a dictionary, "remove_string_values_longer_than" removes any
 
 ```
 dictionary = {'name': 'Montana', 'age': 20, 'location': 'Texas'}
-remove_string_values_longer_than(6, dictionary)
+result = remove_string_values_longer_than(6, dictionary)
 
-print(dictionary)  # -> {'age': 20, 'location': 'Texas'}
+print(result)  # -> {'age': 20, 'location': 'Texas'}
 ```
 
 ### !end-question
@@ -168,7 +190,18 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_string_values_longer_than(target, dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], str):
+            if len(dictionary[key]) > target: removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
