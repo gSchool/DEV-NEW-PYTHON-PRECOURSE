@@ -1,4 +1,4 @@
-# Objects 10
+# Dictionary 10
 
 ### !challenge
 
