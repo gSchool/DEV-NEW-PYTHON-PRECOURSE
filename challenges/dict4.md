@@ -42,7 +42,7 @@ class TestScript(unittest.TestCase):
         # it should remove any keys with values that are numbers greater than the given number
         dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd':-3}
         number = -1
-        result = {'c':'montana', 'd':'-3'}
+        result = {'c':'montana', 'd':-3}
         self.assertEqual(main.remove_numbers_larger_than(number, dictionary), result,
         msg = 'should remove any keys with values that are numbers greater than num')
 ```
