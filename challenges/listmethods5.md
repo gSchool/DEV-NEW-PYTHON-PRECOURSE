@@ -1,4 +1,4 @@
-# Array Methods 5
+# List Methods 5
 
 ### !challenge
 
@@ -15,10 +15,10 @@ Given a list, "remove_from_back_of_new" returns a new list containing all but th
 
 
 ```
-list1 = [1, 2, 3]
-output = remove_from_back_of_new(list1)
+lst = [1, 2, 3]
+output = remove_from_back_of_new(lst)
 print(output) # --> [1, 2]
-print(list1) # --> [1, 2, 3]
+print(lst) # --> [1, 2, 3]
 ```
 
 ### !end-question
@@ -68,7 +68,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_from_back_of_new(lst):
+    return lst[:-1]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -141,7 +144,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_from_front_of_new(lst):
+    return lst[1:]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -208,7 +214,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def count_character(string, target):
+    count = 0
+    for char in string:
+        if char == target: count += 1
+    return count
+```
 ### !end-explanation
 
 ### !end-challenge

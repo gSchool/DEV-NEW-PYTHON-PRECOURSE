@@ -69,6 +69,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def get_all_elements_but_first(lst):
+    return lst[1:]
+```
 
 ### !end-explanation
 
@@ -145,7 +149,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_all_elements_but_last(lst):
+    return lst[:-1]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -212,7 +219,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_from_front(lst):
+    return lst[1:]
+```
 ### !end-explanation
 
 ### !end-challenge
