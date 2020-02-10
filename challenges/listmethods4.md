@@ -1,4 +1,4 @@
-# Array Methods 4
+# List Methods 4
 
 ### !challenge
 
@@ -14,8 +14,8 @@ Write a function called "get_all_elements_but_first".
 Given a list, "get_all_elements_but_first" returns a list with all the elements but the first.
 
 ```
-input = [1, 2, 3, 4]
-output = get_all_elements_but_first(input)
+x = [1, 2, 3, 4]
+output = get_all_elements_but_first(x)
 print(output) # --> [2, 3, 4]
 
 output = get_all_elements_but_first([])
@@ -88,8 +88,8 @@ Write a function called "get_all_elements_but_last".
 Given an list, "get_all_elements_but_last" returns an list with all the elements but the last.
 
 ```
-input = [1, 2, 3, 4]
-output = get_all_elements_but_last(input)
+x = [1, 2, 3, 4]
+output = get_all_elements_but_last(x)
 print(output) # --> [1, 2, 3]
 
 output = get_all_elements_but_last([])

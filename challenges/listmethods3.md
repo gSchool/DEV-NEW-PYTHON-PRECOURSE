@@ -1,20 +1,20 @@
-# Array Methods 3
+# List Methods 3
 
 ### !challenge
 
 * type: code-snippet
 * language: python3.6
 * id: 14e62a93-6633-4448-bea5-14ab6d68995c
-* title: join_arrays
+* title: join lists
 
 ### !question
 
-Write a function called "joinLists".
+Write a function called "join_lists".
 
-Given two lists, "joinLists" returns an list with the elements of "list1" in order, followed by the elements in "list2".
+Given two lists, "join_lists" returns an list with the elements of "list1" in order, followed by the elements in "list2".
 
 ```
-output = joinLists([1, 2], [3, 4])
+output = join_lists([1, 2], [3, 4])
 print(output) # --> [1, 2, 3, 4]
 ```
 
@@ -41,22 +41,22 @@ import unittest
 class TestScript(unittest.TestCase):
     def test1(self):
         # it it should return a list
-        self.assertIs(type(main.joinLists([1, 2], [3, 4])), list,
+        self.assertIs(type(main.join_lists([1, 2], [3, 4])), list,
         msg = "it should return a list" )
 
     def test2(self):
         # it "should return an array with the elements from the first and then the second array"
-        self.assertEqual(main.joinLists(['a', 'b'], [1, 3]), ['a', 'b', 1, 3],
+        self.assertEqual(main.join_lists(['a', 'b'], [1, 3]), ['a', 'b', 1, 3],
         msg = "should return an array with the elements from the first and then the second array" )
 
     def test3(self):
         # "it should handle empty arrays in the first position"
-        self.assertEqual(main.joinLists([], [1, 3]), [ 1, 3],
+        self.assertEqual(main.join_lists([], [1, 3]), [ 1, 3],
         msg = "it should handle empty arrays in the first position" )
 
     def test4(self):
         # "it should handle empty arrays in the second position"
-        self.assertEqual(main.joinLists(['a', 'b'], []), ['a', 'b'],
+        self.assertEqual(main.join_lists(['a', 'b'], []), ['a', 'b'],
         msg = "it should handle empty arrays in the second position" )
 
 ```
@@ -65,7 +65,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def join_lists(lst1, lst2):
+    return lst1 + lst2
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -158,7 +161,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_elements_after(lst, index):
+    return lst[index+1:]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -251,7 +257,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_elements_up_to(lst, index):
+    return lst[:index]
+```
 ### !end-explanation
 
 ### !end-challenge

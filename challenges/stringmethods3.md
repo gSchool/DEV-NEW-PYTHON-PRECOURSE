@@ -48,7 +48,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_length_of_three_words(word1, word2, word3):
+    return len(word1 + word2 + word3)
+```
 ### !end-explanation
 
 ### !end-challenge
