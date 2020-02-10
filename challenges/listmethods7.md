@@ -1,20 +1,20 @@
-# Array Methods 7
+# list Methods 7
 
 ### !challenge
 
 * type: code-snippet
 * language: python3.6
 * id: d5349d84-2036-435e-a352-d996dffc92e3
-* title: join_three_arrays
+* title: join_three_lists
 
 ### !question
 
-Write a function called "join_three_arrays".
+Write a function called "join_three_lists".
 
-Given three arrays, "join_three_arrays" returns an array with the elements of "arr1" in order followed by the elements in "arr2" in order followed by the elements of "arr3" in order.
+Given three lists, "join_three_lists" returns an list with the elements of "list1" in order followed by the elements in "list2" in order followed by the elements of "list3" in order.
 
 ```
-output = join_three_arrays([1, 2], [3, 4], [5, 6])
+output = join_three_lists([1, 2], [3, 4], [5, 6])
 print(output) # --> [1, 2, 3, 4, 5, 6]
 ```
 
@@ -24,7 +24,7 @@ print(output) # --> [1, 2, 3, 4, 5, 6]
 ### !placeholder
 
 ```python
-def join_three_arrays(arr1, arr2, arr3):
+def join_three_lists(list1, list2, list3):
     # your code here
     pass
 
@@ -42,38 +42,38 @@ import unittest
 class TestScript(unittest.TestCase):
 
     def test_0(self):
-        # it should return an array
-        self.assertIsInstance(main.join_three_arrays(['a', 'b'], [1, 3], [True, False]), list,
+        # it should return an list
+        self.assertIsInstance(main.join_three_lists(['a', 'b'], [1, 3], [True, False]), list,
         msg = 'should return a list')
 
 
     def test_1(self):
         # it should return an list with the elements from the first and then the second list
-        self.assertEqual(main.join_three_arrays(['a', 'b'], [1, 3], [True, False]), ['a', 'b', 1, 3, True, False],
+        self.assertEqual(main.join_three_lists(['a', 'b'], [1, 3], [True, False]), ['a', 'b', 1, 3, True, False],
         msg = 'should return a list with the elements from the first and then the second list')
 
 
     def test_2(self):
-        # it should handle empty arrays in the first position
-        self.assertEqual(main.join_three_arrays([], [1, 3], [True, False]), [1, 3, True, False],
+        # it should handle empty lists in the first position
+        self.assertEqual(main.join_three_lists([], [1, 3], [True, False]), [1, 3, True, False],
         msg = 'should handle empty list in the first position')
 
 
     def test_3(self):
-        # it should handle empty arrays in the second position
-        self.assertEqual(main.join_three_arrays(['a', 'b'], [], [True, False]), ['a', 'b', True, False],
+        # it should handle empty lists in the second position
+        self.assertEqual(main.join_three_lists(['a', 'b'], [], [True, False]), ['a', 'b', True, False],
         msg = 'should handle empty list in the second position')
 
 
     def test_4(self):
-        # it should handle empty arrays in the third position
-        self.assertEqual(main.join_three_arrays(['a', 'b'], [1, 3], []), ['a', 'b', 1, 3],
+        # it should handle empty lists in the third position
+        self.assertEqual(main.join_three_lists(['a', 'b'], [1, 3], []), ['a', 'b', 1, 3],
         msg = 'should handle empty list in the third position')
 
 
     def test_5(self):
-        # it should handle empty arrays in all positions
-        self.assertEqual(main.join_three_arrays([], [], []), [],
+        # it should handle empty lists in all positions
+        self.assertEqual(main.join_three_lists([], [], []), [],
         msg = 'should handle empty lists in all positions')
 
 
@@ -82,7 +82,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def join_three_lists(list1, list2, list3):
+    return list1 + list2 + list3
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -103,10 +106,10 @@ Given a list and an element, "add_to_front_of_new" returns a new list containing
 Important: It should be a NEW list instance, not the original list instance.
 
 ```
-input = [1, 2]
-output = add_to_front_of_new(input, 3)
+list1 = [1, 2]
+output = add_to_front_of_new(list1, 3)
 print(output) # --> [3, 1, 2]
-print(input) --> [1, 2]
+print(list1) --> [1, 2]
 ```
 
 ### !end-question
@@ -114,7 +117,7 @@ print(input) --> [1, 2]
 ### !placeholder
 
 ```python
-def add_to_front_of_new(arr, element):
+def add_to_front_of_new(list1, element):
     # your code here
     pass
 
@@ -140,13 +143,13 @@ class TestScript(unittest.TestCase):
     def test_1(self):
         # it should add an element to the end of an list
         self.assertEqual(main.add_to_front_of_new([1, 2], 3), [3, 1, 2],
-        msg = 'should add an element to the end of an list')
+        msg = 'should add an element to the front of an list')
 
 
     def test_2(self):
         # it should add an element to the end of an empty list
         self.assertEqual(main.add_to_front_of_new([], 3), [3],
-        msg = 'should add an element to the end of an empty list')
+        msg = 'should add an element to the front of an empty list')
 
 
     def test_3(self):
@@ -176,14 +179,14 @@ class TestScript(unittest.TestCase):
 
 Write a function called "addToBackNew".
 
-Given an array and an element, "addToBackNew" returns a clone of the given array, with the given element added to the end.
+Given an list and an element, "addToBackNew" returns a clone of the given list, with the given element added to the end.
 
-Important: It should be a NEW array instance, not the original array instance.
+Important: It should be a NEW list instance, not the original list instance.
 
 ```
-input = [1, 2]
-output = add_to_back_of_new(input, 3)
-print(input) # --> [1, 2]
+list1 = [1, 2]
+output = add_to_back_of_new(list1, 3)
+print(list1) # --> [1, 2]
 print(output) # --> [1, 2, 3]
 ```
 
@@ -192,7 +195,7 @@ print(output) # --> [1, 2, 3]
 ### !placeholder
 
 ```python
-def add_to_back_of_new(arr, element):
+def add_to_back_of_new(list1, element):
     # your code here
     pass
 
@@ -210,25 +213,25 @@ import unittest
 class TestScript(unittest.TestCase):
 
     def test_0(self):
-        # it should return an array
+        # it should return an list
         self.assertIsInstance(main.add_to_back_of_new([1, 2], 3), list,
         msg = 'should return a list')
 
 
     def test_1(self):
-        # it should add an element to the end of an array
+        # it should add an element to the end of an list
         self.assertEqual(main.add_to_back_of_new([1, 2], 3), [1, 2, 3],
-        msg = 'should add an element to the end of an array')
+        msg = 'should add an element to the end of an list')
 
 
     def test_2(self):
-        # it should add an element to the end of an empty array
+        # it should add an element to the end of an empty list
         self.assertEqual(main.add_to_back_of_new([], 3), [3],
-        msg = 'should add an element to the end of an empty array')
+        msg = 'should add an element to the end of an empty list')
 
 
     def test_3(self):
-        # it should leave arr unmodified
+        # it should leave lst unmodified
         originalList = [1,2]
         main.add_to_back_of_new(originalList, 3)
         self.assertEqual(originalList, [1, 2],
@@ -255,7 +258,7 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_all_elements_but_nth".
 
-Given an array and an index, "get_all_elements_but_nth" returns an array with all the elements but the nth.
+Given an list and an index, "get_all_elements_but_nth" returns an list with all the elements but the nth.
 
 ```
 output = get_all_elements_but_nth(['a', 'b', 'c'], 1)
@@ -270,7 +273,7 @@ print(output) # --> ['a', 'b', 'c']
 ### !placeholder
 
 ```python
-def get_all_elements_but_nth(array, n):
+def get_all_elements_but_nth(list, n):
     # your code here
     pass
 
@@ -302,17 +305,17 @@ class TestScript(unittest.TestCase):
         def test_2(self):
             # it should return an empty list when passed in a single element list
             self.assertEqual(main.get_all_elements_but_nth([4], 0), [],
-            msg = 'should return an empty array when passed in a single element array')
+            msg = 'should return an empty list when passed in a single element list')
 
 
         def test_3(self):
-            # it should return a mirror of the original array when passed an n out of range
+            # it should return a mirror of the original list when passed an n out of range
             self.assertEqual(main.get_all_elements_but_nth([4], 10), [4],
             msg = 'should return a mirror of the original list when passed an n out of range')
 
 
         def test_4(self):
-            # it should return an empty array when passed in an empty array
+            # it should return an empty list when passed in an empty list
             self.assertEqual(main.get_all_elements_but_nth([],0), [],
             msg = 'should return an empty list when passed in an empty list')
 

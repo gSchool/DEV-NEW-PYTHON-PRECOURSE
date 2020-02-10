@@ -13,6 +13,8 @@ Write a function called "convert_double_space_to_single".
 
 Given a string, "convert_double_space_to_single" returns the passed in string, with all the double spaces converted to single spaces.
 
+Given an empty string, "convert_double_space_to_single" should return an empty string.
+
 ```
 output = convert_double_space_to_single("string  with  double  spaces")
 print(output) # --> "string with double spaces"
@@ -22,7 +24,7 @@ print(output) # --> ""
 ````
 
 Notes:
-* In order to do this problem, you should be familiar with "str.split", and the "join" methods.
+* In order to do this problem, you should be familiar with "str.split", and the "str.join" methods.
 
 
 ### !end-question
@@ -70,7 +72,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def convert_double_space_to_single(string):
+    temp = string.split("  ") # two spaces between quotes
+    return " ".join(temp) # one space between quotes
+```
 ### !end-explanation
 
 ### !end-challenge

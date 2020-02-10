@@ -11,16 +11,16 @@
 
 Write a function called "remove_even_values".
 
-Given an object, "remove_even_values" removes any properties whose values are even numbers.
+Given an dictionary, "remove_even_values" removes any keys whose values are even integers.
 
-Do this in place and return the original object, do not construct a cloned object that omits the properties.
+Do this in place, and return the original dictionary.
 
 Example:
 
 ```
-input = {'a': 2, 'b': 3, 'c': 4, 'd':'Texas'}
+dictionary = {'a': 2, 'b': 3, 'c': 4, 'd':'Texas'}
 
-output = remove_even_values(input)
+output = remove_even_values(dictionary)
 print(output) # --> {'b': 3, 'd':'Texas'}
 ```
 
@@ -44,18 +44,30 @@ import unittest
 
 class TestScript(unittest.TestCase):
     def test_0(self):
-        # it should remove any keys with values that are even numbers
-        input = {'a':1, 'b':2, 'c': 'montana', 'd':8}
+        # it should remove any keys with values that are even integers
+        dictionary = {'a':1, 'b':2, 'c': 'montana', 'd':8}
         result = {'a':1, 'c': 'montana'}
-        self.assertEqual(main.remove_even_values(input), result,
-        msg = 'should remove any keys with values that are even numbers')
+        self.assertEqual(main.remove_even_values(dictionary), result,
+        msg = 'should remove any keys with values that are even integers')
 
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_even_values(dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], int):
+            if dictionary[key] % 2 == 0: 
+                removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -71,12 +83,12 @@ class TestScript(unittest.TestCase):
 
 Write a function called "count_number_of_keys".
 
-Given an object, "count_number_of_keys" returns how many properties the given object has.
+Given an dictionary, "count_number_of_keys" returns how many keys the given dictionary has.
 
 ```
-input = {'a': 1, 'b': 2, 'c': 3}
+dictionary = {'a': 1, 'b': 2, 'c': 3}
 
-output = count_number_of_keys(input)
+output = count_number_of_keys(dictionary)
 print(output) # --> 3
 ```
 
@@ -102,13 +114,13 @@ import unittest
 class TestScript(unittest.TestCase):
 
     def test_1(self):
-        # it should return the number of keys for an object
+        # it should return the number of keys for an dictionary
         self.assertEqual(main.count_number_of_keys({'a': 1, 'b': 2, 'c': 3}), 3,
         msg = 'should return the number of keys for a dict')
 
 
     def test_2(self):
-        # it should return 0 for an object with no keys
+        # it should return 0 for an dictionary with no keys
         self.assertEqual(main.count_number_of_keys({}), 0,
         msg = 'should return 0 for a dict with no keys')
 
@@ -118,7 +130,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def count_number_of_keys(dictionary):
+    return len(dictionary.keys())
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -134,12 +149,12 @@ class TestScript(unittest.TestCase):
 
 Write a function called "remove_odd_values".
 
-Given an object, "remove_odd_values" removes any keys whose values are odd numbers.
+Given an dictionary, "remove_odd_values" removes any keys whose values are odd integers.
 
 ```
-input = {'a': 1, 'b': 2, 'c': 3, 'd':'montana'}
+dictionary = {'a': 1, 'b': 2, 'c': 3, 'd':'montana'}
 
-output = remove_odd_values(input)
+output = remove_odd_values(dictionary)
 print(output) # --> {'b': 2, 'd':'montana'}
 ```
 
@@ -163,16 +178,28 @@ import unittest
 
 class TestScript(unittest.TestCase):
     def test_0(self):
-        # it should remove any properties with values that are odd numbers
+        # it should remove any keys with values that are odd integers
         self.assertEqual(main.remove_odd_values({'a': 1, 'b': 2, 'c': 3, 'd':'Montana'}), {'b': 2, 'd':'Montana'},
-        msg = 'should remove any key with values that are odd numbers')
+        msg = 'should remove any key with values that are odd integers')
 
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_odd_values(dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], int):
+            if dictionary[key] % 2 == 1: 
+                removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge

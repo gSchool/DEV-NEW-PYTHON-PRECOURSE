@@ -5,18 +5,18 @@
 * type: code-snippet
 * language: python3.6
 * id: 0fa027aa-cf1a-4b02-a19e-5d43a6c83a32
-* title: remove_array_values
+* title: remove_list_values
 
 ### !question
 
-Write a function called "removeListValues".
+Write a function called "remove_list_values".
 
-Given an dict, "removeListValues" removes any keys whose values are lists.
+Given an dict, "remove_list_values" removes any keys whose values are lists.
 
 ```
-input = {'a': [1, 3, 4], 'b': 2, 'c': ['hi', 'there']}
+dictionary = {'a': [1, 3, 4], 'b': 2, 'c': ['hi', 'there']}
 
-output = removeListValues(input)
+output = remove_list_values(dictionary)
 print(output) # --> {'b': 2}
 ```
 
@@ -41,9 +41,9 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should remove any keys with values that are lists
-        input = {'a': [1, 3, 4], 'b': 2, 'c': ['hi', 'there'], 'd':'hi'}
+        dictionary = {'a': [1, 3, 4], 'b': 2, 'c': ['hi', 'there'], 'd':'hi'}
         output = {'b': 2, 'd':'hi'}
-        self.assertEqual(main.removeListValues(input), output,
+        self.assertEqual(main.remove_list_values(dictionary), output,
         msg = 'should remove any keys with values that are lists')
 
 
@@ -52,7 +52,18 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_list_values(dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], list):
+                removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -68,12 +79,12 @@ class TestScript(unittest.TestCase):
 
 Write a function called "remove_number_values".
 
-Given a dictionary, "remove_number_values" removes any keys whose values are numbers.
+Given a dictionary, "remove_number_values" removes any keys whose values are integers or floats.
 
 ```
-input = {'b': 2, 'c': ['hi', 'there'], 'd':'hi'}
+dictionary = {'a': 3.4, 'b': 2, 'c': ['hi', 'there'], 'd':'hi'}
 
-output = remove_number_values(input)
+output = remove_number_values(dictionary)
 print(output) # --> {'c': ['hi', 'there'], 'd':'hi'}
 ```
 
@@ -108,7 +119,18 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_number_values(dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], (int,float)):
+                removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -127,9 +149,9 @@ Write a function called "remove_string_values".
 Given an dictionary, "remove_string_values" removes any keys on the given dictionary whose values are strings.
 
 ```
-input = {'name': 'Sam', 'age': 20}
+dictionary = {'name': 'Sam', 'age': 20}
 
-output = remove_string_values(input)
+output = remove_string_values(dictionary)
 print(output) # -> {'age': 20}
 ```
 
@@ -164,7 +186,18 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_string_values(dictionary):
+    removal_list = []
+    for key in dictionary:
+        if isinstance(dictionary[key], str):
+                removal_list.append(key)
+    
+    for key in removal_list:
+        dictionary.pop(key)
+    
+    return dictionary
+```
 ### !end-explanation
 
 ### !end-challenge
