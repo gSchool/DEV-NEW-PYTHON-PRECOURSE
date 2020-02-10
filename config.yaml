@@ -27,7 +27,7 @@ Standards:
     #
 
   -
-    Title: Part 1
+    Title: Warmups Part 1
     UID: 47567dbe-9f6a-451b-b52c-803b1ea45025
     Description: Solve Code Challenges
     SuccessCriteria:
@@ -76,7 +76,7 @@ Standards:
         Path: /challenges/stringmethods2.md
         Autoscore: true
   -
-    Title: Part 2
+    Title: Warmups Part 1, Part 2
     UID: 9182cb5e-7e40-4e64-be22-e9ae72b69b01
     Description: Solve Code Challenges
     SuccessCriteria:
@@ -133,7 +133,7 @@ Standards:
         Path: /challenges/listmethods5.md
         Autoscore: true
   -
-    Title: Part 3
+    Title: Code Challenges, Part 1
     UID: 2c549be4-cd7a-4e99-8010-4eea8c094d98
     Description: Solve Code Challenges
     SuccessCriteria:
@@ -194,7 +194,7 @@ Standards:
         Path: /challenges/advanced3.md
         Autoscore: true
   -
-    Title: Part 4
+    Title: Code Challenges, Part 2
     UID: 29e76b90-d7ce-4541-9706-bf73cc7a2178
     Description: Solve Code Challenges
     SuccessCriteria:
@@ -243,7 +243,7 @@ Standards:
         Path: /challenges/listmethods11.md
         Autoscore: true
   -
-    Title: Part 5
+    Title: Code Challenges, Part 3
     UID: aa8fbca0-be5e-418c-8165-ae834b79d225
     Description: Solve Code Challenges
     SuccessCriteria:
