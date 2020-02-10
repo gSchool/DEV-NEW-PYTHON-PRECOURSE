@@ -40,7 +40,7 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should remove any keys with values that are numbers greater than the given number
-        dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd':'-3'}
+        dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd':-3}
         number = -1
         result = {'c':'montana', 'd':'-3'}
         self.assertEqual(main.remove_numbers_larger_than(number, dictionary), result,
@@ -60,18 +60,18 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: ee54e130-d037-4ff7-9c59-5461322523e1
-* title: remove_numbers_less_than
+* title: remove_integers_less_than
 
 ### !question
 
-Write a function called "remove_numbers_less_than".
+Write a function called "remove_integers_less_than".
 
-Given a number and a dictionary, "remove_numbers_less_than" removes any keys whose values are numbers less than the given number.
+Given a number and a dictionary, "remove_integers_less_than" removes any keys whose values are numbers less than the given number.
 
 ```
 dictionary = {'a': 8, 'b': 2, 'c':'montana'}
 
-remove_numbers_less_than(5, dictionary)
+remove_integers_less_than(5, dictionary)
 print(dictionary) # --> {'a': 8, 'c':'montana'}
 ```
 
@@ -94,13 +94,13 @@ import unittest
 
 class TestScript(unittest.TestCase):
     def test_0(self):
-        # it should remove any properties with values that are numbers less than num
+        # it should remove any keys with values that are integers less than target
         dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd': -3}
-        number = 5
+        target = 5
         result = {'a': 8, 'b': 6, 'c':'montana'}
 
-        self.assertEqual(main.remove_numbers_less_than(number, dictionary), result,
-        msg = 'should remove any properties with values that are numbers less than num')
+        self.assertEqual(main.remove_integers_less_than(target, dictionary), result,
+        msg = 'should remove any keys with values that are integers less than target')
 
 ```
 
