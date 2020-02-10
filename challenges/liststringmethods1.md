@@ -66,7 +66,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_all_letters(string):
+    return [letter for letter in string]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -137,7 +140,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_all_words(string):
+    if string: 
+        return string.split(" ")
+    else: 
+        return []
+```
 ### !end-explanation
 
 ### !end-challenge

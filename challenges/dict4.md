@@ -11,13 +11,13 @@
 
 Write a function called "remove_numbers_larger_than".
 
-Given a number and an dictionary, "remove_numbers_larger_than" removes any keys whose values are numbers greater than the given number.
+Given a number and a dictionary, "remove_numbers_larger_than" removes any keys whose values are numbers greater than the given number.
 
 ```
-input = {'a': 8, 'b': 2, 'c': 'montana'}
+dictionary = {'a': 8, 'b': 2, 'c': 'montana'}
 
-remove_numbers_larger_than(5, input)
-print(input) # --> {'b': 2, 'c': 'montana'}
+remove_numbers_larger_than(5, dictionary)
+print(dictionary) # --> {'b': 2, 'c': 'montana'}
 ```
 
 ### !end-question
@@ -40,10 +40,10 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should remove any keys with values that are numbers greater than the given number
-        input = {'a': 8, 'b': 6, 'c':'montana', 'd':'-3'}
+        dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd':'-3'}
         number = -1
         result = {'c':'montana', 'd':'-3'}
-        self.assertEqual(main.remove_numbers_larger_than(number, input), result,
+        self.assertEqual(main.remove_numbers_larger_than(number, dictionary), result,
         msg = 'should remove any keys with values that are numbers greater than num')
 ```
 
@@ -69,10 +69,10 @@ Write a function called "remove_numbers_less_than".
 Given a number and a dictionary, "remove_numbers_less_than" removes any keys whose values are numbers less than the given number.
 
 ```
-input = {'a': 8, 'b': 2, 'c':'montana'}
+dictionary = {'a': 8, 'b': 2, 'c':'montana'}
 
-remove_numbers_less_than(5, input)
-print(input) # --> {'a': 8, 'c':'montana'}
+remove_numbers_less_than(5, dictionary)
+print(dictionary) # --> {'a': 8, 'c':'montana'}
 ```
 
 ### !end-question
@@ -95,11 +95,11 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should remove any properties with values that are numbers less than num
-        input = {'a': 8, 'b': 6, 'c':'montana', 'd': -3}
+        dictionary = {'a': 8, 'b': 6, 'c':'montana', 'd': -3}
         number = 5
         result = {'a': 8, 'b': 6, 'c':'montana'}
 
-        self.assertEqual(main.remove_numbers_less_than(number, input), result,
+        self.assertEqual(main.remove_numbers_less_than(number, dictionary), result,
         msg = 'should remove any properties with values that are numbers less than num')
 
 ```
@@ -123,13 +123,13 @@ class TestScript(unittest.TestCase):
 
 Write a function called "remove_string_values_longer_than".
 
-Given an number and an dictionary, "remove_string_values_longer_than" removes any keys on the given dict whose values are strings longer than the given number.
+Given an number and a dictionary, "remove_string_values_longer_than" removes any keys on the given dictionary whose values are strings longer than the given number.
 
 ```
-input = {'name': 'Montana', 'age': 20, 'location': 'Texas'}
-remove_string_values_longer_than(6, input)
+dictionary = {'name': 'Montana', 'age': 20, 'location': 'Texas'}
+remove_string_values_longer_than(6, dictionary)
 
-print(input)  # -> {'age': 20, 'location': 'Texas'}
+print(dictionary)  # -> {'age': 20, 'location': 'Texas'}
 ```
 
 ### !end-question
@@ -156,11 +156,11 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should remove any keys with values that are strings longer than num
-        input = {'a': 8, 'b': 6, 'c':'montana', 'location':'castle', 'age': 'old'}
+        dictionary = {'a': 8, 'b': 6, 'c':'montana', 'location':'castle', 'age': 'old'}
         number = 5
         result = {'a': 8, 'b': 6, 'age': 'old'}
 
-        self.assertEqual(main.remove_string_values_longer_than(number, input), result,
+        self.assertEqual(main.remove_string_values_longer_than(number, dictionary), result,
         msg = 'should remove any keys with values that are strings longer than num')
 
 ```

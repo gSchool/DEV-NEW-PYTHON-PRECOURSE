@@ -63,7 +63,22 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+# much easier to use collections.Counter !!!!
+def count_words(string):
+    if not string:
+        return {}
+    
+    word_dict = {}
+    words = string.split(" ")
+    for word in words:
+        if word_dict.get(word):
+            word_dict[word] += 1
+        else:
+            word_dict[word] = 1
+    
+    return word_dict
+```
 ### !end-explanation
 
 ### !end-challenge

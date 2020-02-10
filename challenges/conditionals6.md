@@ -105,8 +105,11 @@ Given two numbers, 'is_either_even_or_are_both_7' returns whether at least one o
 output = is_either_even_or_are_both_7(3, 7)
 print(output) # --> False
 
-output = is_either_even_or_are_both_7(2, 3)
-print(output) # --> True
+output2 = is_either_even_or_are_both_7(2, 3)
+print(output2) # --> True
+
+output3 = is_either_even_or_are_both_7(7, 7)
+print(output3) # --> True
 ```
 
 ### !end-question
@@ -169,7 +172,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def is_either_even_or_are_both_7(num1, num2):
+    return num1 % 2 == 0 or num2 % 2 == 0 or (num1 == 7 and num2 == 7)
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -179,19 +185,19 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: 45e91a10-4d74-4f10-83ef-b7b065d45830
-* title: is_either_even_and_less_than_9
+* title: is_either_even_and_both_less_than_9
 
 ### !question
 
-Write a function called "is_either_even_and_less_than_9".
+Write a function called "is_either_even_and_both_less_than_9".
 
-Given two numbers, 'is_either_even_and_less_than_9' returns whether at least one of them is even AND both of them are less than 9.
+Given two numbers, 'is_either_even_and_both_less_than_9' returns whether at least one of them is even AND both of them are less than 9.
 
 ```
-output = is_either_even_and_less_than_9(2, 4)
+output = is_either_even_and_both_less_than_9(2, 4)
 print(output) # --> True
 
-output = is_either_even_and_less_than_9(72, 2)
+output = is_either_even_and_both_less_than_9(72, 2)
 print(output) # --> False
 ```
 
@@ -200,7 +206,7 @@ print(output) # --> False
 ### !placeholder
 
 ```python
-def is_either_even_and_less_than_9(num1, num2):
+def is_either_even_and_both_less_than_9(num1, num2):
     # your code here
     pass
 
@@ -219,52 +225,55 @@ class TestScript(unittest.TestCase):
 
     def test_1(self):
         # it should return a boolean
-        self.assertIsInstance(main.is_either_even_and_less_than_9(6, 99), bool,
+        self.assertIsInstance(main.is_either_even_and_both_less_than_9(6, 99), bool,
         msg = 'should return a boolean')
 
 
     def test_2(self):
         # it "should return True if the first number is even and both are less than 9"
-        self.assertTrue(main.is_either_even_and_less_than_9(4, 3),
+        self.assertTrue(main.is_either_even_and_both_less_than_9(4, 3),
         msg = "should return True if the first number is even and both are less than 9")
 
 
     def test_3(self):
         # it "should return True if the second number is even and both are less than 9"
-        self.assertTrue(main.is_either_even_and_less_than_9(7, 8),
+        self.assertTrue(main.is_either_even_and_both_less_than_9(7, 8),
         msg = "should return True if the second number is even and both are less than 9")
 
 
     def test_4(self):
         # it "should return True if the both numbers are even and both are less than 9"
-        self.assertTrue(main.is_either_even_and_less_than_9(2, 4),
+        self.assertTrue(main.is_either_even_and_both_less_than_9(2, 4),
         msg = "should return True if the both numbers are even and both are less than 9")
 
     def test_5(self):
         # it "should return False if the both numbers are greater than 9"
-        self.assertFalse(main.is_either_even_and_less_than_9(12,14),
+        self.assertFalse(main.is_either_even_and_both_less_than_9(12,14),
         msg = "should return False if the both numbers are greater than 9")
 
     def test_6(self):
         # it "should return False if the left number is greater than 9"
-        self.assertFalse(main.is_either_even_and_less_than_9(222, 8),
+        self.assertFalse(main.is_either_even_and_both_less_than_9(222, 8),
         msg = "should return False if the left number is greater than 9")
 
     def test_6(self):
         # it "should return False if the right number is greater than 9"
-        self.assertFalse(main.is_either_even_and_less_than_9(4,221),
+        self.assertFalse(main.is_either_even_and_both_less_than_9(4,221),
         msg = "should return False if the right number is greater than 9")    
 
     def test_7(self):
         # it "should return False if neither number is even"
-        self.assertFalse(main.is_either_even_and_less_than_9(-3,-1),
+        self.assertFalse(main.is_either_even_and_both_less_than_9(-3,-1),
         msg = "should return False if neither number is even")
 ```
 
 ### !end-tests
 
 ### !explanation
-
+```python
+def is_either_even_and_both_less_than_9(num1, num2):
+    return (num1 % 2 == 0 or num2 % 2 == 0) and (num1 < 9 and num2 < 9)
+```
 ### !end-explanation
 
 ### !end-challenge

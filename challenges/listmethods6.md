@@ -1,4 +1,4 @@
-# Array Methods 6
+# List Methods 6
 
 ### !challenge
 
@@ -11,7 +11,9 @@
 
 Write a function called "remove_from_back".
 
-Given an array, "remove_from_back" returns the given array with its last element removed.
+Given a non-empty list, "remove_from_back" returns the given list with its last element removed.
+
+Given an empty list, "remove_from_back" should return the empty list.
 
 Notes:
 * You should be familiar with the method 'pop'.
@@ -19,6 +21,9 @@ Notes:
 ```
 output = remove_from_back([1, 2, 3])
 print(output) # --> [1, 2]
+
+output2 = remove_from_back([])
+print(output2) # --> []
 ```
 
 ### !end-question
@@ -26,7 +31,7 @@ print(output) # --> [1, 2]
 ### !placeholder
 
 ```python
-def remove_from_back(arr):
+def remove_from_back(lst):
     # your code here
     pass
 
@@ -55,13 +60,13 @@ class TestScript(unittest.TestCase):
 
 
     def test_2(self):
-        # it should remove the last element from a 2-element array
+        # it should remove the last element from a 2-element list
         self.assertEqual(main.remove_from_back([1, 2]), [1],
         msg = 'should remove the last element from a 2-element list')
 
 
     def test_3(self):
-        # it should handle an empty array
+        # it should handle an empty list
         self.assertEqual(main.remove_from_back([]), [],
         msg = 'should handle an empty list')
 
@@ -69,7 +74,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+if lst:  #prevents pop from throwing an error if you try to pop an empty list
+    lst.pop() 
+return lst
+```
 ### !end-explanation
 
 ### !end-challenge

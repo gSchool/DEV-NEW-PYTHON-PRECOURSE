@@ -73,7 +73,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def extend(dict1, dict2):
+    for key in dict2:
+        if key not in dict1:
+            dict1[key] = dict2[key]
+    return dict1
+```
 ### !end-explanation
 
 ### !end-challenge
