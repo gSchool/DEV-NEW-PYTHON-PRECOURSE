@@ -98,11 +98,11 @@ Standards:
       -
         Type: Lesson
         UID: acdab971-cf11-4bf3-8459-43295a24f974
-        Path: /challenges/arraymethods1.md
+        Path: /challenges/listmethods1.md
       -
         Type: Lesson
         UID: e4516013-fec9-4863-9c96-a7ff9568b920
-        Path: /challenges/arraymethods2.md
+        Path: /challenges/listmethods2.md
       -
         Type: Lesson
         UID: cd7b33f1-d189-4445-8b87-3fd3e1860402
@@ -122,15 +122,15 @@ Standards:
       -
         Type: Lesson
         UID: 9f07d18a-55cc-4fa7-b849-160f9ecb3317
-        Path: /challenges/arraymethods3.md
+        Path: /challenges/listmethods3.md
       -
         Type: Lesson
         UID: 1bd2583e-24c8-477c-873c-5e0288e13651
-        Path: /challenges/arraymethods4.md
+        Path: /challenges/listmethods4.md
       -
         Type: Lesson
         UID: 0ba0c75b-e834-41f5-98e4-784e68d35e5d
-        Path: /challenges/arraymethods5.md
+        Path: /challenges/listmethods5.md
         Autoscore: true
   -
     Title: Part 3
@@ -143,7 +143,7 @@ Standards:
       -
         Type: Lesson
         UID: 50d6e1e9-06fa-4de9-92e3-578b36fda7e3
-        Path: /challenges/arraystringmethods1.md
+        Path: /challenges/liststringmethods1.md
       -
         Type: Lesson
         UID: 1ac724b0-ffee-4edb-a144-41cab357c290
@@ -151,7 +151,7 @@ Standards:
       -
         Type: Lesson
         UID: e5533c1b-f3a1-4b25-a479-deb411b09c46
-        Path: /challenges/arraymethods6.md
+        Path: /challenges/listmethods6.md
       -
         Type: Lesson
         UID: 66c67021-10ef-419f-b4d3-1da3256b1451
@@ -175,11 +175,11 @@ Standards:
       -
         Type: Lesson
         UID: 23e7cb41-ba68-4143-bcf2-96cbca222337
-        Path: /challenges/arraystringmethods2.md
+        Path: /challenges/liststringmethods2.md
       -
         Type: Lesson
         UID: cf71f041-2465-48d1-9332-7b3b0f64b200
-        Path: /challenges/arraymethods7.md
+        Path: /challenges/listmethods7.md
       -
         Type: Lesson
         UID: ada4947d-6eb6-4621-987c-7f50f36ab0fa
@@ -216,7 +216,7 @@ Standards:
       -
         Type: Lesson
         UID: 0972add3-be30-4c1a-a58d-be8d6b2be8de
-        Path: /challenges/arraymethods8.md
+        Path: /challenges/listmethods8.md
       -
         Type: Lesson
         UID: 238aa790-a77d-4e4a-9301-d99fc8df0f7d
@@ -228,7 +228,7 @@ Standards:
       -
         Type: Lesson
         UID: 0433a235-634c-41dc-b36b-23b7bdaed6b6
-        Path: /challenges/arraymethods9.md
+        Path: /challenges/listmethods9.md
       -
         Type: Lesson
         UID: 7f8ba3bf-11da-47b3-ab3a-4e8f24af2e2c
@@ -236,11 +236,11 @@ Standards:
       -
         Type: Lesson
         UID: ba5bec61-dcde-4db6-9490-9cf3ba789d0a
-        Path: /challenges/arraymethods10.md
+        Path: /challenges/listmethods10.md
       -
         Type: Lesson
         UID: 3b4790ef-6ddd-46eb-ae5a-3a08baa4ee60
-        Path: /challenges/arraymethods11.md
+        Path: /challenges/listmethods11.md
         Autoscore: true
   -
     Title: Part 5
@@ -253,11 +253,11 @@ Standards:
       -
         Type: Lesson
         UID: 9fd7cf80-e499-4cf2-af03-295843af34a8
-        Path: /challenges/arraymethods12.md
+        Path: /challenges/listmethods12.md
       -
         Type: Lesson
         UID: 5f2620de-7929-4fed-9e5f-fa759e5d6e24
-        Path: /challenges/arraymethods13.md
+        Path: /challenges/listmethods13.md
       -
         Type: Lesson
         UID: 24568ce9-71d9-4f2a-b0fc-41d8c6e6e1cf
@@ -269,7 +269,7 @@ Standards:
       -
         Type: Lesson
         UID: d5c3c5fc-e07f-49bf-a489-bb0c504c5f1e
-        Path: /challenges/arraymethods14.md
+        Path: /challenges/listmethods14.md
       -
         Type: Lesson
         UID: 43db9031-9a69-4e2c-a96c-9476aca5bf86
@@ -285,11 +285,11 @@ Standards:
       -
         Type: Lesson
         UID: d477bfb0-4cd0-487f-bb94-58095f831dfe
-        Path: /challenges/arraymethods15.md
+        Path: /challenges/listmethods15.md
       -
         Type: Lesson
         UID: 8cbd5ead-0d7e-46e2-8fbb-45c61dc17c65
-        Path: /challenges/arraymethods16.md
+        Path: /challenges/listmethods16.md
       -
         Type: Lesson
         UID: 6cc90df0-1b85-45f6-9f4f-e884e96335e9
