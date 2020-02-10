@@ -163,7 +163,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_to_front_of_new(list1, element):
+    result = list1[:] # makes a new distinct copy of the original list
+    result.insert(0,element)
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -242,7 +247,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def add_to_back_of_new(list1, element):
+    result = list1[:]
+    result.append(element)
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -258,14 +268,20 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_all_elements_but_nth".
 
-Given an list and an index, "get_all_elements_but_nth" returns an list with all the elements but the nth.
+Given an list and an index, "get_all_elements_but_nth" returns a new list with all the elements but the nth.
+
+Note: DO NOT MUTATE THE ORIGINAL LIST
 
 ```
-output = get_all_elements_but_nth(['a', 'b', 'c'], 1)
+list1 = ['a', 'b', 'c']
+output = get_all_elements_but_nth(list1, 1)
 print(output) # --> ['a', 'c']
+print(list1) # --> ['a', 'b', 'c']
 
 output = get_all_elements_but_nth(['a', 'b', 'c'], 8)
 print(output) # --> ['a', 'b', 'c']
+print(list1) # --> ['a', 'b', 'c']
+
 ```
 
 ### !end-question
@@ -273,7 +289,7 @@ print(output) # --> ['a', 'b', 'c']
 ### !placeholder
 
 ```python
-def get_all_elements_but_nth(list, n):
+def get_all_elements_but_nth(list1, n):
     # your code here
     pass
 
@@ -324,7 +340,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_all_elements_but_nth(list1, n):
+    result = list1[:]
+    if len(list1) >= n + 1:
+        result.pop(n)
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge
