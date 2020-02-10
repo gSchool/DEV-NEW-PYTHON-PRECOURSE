@@ -59,7 +59,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def compute_power(num, exponent):
+    return num ** exponent
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -114,7 +117,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def compute_square_root(num):
+    return math.sqrt(num)
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -124,15 +130,15 @@ class TestScript(unittest.TestCase):
 * type: code-snippet
 * language: python3.6
 * id: e5a953a0-42f3-414c-bd77-c4247d272f7a
-* title: double_square_root_of
+* title: double_square_root
 
 ### !question
 
-Write a function called "double_square_root_of".
-Given a number, "double_square_root_of" returns double its square root.
+Write a function called "double_square_root".
+Given a number, "double_square_root" returns double its square root.
 
 ```
-output = double_square_root_of(121)
+output = double_square_root(121)
 print(output) # --> 22
 ```
 
@@ -142,7 +148,7 @@ print(output) # --> 22
 
 ```python
 import math
-def double_square_root_of(num):
+def double_square_root(num):
     # your code here
     pass
 
@@ -161,7 +167,7 @@ import math
 class TestScript(unittest.TestCase):
     def test1(self):
         # it
-        self.assertEqual(main.double_square_root_of(121), 22,
+        self.assertEqual(main.double_square_root(121), 22,
         msg = "it should return the doubled square root of the passed in number" )
 
 
