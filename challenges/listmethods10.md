@@ -1,4 +1,4 @@
-# Array Methods 10
+# List Methods 10
 
 ### !challenge
 
@@ -142,6 +142,7 @@ Given a list of numbers, "compute_product_of_all_elements" returns the products 
 
 Notes:
 * If given list is empty, it should return 0.
+* If the list contains a string, it should return -1.
 
 ```
 output = compute_product_of_all_elements([2, 5, 6])
@@ -172,7 +173,7 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return a number
-        self.assertEqual(main.compute_product_of_all_elements([1, 2, 4]), (float, int),
+        self.assertIsInstance(main.compute_product_of_all_elements([1, 2, 4]), (float, int),
         msg = 'should return a number')
 
 
@@ -189,8 +190,8 @@ class TestScript(unittest.TestCase):
 
     def test_3(self):
         # it return 0 if the passed in list that doesn't have all numbers
-        self.assertEqual(main.compute_product_of_all_elements([3, "not",'numbers']), 0,
-        msg = 'return 0 if the passed in list that does not have all numbers')
+        self.assertEqual(main.compute_product_of_all_elements([3, "not",'numbers']), -1,
+        msg = 'return -1 if the list contains one or more strings')
 
 ```
 

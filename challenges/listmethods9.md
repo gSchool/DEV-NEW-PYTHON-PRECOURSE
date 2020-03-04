@@ -1,4 +1,4 @@
-# Array Methods 9
+# List Methods 9
 
 ### !challenge
 
@@ -23,9 +23,8 @@ print(output) # --> ['there', "now']
 ### !placeholder
 
 ```python
-def filter_odd_length_words(words):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -68,7 +67,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def filter_odd_length_words(words):
+    return [x for x in words if len(x) % 2 == 1]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -96,9 +98,8 @@ print(output) # --> ['word', 'word']
 ### !placeholder
 
 ```python
-def filter_even_length_words(words):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -141,7 +142,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def filter_even_length_words(words):
+    return [x for x in words if len(x) % 2 == 0]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -172,9 +176,8 @@ print(output) # --> 5
 ### !placeholder
 
 ```python
-def get_length_of_longest_element(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -216,7 +219,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_length_of_longest_element(lst):
+    if not lst: return 0
+    return max([len(x) for x in lst])
+```
 ### !end-explanation
 
 ### !end-challenge

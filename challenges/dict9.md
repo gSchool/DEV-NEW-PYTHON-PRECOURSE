@@ -186,7 +186,12 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
+def get_average_of_elements_at_key(dictionary, key):
+    value = dictionary.get(key)
+    if (value is None) or (not value) or (type(value) is not list):
+        return 0
 
+    return sum(value) / len(value)
 ```
 ### !end-explanation
 
