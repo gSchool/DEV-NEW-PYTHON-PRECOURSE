@@ -1,4 +1,4 @@
-# Array Methods 12
+# List Methods 12
 
 ### !challenge
 
@@ -26,9 +26,8 @@ print(output) # --> 1
 ### !placeholder
 
 ```python
-def find_smallest_element(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -77,7 +76,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def find_smallest_element(lst):
+    if not lst: return 0
+    return min(lst)
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -93,7 +96,7 @@ class TestScript(unittest.TestCase):
 
 Write a function called "find_shortest_element".
 
-Given a list, "find_shortest_element" returns the shortest string within the given list.
+Given a list of strings, "find_shortest_element" returns the shortest string within the given list.
 
 Notes:
 * If there are ties, it should return the first element to appear.
@@ -128,7 +131,7 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return a string
-        self.assertEqual(main.find_shortest_element(["one", "two", "three"]), str,
+        self.assertIsInstance(main.find_shortest_element(["one", "two", "three"]), str,
         msg = 'should return a string')
 
 
