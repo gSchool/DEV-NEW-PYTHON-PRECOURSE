@@ -47,10 +47,10 @@ class TestScript(unittest.TestCase):
 
     def test_00(self):
         # should not have the word "len" anywhere in function body'
-        pattern = re.compile(r'len')
+        pattern = re.compile(r'len[^g]')
         source = inspect.getsource(main.get_string_length)
         self.assertIsNone(pattern.search(source),
-        msg = 'should not have the word "len" anywhere in function body')
+        msg = 'should not have the function "len" anywhere in function body')
 
 
     def test_0(self):

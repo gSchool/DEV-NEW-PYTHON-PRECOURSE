@@ -112,9 +112,8 @@ print(output) # --> 'a'
 ### !placeholder
 
 ```python
-def find_shortest_element(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -156,7 +155,16 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def find_shortest_element(lst):
+    if not lst: return ""
+    
+    min_len, shortest_string = len(lst[0]), lst[0]
+    for item in lst:
+        if len(item) < min_len:
+            min_len, shortest_string = len(item), item
+    return shortest_string
+```
 ### !end-explanation
 
 ### !end-challenge

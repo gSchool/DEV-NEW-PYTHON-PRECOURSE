@@ -1,4 +1,4 @@
-# Array Methods 13
+# List Methods 13
 
 ### !challenge
 
@@ -26,9 +26,8 @@ print(output) # --> 8
 ### !placeholder
 
 ```python
-def get_largest_element(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -70,7 +69,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_largest_element(lst):
+    if not lst: return 0
+    return max(lst)
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -88,6 +91,8 @@ Write a function called "compute_sum_of_all_elements".
 
 Given a list of numbers, "compute_sum_of_all_elements" returns the sum of all the elements in the given list.
 
+Note: Function should return 0 if the list is empty.
+
 ```
 output = compute_sum_of_all_elements([1, 2, 3])
 print(output) # --> 6
@@ -98,9 +103,8 @@ print(output) # --> 6
 ### !placeholder
 
 ```python
-def compute_sum_of_all_elements(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -137,7 +141,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def compute_sum_of_all_elements(lst):
+    if not lst: return 0
+    return sum(lst)
 
+```
 ### !end-explanation
 
 ### !end-challenge
