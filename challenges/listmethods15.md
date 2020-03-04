@@ -108,7 +108,7 @@ def find_shortest_string_among_mixed_elements(lst):
 
 Write a function called "find_smallest_number_among_mixed_elements".
 
-Given a list of mixed elements, "find_smallest_number_among_mixed_elements" returns the smallest number within the given list.
+Given a list of mixed elements, "find_smallest_number_among_mixed_elements" returns the smallest integer within the given list.
 
 Notes:
 * If the given list is empty, it should return 0.
@@ -124,9 +124,7 @@ print(output) # --> 4
 ### !placeholder
 
 ```python
-def find_smallest_number_among_mixed_elements(arr):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -181,7 +179,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def find_smallest_number_among_mixed_elements(lst):
+    if not lst: return 0
+    numbers = [x for x in lst if type(x) is int]
+    if not numbers: return 0
+    return min(numbers)
+```
 ### !end-explanation
 
 ### !end-challenge
