@@ -65,7 +65,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def are_valid_credentials(name, password):
+    return len(name) > 3 and len(password) > 8
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -93,9 +96,8 @@ print(output) # --> 1
 ### !placeholder
 
 ```python
-def find_min_length_of_three_words(word1, word2, word3):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -125,7 +127,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def find_min_length_of_three_words(word1, word2, word3):
+    return min(len(word1), len(word2), len(word3))
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -153,9 +160,8 @@ print(output) # --> 3
 ### !placeholder
 
 ```python
-def find_max_length_of_three_words(word1, word2, word3):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -186,7 +192,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def find_max_length_of_three_words(word1, word2, word3):
+    return max(len(word1), len(word2), len(word3))
 
+
+```
 ### !end-explanation
 
 ### !end-challenge

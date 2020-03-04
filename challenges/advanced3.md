@@ -32,9 +32,8 @@ print(input_dict) # --> {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 ### !placeholder
 
 ```python
-def select(list1, dict1):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -75,7 +74,15 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def select(input_list, input_dict):
+    result = {}
+    for key in input_list:
+        if key in input_dict:
+            result[key] = input_dict[key]
+    return result
 
+```
 ### !end-explanation
 
 ### !end-challenge
