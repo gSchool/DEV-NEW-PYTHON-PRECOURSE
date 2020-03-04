@@ -55,7 +55,7 @@ class TestScript(unittest.TestCase):
 
     def test_0(self):
         # it should return an int    
-        self.assertIsInstance(main.get_string_length("heyo"), int,
+        self.assertIsInstance(main.get_string_length("hey"), int,
         msg = 'it should return an int')
 
 
@@ -74,7 +74,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_string_length(string):
+    length = 0
+    for char in string:
+        length+=1
+    return length
+```
 ### !end-explanation
 
 ### !end-challenge

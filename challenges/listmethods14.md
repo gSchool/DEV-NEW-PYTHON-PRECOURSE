@@ -1,4 +1,4 @@
-# Array Methods 14
+# List Methods 14
 
 ### !challenge
 
@@ -11,11 +11,15 @@
 
 Write a function called "flatten".
 
-Given a list of lists, "flatten" returns a single list containing the elements of the nested lists.
+Given a list of lists, "flatten" returns a single list containing the elements of the nested list.
 
 ```
-output = flatten([[1, 4], [True, False], ['x', 'y']])
+test_list = [[1, 4], [True, False], ['x', 'y']]
+output = flatten(test_list)
 print(output) # --> [1, 4, True, False, 'x', 'y']
+
+output2 = flatten([['tony'],['the'], ['tiger']])
+print(output2) # ['tony', 'the', 'tiger']
 ```
 
 
@@ -24,9 +28,13 @@ print(output) # --> [1, 4, True, False, 'x', 'y']
 ### !placeholder
 
 ```python
-def flatten(arr):
-    # your code here
-    pass
+# your cdef flatten(nested_list):
+    result = []
+    for lst in nested_list:
+        for item in lst:
+            result.append(item)
+    return resultode here
+
 
 
 ```
@@ -52,6 +60,10 @@ class TestScript(unittest.TestCase):
         self.assertEqual(main.flatten([['a', 'b'], [1, 3], [True, False]]), ['a', 'b', 1, 3, True, False],
         msg = 'should return a list with the elements from all the nested lists')
 
+    def test_1_1(self):
+        # it should return a list with the elements from all the nested lists
+        self.assertEqual(main.flatten([['tony'],['the'], ['tiger']]), ['tony', 'the', 'tiger'],
+        msg = 'should return a list with the elements from all the nested lists')
 
     def test_2(self):
         # it should handle empty lists in the first position
@@ -81,7 +93,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+# your code here
 
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
