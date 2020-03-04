@@ -62,7 +62,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+from collections import Counter
+def count_all_characters(string):
+    return Counter(string)
+```
 ### !end-explanation
 
 ### !end-challenge

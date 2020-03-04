@@ -18,6 +18,7 @@ Notes:
 * If the list contains no elements that are equal to 10, it should return an empty list.
 * If the value at the given key is not a list, it should return an empty list.
 * If the key doesn't exist or its value is None, it should return an empty list.
+* If there is a list at the given key you can assume it is a list of numbers.
 
 ```
 dictionary = {'list_of_numbers': [1000, 10, 50, 10]}
@@ -116,6 +117,7 @@ Notes:
 * If the list contains no elements less than 100, it should return an empty list.
 * If the value at the given key is not a list, it should return an empty list.
 * If there is no value at the key, it should return an empty list.
+* If there is a list at the given key you can assume it is a list of numbers.
 
 ```
 dictionary = {'key': [1000, 20, 50, 500, 100]}
