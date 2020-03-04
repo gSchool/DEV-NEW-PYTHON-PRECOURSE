@@ -1,4 +1,4 @@
-# Array Methods 11
+# List Methods 11
 
 ### !challenge
 
@@ -22,9 +22,7 @@ print(output) # --> [2, 4, 6]
 ### !placeholder
 
 ```python
-def filter_even_elements(arr):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -67,7 +65,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def filter_even_elements(lst):
+    return [x for x in lst if x % 2 ==0]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -83,10 +84,11 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_length_of_shortest_element".
 
-Given a list, "get_length_of_shortest_element" returns the length of the shortest string in the given list.
+Given a list of strings, "get_length_of_shortest_element" returns the length of the shortest string in the given list.
 
 Notes:
 * It should return 0 if the list is empty.
+* If there are ties, it returns the first element to appear.
 
 ```
 output = get_length_of_shortest_element(['one', 'two', 'three'])
@@ -140,7 +142,11 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_length_of_shortest_element(lst):
+    if not lst: return 0
+    return min([len(x) for x in lst])
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -156,11 +162,11 @@ class TestScript(unittest.TestCase):
 
 Write a function called "get_longest_element".
 
-Given a list, "get_longest_element" returns the longest string in the given list.
+Given a list of strings, "get_longest_element" returns the longest string in the given list.
 
 Notes:
 * If there are ties, it returns the first element to appear.
-* If the list is empty, it should return an empty string.
+* If the list is empty, it should return the empty string.
 
 ```
 output = get_longest_element(['one', 'two', 'three'])
@@ -207,7 +213,15 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_longest_element(lst):
+    if not lst: return ""
+    max_len, longest_str = 0, ""
+    for string in lst:
+        if len(string) > max_len:
+            max_len, longest_str = len(string), string
+    return longest_str
+```
 ### !end-explanation
 
 ### !end-challenge

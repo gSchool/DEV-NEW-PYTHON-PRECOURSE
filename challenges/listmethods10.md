@@ -147,7 +147,7 @@ Given a list of numbers, "compute_product_of_all_elements" returns the products 
 
 Notes:
 * If given list is empty, it should return 0.
-* If the list contains a string, it should return -1.
+* If the list contains strings, it should return -1.
 
 ```
 output = compute_product_of_all_elements([2, 5, 6])
@@ -205,11 +205,10 @@ class TestScript(unittest.TestCase):
 from functools import reduce
 def compute_product_of_all_elements(lst):
     if not lst: return 0
-
-    if any([(type(x) is str) for x in lst]):
-        return -1
-    else:
-        return reduce(lambda x, y: x*y, lst, 1) 
+    try:
+        return reduce(lambda x, y: x * y, lst, 1)
+    except TypeError: #if there are strings in lst, will get TypeError on x*y
+        return -1    
 
 #alternative solution
 # def compute_product_of_all_elements(lst):
