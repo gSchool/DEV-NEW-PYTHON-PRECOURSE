@@ -21,9 +21,8 @@ print(output) # --> [1, 4, 9]
 ### !placeholder
 
 ```python
-def square_elements(arr):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -54,7 +53,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def square_elements(lst):
+    return [x*x for x in lst]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -122,7 +124,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def filter_odd_elements(lst):
+    return [x for x in lst if x % 2 == 1]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -154,9 +159,7 @@ print(output) # --> 60
 ### !placeholder
 
 ```python
-def compute_product_of_all_elements(arr):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -198,7 +201,29 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+from functools import reduce
+def compute_product_of_all_elements(lst):
+    if not lst: return 0
 
+    if any([(type(x) is str) for x in lst]):
+        return -1
+    else:
+        return reduce(lambda x, y: x*y, lst, 1) 
+
+#alternative solution
+# def compute_product_of_all_elements(lst):
+#     if not lst: return 0
+
+#     acc = 1
+#     for item in lst:
+#         if isinstance(item, str):
+#             return -1
+#         else:
+#             acc *= item
+
+#     return acc
+```
 ### !end-explanation
 
 ### !end-challenge
