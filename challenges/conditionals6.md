@@ -1,6 +1,6 @@
 # Conditionals 6
 
-### !challenge
+<!-- ### !challenge
 
 * type: code-snippet
 * language: python3.6
@@ -87,7 +87,7 @@ class TestScript(unittest.TestCase):
 ### !end-explanation
 
 ### !end-challenge
-
+ -->
 ### !challenge
 
 * type: code-snippet
