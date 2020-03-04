@@ -11,7 +11,7 @@
 
 Write a function called "sum_digits".
 
-Given a number, "sum_digits" returns the sum of all its digits.
+Given an integer, "sum_digits" returns the sum of all its digits.
 
 ```
 output = sum_digits(1148)
@@ -24,10 +24,6 @@ If the number is negative, the first digit should count as negative.
 output = sum_digits(-316)
 print(output) # --> 4
 ```
-
-Notes:
-* In order to use some of the methods that will be most helpful to you, you will most likely want to do some string to number conversion and vice versa.
-
 
 ### !end-question
 
@@ -78,7 +74,24 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def sum_digits(number):
+    string = str(number)
+    
+    if number >= 0:
+        #positive numbers
+        acc = 0
+        for char in string:
+            acc += int(char)
+    else:
+        #negative numbers
+        acc = -int(string[1])
+        for char in (string[2:]):
+            acc += int(char)
 
+    return acc
+
+```
 ### !end-explanation
 
 ### !end-challenge

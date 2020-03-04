@@ -28,13 +28,7 @@ print(output2) # ['tony', 'the', 'tiger']
 ### !placeholder
 
 ```python
-# your cdef flatten(nested_list):
-    result = []
-    for lst in nested_list:
-        for item in lst:
-            result.append(item)
-    return resultode here
-
+# your code here
 
 
 ```
@@ -94,10 +88,12 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-# your code here
-
-
-
+def flatten(nested_list):
+    result = []
+    for lst in nested_list:
+        for item in lst:
+            result.append(item)
+    return result
 ```
 ### !end-explanation
 
