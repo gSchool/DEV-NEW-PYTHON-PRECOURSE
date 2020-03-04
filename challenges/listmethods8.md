@@ -81,7 +81,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def remove_element(lst, discarder):
+    return [x for x in lst if x != discarder]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -165,7 +168,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def keep(lst, keeper):
+    return [x for x in lst if x == keeper]
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -187,8 +193,8 @@ Notes:
 * If given an empty list, it should return 0.
 
 ```
-input = [1,2,3,4,5]
-output = compute_average_of_numbers(input)
+input_list = [1,2,3,4,5]
+output = compute_average_of_numbers(input_list)
 print(output) # --> 3
 ```
 
@@ -197,9 +203,8 @@ print(output) # --> 3
 ### !placeholder
 
 ```python
-def compute_average_of_numbers(nums):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -241,7 +246,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def compute_average_of_numbers(num_list):
+    if not num_list: return 0
+    return sum(num_list) / len(num_list)
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
