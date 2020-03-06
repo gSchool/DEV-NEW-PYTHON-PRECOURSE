@@ -14,11 +14,21 @@ Write a function called "multiply".
 Given 2 numbers, "multiply" returns their product.
 
 Notes:
-* It should not use the multiply operator - *
+* It should not use the multiply operator '*' anywhere in the code
 
 ```
 output = multiply(4, 7)
 print(output) # --> 28
+
+output2 = multiply(-4, 70)
+print(output2) # --> -280
+
+output2 = multiply(4, -70)
+print(output2) # --> -280
+
+output2 = multiply(-4, -7)
+print(output2) # --> 28
+
 ```
 
 ### !end-question
@@ -26,9 +36,7 @@ print(output) # --> 28
 ### !placeholder
 
 ```python
-def multiply(num1, num2):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -64,11 +72,21 @@ class TestScript(unittest.TestCase):
         msg = 'should multiply two numbers')
 
 
-    def test_3(self):
+    def test_3_1(self):
         # it should multiply negative numbers
         self.assertEqual(main.multiply(6, -8), -48,
         msg = 'should multiply negative numbers')
 
+
+    def test_3_2(self):
+        # it should multiply negative numbers
+        self.assertEqual(main.multiply(-6, 8), -48,
+        msg = 'should multiply negative numbers')
+
+    def test_3_2(self):
+        # it should multiply negative numbers
+        self.assertEqual(main.multiply(-6, -8), 48,
+        msg = 'should multiply negative numbers')
 
     def test_4(self):
         # it should multiply with the second number as 0
@@ -86,7 +104,16 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def multiply(num1, num2):
+    acc = 0
+    for i in range(abs(num2)):
+        acc += num1
+    if (num1 < 0 and num2 > 0) or (num1 > 0 and num2 < 0):
+        return -abs(acc)
+    else:
+        return abs(acc)
+```
 ### !end-explanation
 
 ### !end-challenge
