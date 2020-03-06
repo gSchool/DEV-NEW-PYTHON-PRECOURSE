@@ -60,7 +60,19 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def convert_dict_to_list(dictionary):
+    return [[key, dictionary[key]] for key in dictionary]
 
+#alternative solution
+# def convert_dict_to_list(dictionary):
+#     result = []
+#     for key in dictionary:
+#         result.append([key, dictionary[key]])
+#     return result
+    
+
+```
 ### !end-explanation
 
 ### !end-challenge
