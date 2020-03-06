@@ -1,4 +1,4 @@
-# Array Methods 1
+# List Methods 1
 
 ### !challenge
 
