@@ -3,16 +3,16 @@
 * type: code-snippet
 * language: python3.6
 * id: c27c7922-479a-41ca-a400-d3bc984468f4
-* title: convert_list_to_dict1.md
+* title: list_to_dict1
 
 ### !question
 
 
 Write a function 'transform_first_and_last' that takes in a list, and returns a dictionary with:
-1) the first element of the list as the dictionary's key, and
-2) the last element of the list as that key's value.
+* the first element of the list as the dictionary's key, and
+* the last element of the list as that key's value.
 
-Do not change the input list. Assume all elements in the input list will be of type 'string'.
+Assume all elements in the input list will be of type 'string'.
 
 Note that the input list may have a varying number of elements. Your code should flexibly accommodate that.
 
@@ -60,7 +60,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def transform_first_and_last(lst):
+    return {lst[0]:lst[-1]}
+```
 ### !end-explanation
 
 ### !end-challenge

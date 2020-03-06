@@ -3,7 +3,7 @@
 * type: code-snippet
 * language: python3.6
 * id: 877a8e09-fe8e-4e6d-b5c1-8163dcbaff47
-* title: convert_list_to_dict2.md
+* title: list_to_dict2
 
 ### !question
 
@@ -62,7 +62,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def from_list_to_dict(input_list):
+    result = {}
+    for pair in input_list:
+        result[pair[0]] = pair[1]
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge

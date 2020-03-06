@@ -3,47 +3,48 @@
 * type: code-snippet
 * language: python3.6
 * id: 5c6e257b-c85d-4a59-9df2-777bc47d4d92
-* title: convert_list_to_dict3.md
+* title: convert_list_to_dict3
 
 ### !question
 
 Write a function called "transform_employee_data" that transforms some employee data from one format to another.
 
-The argument will look like this:
-
 ```
+input1 = 
 [
-    [
-        ['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']
-    ],
-    [
-        ['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']
-    ]
+    [['firstName', 'Joe'], ['lastName', 'Coltrane'], ['age', 42], ['role', 'clerk']],
+    [['firstName', 'Sheila'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']]
+]
+
+output1 = transform_employee_data(input1)
+print(output1)
+
+[
+{'firstName': 'Joe', 'lastName': 'Coltrane', 'age': 42, 'role': 'clerk'}, {'firstName': 'Sheila', 'lastName': 'Jenkins', 'age': 36, 'role': 'manager'}
 ]
 ```
 
-Given that input, the return value should look like this:
-
 ```
-[
-    {'firstName': 'Joe', 'lastName': 'Blow', 'age': 42, 'role': 'clerk'},
-    {'firstName': 'Mary', 'lastName': 'Jenkins', 'age': 36, 'role': 'manager'}
+input2 = 
+[ 
+    [['id', '4343F5X'], ['location', 'New York']],
+    [['id', '2564F5X'], ['location', 'Berlin']]
+]
+
+output2 = transform_employee_data(input2)
+print(output2)
+
+[ 
+    {'id':'4343N9X', 'location':'New York'},
+    {'id':'2564B5B', 'location':'Berlin'}
 ]
 ```
-
-Note that the input may have a different number of rows or different keys than the given sample.
-
-For example, let's say the HR department adds a "tshirtSize" field to each employee record.
-Your code should flexibly accommodate that.
-
 ### !end-question
 
 ### !placeholder
 
 ```python
-def transform_employee_data(data):
-    # your code here
-    pass
+# your code here
 
 ```
 
@@ -98,7 +99,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+# your code here
 
+```
 ### !end-explanation
 
 ### !end-challenge
