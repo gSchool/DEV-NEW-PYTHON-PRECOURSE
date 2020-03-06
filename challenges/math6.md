@@ -65,9 +65,8 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def compute_compound_interest(principal, annual_rate, frequency, num_years):
-    # your code here
-    pass
+def compute_compound_interest(principal, annual_rate, freq, num_years):
+    return principal * (1 + annual_rate/freq)**(freq * num_years) - principal
 
 
 ```
