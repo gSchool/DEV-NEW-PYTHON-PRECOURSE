@@ -72,7 +72,7 @@ Standards:
         Path: /challenges/stringmethods2.md
         Autoscore: true
   -
-    Title: Warmups Part 1, Part 2
+    Title: Warmups Part 2
     UID: 9182cb5e-7e40-4e64-be22-e9ae72b69b01
     Description: Solve Code Challenges
     SuccessCriteria:
