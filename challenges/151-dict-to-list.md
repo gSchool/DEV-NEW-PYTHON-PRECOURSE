@@ -3,15 +3,15 @@
 * type: code-snippet
 * language: python3.6
 * id: 862b3ed4-83e2-4253-9e53-e7d2263c2727
-* title: convert_dict_to_list3.md
+* title: dict_to_list3
 
 ### !question
 
-Write a function called "convert_dict_to_list" which converts a dictionary literal into a list of lists, like this:
+Write a function called "convert_dict_to_list" which converts a into a list of lists, like this:
 
 ```
-inp = {'name': 'Holly', 'age': 35, 'role': 'producer'}
-output = convert_dict_to_list(inp)
+dictionary = {'name': 'Holly', 'age': 35, 'role': 'producer'}
+output = convert_dict_to_list(dictionary)
 print(output) # -> [['name', 'Holly'], ['age', 35], ['role', 'producer']]
 
 ```
@@ -21,9 +21,7 @@ print(output) # -> [['name', 'Holly'], ['age', 35], ['role', 'producer']]
 ### !placeholder
 
 ```python
-def convert_dict_to_list(obj):
-    # your code here
-    pass
+# your code here
 
 ```
 
@@ -41,18 +39,17 @@ class TestScript(unittest.TestCase):
         msg = "it should return a list")
 
     def test0(self):
-        input1 = {'name': 'Holly', 'age': 35, 'role': 'producer'}
-        self.assertEqual(main.convert_dict_to_list(input1),
+        dictionary = {'name': 'Holly', 'age': 35, 'role': 'producer'}
+        self.assertEqual(main.convert_dict_to_list(dictionary),
         [['name', 'Holly'], ['age', 35], ['role', 'producer']],
         msg = "it should return a list of lists")
 
     def test1(self):
-        input1 = {'name': 'Holly', 'age': 35, 'role': 'producer'}  
+        dictionary = {'name': 'Holly', 'age': 35, 'role': 'producer'}  
 
         try:
-            holly = main.convert_dict_to_list(input1)[0][1]
-            self.assertEqual(main.convert_dict_to_list(input1),
-            'Holly',
+            holly = main.convert_dict_to_list(dictionary)[0][1]
+            self.assertEqual(holly,'Holly',
             msg = "it should have the correct nesting")
             
         except TypeError:

@@ -10,14 +10,14 @@
 Write a function called "dict_to_list" which returns a list of all the input dictionary's keys.
 
 ```
-input1 = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
-output = dict_to_list(input1)
+dictionary = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
+output = dict_to_list(dictionary)
 print(output) # -> ['name', 'age', 'has_pets']
 ```
 
-Do not use "dict.keys()" to solve this exercise.
+Do NOT use the word dict.keys method to solve this exercise.
 
-Note that your def should be able to handle any dictionary passed in it regardless of the number of keys.
+Note that your function should be able to handle any dictionary passed in it regardless of the number of keys.
 
 
 ### !end-question
@@ -39,7 +39,7 @@ import inspect, re
 
 class TestScript(unittest.TestCase):
     def test_000(self):
-        # should not have "%" anywhere in function body'
+        # should not have the word "keys" anywhere in function body'
         pattern = re.compile(r'keys')
         source = inspect.getsource(main.dict_to_list)
         self.assertIsNone(pattern.search(source),
@@ -51,8 +51,8 @@ class TestScript(unittest.TestCase):
         msg = "it should return a list")
 
     def test0(self):
-        input1 = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
-        self.assertEqual(main.dict_to_list(input1),
+        dictionary = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
+        self.assertEqual(main.dict_to_list(dictionary),
         ['name', 'age', 'has_pets'],
         msg = "it should return a list of keys")
 
@@ -68,7 +68,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def dict_to_list(dictionary):
+    return [key for key in dictionary]
+```
 ### !end-explanation
 
 ### !end-challenge
