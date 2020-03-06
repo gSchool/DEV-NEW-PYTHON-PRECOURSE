@@ -7,7 +7,7 @@
 
 ### !question
 
-Write a function called "transform_employee_data" that transforms some employee data from one format to another.
+Write a function called "transform_employee_data" that transforms some employee data from one format to another. Do not change the original input list.
 
 ```
 input1 = 
@@ -20,7 +20,8 @@ output1 = transform_employee_data(input1)
 print(output1)
 
 [
-{'firstName': 'Joe', 'lastName': 'Coltrane', 'age': 42, 'role': 'clerk'}, {'firstName': 'Sheila', 'lastName': 'Jenkins', 'age': 36, 'role': 'manager'}
+{'firstName': 'Joe', 'lastName': 'Coltrane', 'age': 42, 'role': 'clerk'},
+{'firstName': 'Sheila', 'lastName': 'Jenkins', 'age': 36, 'role': 'manager'}
 ]
 ```
 
@@ -100,7 +101,40 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-# your code here
+def transform_employee_data(input_list):
+    result = []
+    for record in input_list:
+        new_record = {}
+        for field in record:
+            new_record[field[0]] = field[1]
+        result.append(new_record)
+    return result
+
+# alternative solution #1
+# def transform_employee_data(input_list):
+#     result = []
+#     for record in input_list:
+#         new_record = {field[0]:field[1] for field in record}
+#         result.append(new_record)
+#     return result
+
+# alternative solution #2
+# def transform_employee_data(input_list):
+#     result = [{field[0]:field[1] for field in record}
+#                 for record in input_list]
+#     return result
+
+# alternative solution #3
+# def transform_employee_data(input_list):
+#     return [{field[0]:field[1] for field in record}
+#                 for record in input_list]
+
+
+
+
+
+
+
 
 ```
 ### !end-explanation

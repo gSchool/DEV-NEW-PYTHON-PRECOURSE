@@ -3,16 +3,16 @@
 * type: code-snippet
 * language: python3.6
 * id: c484fcc2-9db9-4e13-9362-a1377b196679
-* title: convert_dict_to_list1.md
+* title: dict_to_list1
 
 ### !question
 
-Write a function called "get_all_keys" which returns a list of all the input dictionary's keys.
+Write a function called "dict_to_list" which returns a list of all the input dictionary's keys.
 
 ```
-inp = {'name' : 'Sam', 'age' : 25, 'hasPets' : True}
-output = get_all_keys(inp)
-print(output) # -> ['name', 'age', 'hasPets']
+input1 = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
+output = dict_to_list(input1)
+print(output) # -> ['name', 'age', 'has_pets']
 ```
 
 Do not use "dict.keys()" to solve this exercise.
@@ -38,20 +38,28 @@ import unittest
 import inspect, re
 
 class TestScript(unittest.TestCase):
+    def test_000(self):
+        # should not have "%" anywhere in function body'
+        pattern = re.compile(r'keys')
+        source = inspect.getsource(main.dict_to_list)
+        self.assertIsNone(pattern.search(source),
+        msg = 'should not have the word "keys" *anywhere* in function body')
+
+
     def test_00(self):
-        self.assertIsInstance(main.get_all_keys({'first':1}),list,
+        self.assertIsInstance(main.dict_to_list({'first':1}),list,
         msg = "it should return a list")
 
     def test0(self):
-        input1 = {'name' : 'Sam', 'age' : 25, 'hasPets' : True}
-        self.assertEqual(main.get_all_keys(input1),
-        ['name', 'age', 'hasPets'],
+        input1 = {'name' : 'Sam', 'age' : 25, 'has_pets' : True}
+        self.assertEqual(main.dict_to_list(input1),
+        ['name', 'age', 'has_pets'],
         msg = "it should return a list of keys")
 
     def test_1(self):
         # it should not use the multiply operator
         pattern = re.compile(r'\.keys')
-        source = inspect.getsource(main.get_all_keys)
+        source = inspect.getsource(main.dict_to_list)
         self.assertIsNone(pattern.search(source),
         msg = 'should not call the "keys" method on the input dictionary in the function body')
 
