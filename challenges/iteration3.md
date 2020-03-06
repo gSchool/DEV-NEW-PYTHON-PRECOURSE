@@ -26,9 +26,8 @@ print(output) # -> 21
 ### !placeholder
 
 ```python
-def compute_summation_to_n(n):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -66,7 +65,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def compute_summation_to_n(n):
+    return sum([x for x in range(n+1)])
+```
 ### !end-explanation
 
 ### !end-challenge

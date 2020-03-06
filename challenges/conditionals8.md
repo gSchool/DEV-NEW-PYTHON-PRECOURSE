@@ -32,8 +32,13 @@ print(output) # --> 'A'
 
 ```python
 def convert_score_to_grade(score):
-    # your code here
-    pass
+    if score > 100 or score < 0: return "INVALID SCORE"
+    if score >= 90: return "A"
+    if score >= 80: return "B"
+    if score >= 70: return "C"
+    if score >= 60: return "D"
+    return "F"
+
 
 
 ```
@@ -112,7 +117,24 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def convert_score_to_grade_plus_minus(score):
+    if score > 100 or score < 0: return "INVALID SCORE"
+    if score >= 98: return "A+"
+    if score >= 93: return "A"
+    if score >= 90: return "A-"
+    if score >= 88: return "B+"
+    if score >= 83: return "B"
+    if score >= 80: return "B-"
+    if score >= 78: return "C+"
+    if score >= 73: return "C"
+    if score >= 70: return "C-"
+    if score >= 68: return "D+"
+    if score >= 63: return "D"
+    if score >= 60: return "D-"
+    return "F"
 
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -151,9 +173,7 @@ print(output) # --> 'A-'
 ### !placeholder
 
 ```python
-def convert_score_to_grade_plus_minus(score):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -268,7 +288,12 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+# your code here
 
+
+
+```
 ### !end-explanation
 
 ### !end-challenge
