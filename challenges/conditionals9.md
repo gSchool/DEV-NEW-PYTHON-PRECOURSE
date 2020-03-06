@@ -26,9 +26,8 @@ print(output) # --> 'these'
 ### !placeholder
 
 ```python
-def get_longest_of_three_words(word1, word2, word3):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -65,7 +64,15 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def get_longest_of_three_words(word1, word2, word3):
+    other_words = word2, word3
+    result, max_length = word1, len(word1)
+    for word in other_words:
+        if len(word) > max_length:
+            result, max_length = word, len(word)
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -96,9 +103,7 @@ print(output) # --> 'a'
 ### !placeholder
 
 ```python
-def find_shortest_of_three_words(word1, word2, word3):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -134,7 +139,15 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def find_shortest_of_three_words(word1, word2, word3):
+    other_words = word2, word3
+    result, min_length = word1, len(word1)
+    for word in other_words:
+        if len(word) < min_length:
+            result, min_length = word, len(word)
+    return result
+```
 ### !end-explanation
 
 ### !end-challenge

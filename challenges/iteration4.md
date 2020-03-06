@@ -26,10 +26,7 @@ print(output) # --> 24
 ### !placeholder
 
 ```python
-
-def compute_factorial_of_n(n):
-    # your code here
-    pass
+# your code here
 
 
 ```
@@ -66,7 +63,13 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def compute_factorial_of_n(n):
+    acc = 1
+    for i in range(1,n+1):
+        acc *= i
+    return acc
+```
 ### !end-explanation
 
 ### !end-challenge
@@ -94,10 +97,7 @@ print(output) # --> 'codecodecode'
 ### !placeholder
 
 ```python
-def repeat_string(string, num):
-    # your code here
-    pass
-
+# your code here
 
 ```
 
@@ -133,7 +133,10 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
-
+```python
+def repeat_string(string, num):
+    return num * string
+```
 ### !end-explanation
 
 ### !end-challenge

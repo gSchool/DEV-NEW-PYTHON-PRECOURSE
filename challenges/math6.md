@@ -11,7 +11,7 @@
 
 Write a function called "compute_compound_interest".
 
-Given a principal, an interest rate, a compounding frequency, and a time (in years), "compute_compound_interest" returns the amount of compound interest generated.
+Given a principal balance, an annual interest rate, a compounding frequency, and a time (in years), "compute_compound_interest" returns the amount of compound interest generated.
 
 ```
 output = compute_compound_interest(1500, 0.043, 4, 6)
@@ -19,16 +19,15 @@ print(output) # --> 438.8368221341061
 ```
 
 Reference:
-(Compound_interest)[https://en.wikipedia.org/wiki/Compound_interest#Calculation_of_compound_interest]
-This shows the formula used to calculate the total compound interest generated.
+(This shows the formula you should use to calculate the total compound interest generated.)[https://en.wikipedia.org/wiki/Compound_interest#Periodic_compounding]
+
 
 ### !end-question
 
 ### !placeholder
 
 ```python
-
-def compute_compound_interest(principal, interestRate, compoundingFrequency, timeInYears):
+def compute_compound_interest(principal, annual_rate, frequency, num_years):
     # your code here
     pass
 
@@ -56,13 +55,22 @@ class TestScript(unittest.TestCase):
         self.assertAlmostEqual(main.compute_compound_interest(1500, .043, 4, 6), 438.8368221341061, places=2,
         msg = 'should return the amount of compound interest generated')
 
-
+    def test_2(self):
+        # it should return the amount of compound interest generated
+        self.assertAlmostEqual(main.compute_compound_interest(1000, .05, 2, 10), 638.62, places=1,
+        msg = 'should return the amount of compound interest generated')
 ```
 
 ### !end-tests
 
 ### !explanation
+```python
+def compute_compound_interest(principal, annual_rate, frequency, num_years):
+    # your code here
+    pass
 
+
+```
 ### !end-explanation
 
 ### !end-challenge
