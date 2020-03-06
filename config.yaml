@@ -34,10 +34,6 @@ Standards:
       - Solve Python code challenges
       # - [(optional) Another success criteria, uncomment to use]
     ContentFiles:
-      # -
-      #   Type: Lesson
-      #   UID: 9c7f3591-9dc7-4847-a833-9c6140e598ae
-      #   Path: /reading/synopsis.md
       -
         Type: Lesson
         UID: bbd9c4ac-32ee-4474-b697-35173143e155
