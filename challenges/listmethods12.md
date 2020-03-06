@@ -77,9 +77,9 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def find_smallest_element(lst):
-    if not lst: return 0
-    return min(lst)
+def find_smallest_element(input_list):
+    if not input_list: return 0
+    return min(input_list)
 ```
 ### !end-explanation
 
@@ -156,11 +156,11 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def find_shortest_element(lst):
-    if not lst: return ""
+def find_shortest_element(input_list):
+    if not input_list: return ""
     
-    min_len, shortest_string = len(lst[0]), lst[0]
-    for item in lst:
+    min_len, shortest_string = len(input_list[0]), input_list[0]
+    for item in input_list:
         if len(item) < min_len:
             min_len, shortest_string = len(item), item
     return shortest_string

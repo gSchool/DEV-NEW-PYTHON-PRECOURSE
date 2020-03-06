@@ -59,8 +59,7 @@ class TestScript(unittest.TestCase):
 ### !explanation
 ```python
 def calculate_bill_total(amount):
-    tax = 0.095
-    tip = 0.15
+    tax, tip = 0.095, 0.15
     return amount*(1+tax+tip)
 
 

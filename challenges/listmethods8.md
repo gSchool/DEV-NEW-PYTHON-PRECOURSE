@@ -82,8 +82,8 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def remove_element(lst, discarder):
-    return [x for x in lst if x != discarder]
+def remove_element(list1, discarder):
+    return [x for x in list1 if x != discarder]
 ```
 ### !end-explanation
 
@@ -169,8 +169,8 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def keep(lst, keeper):
-    return [x for x in lst if x == keeper]
+def keep(list1, keeper):
+    return [x for x in list1 if x == keeper]
 ```
 ### !end-explanation
 
@@ -247,9 +247,9 @@ class TestScript(unittest.TestCase):
 
 ### !explanation
 ```python
-def compute_average_of_numbers(num_list):
-    if not num_list: return 0
-    return sum(num_list) / len(num_list)
+def compute_average_of_numbers(input_list):
+    if not input_list: return 0
+    return sum(input_list) / len(input_list)
 
 
 ```
