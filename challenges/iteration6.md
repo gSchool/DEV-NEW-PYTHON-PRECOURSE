@@ -107,19 +107,19 @@ def multiply_between(num1, num2):
 * type: code-snippet
 * language: python3.6
 * id: fc489cfd-7046-4452-8557-c1fccc5ba5a5
-* title: compute_sum_between
+* title: sum_between
 
 ### !question
 
-Write a function called "compute_sum_between".
+Write a function called "sum_between".
 
-Given 2 integers, "compute_sum_between" returns the sum between the two given integers, beginning at num1, and excluding num2.
+Given 2 integers, "sum_between" returns the sum between the two given integers, beginning at num1, and excluding num2.
 
 Notes:
 * The sum between 1 and 4 is 1 + 2 + 3 = 6.
 * If num2 is not greater than num1, it should return 0.
 ```
-output = compute_sum_between(2, 5)
+output = sum_between(2, 5)
 print(output) # --> 9
 ```
 
@@ -128,7 +128,7 @@ print(output) # --> 9
 ### !placeholder
 
 ```python
-def compute_sum_between(num1, num2):
+def sum_between(num1, num2):
     # your code here
     pass
 
@@ -146,31 +146,31 @@ import unittest
 class TestScript(unittest.TestCase):
     def test_0(self):
         # it should return an int
-        self.assertIsInstance(main.compute_sum_between(4, 8), int,
+        self.assertIsInstance(main.sum_between(4, 8), int,
         msg = 'should return an int')
 
 
     def test_1(self):
         # it should sum between the first and second number exclusive
-        self.assertEqual(main.compute_sum_between(4, 6), 9,
+        self.assertEqual(main.sum_between(4, 6), 9,
         msg = 'should sum between the first and second number, exclusive')
 
 
     def test_2(self):
         # it should sum between the first and second number exclusive with negatives
-        self.assertEqual(main.compute_sum_between(-1, 3), 2,
+        self.assertEqual(main.sum_between(-1, 3), 2,
         msg = 'should sum between the first and second number exclusive with negatives')
 
 
     def test_3(self):
         # it should return 0 if the second number is less than the first
-        self.assertEqual(main.compute_sum_between(1, -3), 0,
+        self.assertEqual(main.sum_between(1, -3), 0,
         msg = 'should return 0 if the second number is less than the first')
 
 
     def test_4(self):
         # it should return 0 if the 2 numbers are equal
-        self.assertEqual(main.compute_sum_between(1, 1), 0,
+        self.assertEqual(main.sum_between(1, 1), 0,
         msg = 'should return 0 if the 2 numbers are equal')
 
 ```
