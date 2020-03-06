@@ -26,9 +26,8 @@ print(output) # --> 24
 ### !placeholder
 
 ```python
-def multiply_between(num1, num2):
-    # your code here
-    pass
+# your code here
+
 
 
 ```
@@ -83,7 +82,22 @@ class TestScript(unittest.TestCase):
 ### !end-tests
 
 ### !explanation
+```python
+def multiply_between(num1, num2):
+    if num2 <= num1: return 0
+    acc = 1
+    for i in range(num1, num2):
+        acc *= i
+    return acc
 
+#alternative solution
+# from functools import reduce
+# def multiply_between(num1, num2):
+#     try:
+#         return reduce(lambda x,y: x*y, range(num1, num2))
+#     except:
+#         return 0
+```
 ### !end-explanation
 
 ### !end-challenge
