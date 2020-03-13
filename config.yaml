@@ -36,6 +36,10 @@ Standards:
     ContentFiles:
       -
         Type: Lesson
+        UID: bbd9c4ac-32ee-4474-b697-35173143e154
+        Path: /challenges/unit_overview.md
+
+      - Type: Lesson
         UID: bbd9c4ac-32ee-4474-b697-35173143e155
         Path: /challenges/conditionals1.md
       -
