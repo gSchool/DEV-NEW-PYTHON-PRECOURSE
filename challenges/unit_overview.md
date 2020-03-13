@@ -6,4 +6,4 @@ By the end of this unit, you will be able to _manipulate strings, lists, dicts, 
 
 ## Unit overview
 
-This unit is best completed with a terminal running an online Python 3 REPL, IPYTHON or a Juptyer Notebook side by side with Learn so you can better see the outputs of the functions you write.
+This unit is best completed with a terminal running an online Python 3 REPL, IPYTHON in your terminal, or a Juptyer Notebook side by side with Learn so you can better see the results of the statements and functions you write to try to solve the problems.
